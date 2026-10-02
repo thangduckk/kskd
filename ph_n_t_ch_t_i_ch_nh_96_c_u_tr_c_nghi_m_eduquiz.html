@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập Phân Tích Tài Chính HĐKD - EduQuiz</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        eduGreen: '#10B981',
+                        eduRed: '#EF4444',
+                        eduBlue: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #1f2937; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-full flex flex-col font-sans transition-colors duration-200">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo & Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">
+                            EduQuiz - Phân Tích Tài Chính
+                        </h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">96 Câu Trắc Nghiệm Ngành QTKD (2 TC)</p>
+                    </div>
+                </div>
+
+                <!-- Global Actions -->
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <!-- Mode Toggle -->
+                    <div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-700 p-1 rounded-lg">
+                        <button id="modePractice" onclick="setMode('practice')" class="px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">
+                            <i class="fa-solid fa-book-open mr-1"></i> Ôn Tập Tức Thì
+                        </button>
+                        <button id="modeExam" onclick="setMode('exam')" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all">
+                            <i class="fa-solid fa-clock mr-1"></i> Thi Thử
+                        </button>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleSidebar()" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Left Column: Quiz Engine -->
+        <div class="lg:col-span-8 flex flex-col space-y-6">
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-4 gap-3 bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-medium">Tổng số</span>
+                    <p class="text-lg sm:text-xl font-bold text-slate-800 dark:text-slate-100" id="statTotal">96</p>
+                </div>
+                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
+                    <span class="text-xs text-emerald-600 dark:text-emerald-400 uppercase font-medium">Đúng</span>
+                    <p class="text-lg sm:text-xl font-bold text-emerald-600 dark:text-emerald-400" id="statCorrect">0</p>
+                </div>
+                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
+                    <span class="text-xs text-rose-600 dark:text-rose-400 uppercase font-medium">Sai</span>
+                    <p class="text-lg sm:text-xl font-bold text-rose-600 dark:text-rose-400" id="statWrong">0</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-medium">Tiến độ</span>
+                    <p class="text-lg sm:text-xl font-bold text-blue-600 dark:text-blue-400" id="statProgress">0%</p>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-6 flex-1 flex flex-col justify-between relative transition-all">
+                
+                <!-- Question Header -->
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300" id="questionCategory">
+                                Câu 1 / 96
+                            </span>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300" id="questionGroup">
+                                Nhóm A
+                            </span>
+                        </div>
+                        <button onclick="toggleBookmarkCurrent()" id="btnBookmark" class="text-slate-300 hover:text-amber-400 dark:text-slate-600 dark:hover:text-amber-400 text-xl transition">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Question Text -->
+                    <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 mb-6 leading-relaxed" id="questionText">
+                        Đang tải câu hỏi...
+                    </h2>
+
+                    <!-- Options Container -->
+                    <div class="space-y-3" id="optionsContainer">
+                        <!-- Options injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Question Footer / Controls -->
+                <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700 flex flex-wrap justify-between items-center gap-3">
+                    <button onclick="prevQuestion()" id="btnPrev" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium transition flex items-center">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Câu trước
+                    </button>
+
+                    <div class="flex items-center space-x-2">
+                        <button onclick="resetCurrentQuestion()" class="px-3 py-2 text-xs font-medium text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
+                            <i class="fa-solid fa-rotate-right mr-1"></i> Làm lại
+                        </button>
+                        <button onclick="nextQuestion()" id="btnNext" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md transition flex items-center">
+                            Câu tiếp <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Exam Button (Visible in Exam mode) -->
+            <div id="examSubmitContainer" class="hidden">
+                <button onclick="submitExam()" class="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Nộp Bài Thi
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Question Navigator & Filters -->
+        <div id="sidebar" class="lg:col-span-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-sm flex flex-col max-h-[calc(100vh-120px)]">
+            
+            <!-- Filter Bar -->
+            <div class="mb-4 space-y-3">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm">Danh sách câu hỏi</h3>
+                    <button onclick="resetAll()" class="text-xs text-rose-500 hover:underline">
+                        <i class="fa-solid fa-trash-can mr-1"></i> Xóa làm lại
+                    </button>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="grid grid-cols-3 gap-1 bg-slate-100 dark:bg-slate-700 p-1 rounded-xl text-xs font-medium">
+                    <button onclick="setFilter('all')" id="filterAll" class="py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-xs text-emerald-600 dark:text-emerald-400 font-bold">
+                        Tất cả (96)
+                    </button>
+                    <button onclick="setFilter('groupA')" id="filterA" class="py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900">
+                        Nhóm A (58)
+                    </button>
+                    <button onclick="setFilter('groupB')" id="filterB" class="py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900">
+                        Nhóm B (38)
+                    </button>
+                </div>
+
+                <!-- Sub-filters -->
+                <div class="flex space-x-2 text-xs">
+                    <button onclick="setFilter('wrong')" id="filterWrong" class="px-2.5 py-1 rounded-lg border border-rose-200 text-rose-600 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950 transition">
+                        <i class="fa-solid fa-xmark mr-1"></i> Sai
+                    </button>
+                    <button onclick="setFilter('unanswered')" id="filterUnanswered" class="px-2.5 py-1 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-700 transition">
+                        <i class="fa-regular fa-circle mr-1"></i> Chưa làm
+                    </button>
+                    <button onclick="setFilter('bookmarked')" id="filterBookmarked" class="px-2.5 py-1 rounded-lg border border-amber-200 text-amber-600 hover:bg-amber-50 dark:border-amber-900 dark:text-amber-400 dark:hover:bg-amber-950 transition">
+                        <i class="fa-solid fa-bookmark mr-1"></i> Đã lưu
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid Matrix -->
+            <div class="flex-1 overflow-y-auto custom-scrollbar pr-1">
+                <div class="grid grid-cols-6 sm:grid-cols-8 lg:grid-cols-6 gap-2" id="gridMatrix">
+                    <!-- Buttons generated by JS -->
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700 grid grid-cols-3 gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-emerald-500 mr-1.5"></span> Đúng</div>
+                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-rose-500 mr-1.5"></span> Sai</div>
+                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-700 mr-1.5"></span> Chưa làm</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Quiz Data & Script -->
+    <script>
+        // Full Question Bank (96 Questions matched with User's Answer Key)
+        const rawQuestions = [
+            // NHÓM A (1-58)
+            { id: 1, q: "Nhiệm vụ nào sau đây không phải là nhiệm vụ của phân tích tài chính doanh nghiệp?", options: ["Phản ánh, ghi chép các nghiệp vụ kinh tế phát sinh", "Đánh giá các hiện tượng, kết quả kinh tế", "Xác định, chỉ rõ các nguyên nhân và tính các nhân tố ảnh hưởng", "Đề xuất, kiến nghị các giải pháp"], ans: 0, group: "A" },
+            { id: 2, q: "Phương pháp phân tích TCDN nào sau đây xác định mức độ ảnh hưởng của từng nhân tố đến kết quả kinh tế?", options: ["Phương pháp phân chia", "Phương pháp thay thế liên hoàn", "Phương pháp so sánh", "Phương pháp đồ thị, đồ biểu."], ans: 1, group: "A" },
+            { id: 3, q: "Phương pháp phân tích TCDN nào sau đây không xác định mức độ ảnh hưởng của từng nhân tố đến kết quả kinh tế?", options: ["Phương pháp thay thế liên hoàn", "Phương pháp so sánh", "Phương pháp số chênh lệch", "Phương pháp cân đối."], ans: 1, group: "A" },
+            { id: 4, q: "Giai đoạn nào sau đây không thuộc giai đoạn của phân tích tài chính?", options: ["Giai đoạn lập kế hoạch phân tích", "Giai đoạn sưu tầm tài liệu", "Giai đoạn thực hiện phân tích", "Giai đoạn phát hiện các sai sót."], ans: 3, group: "A" },
+            { id: 5, q: "Chức năng nào sau đây không thuộc chức năng của phân tích tài chính doanh nghiệp?", options: ["Chức năng đánh giá", "Chức năng dự báo", "Chức năng điều chỉnh", "Chức năng phân phối"], ans: 3, group: "A" },
+            { id: 6, q: "Giải pháp nào dưới đây được áp dụng để tăng ROA?", options: ["Tăng sử dụng nợ vay", "Tăng hiệu suất sử dụng tài sản", "Thay đổi kết cấu mặt hàng sản xuất", "Tăng cường vốn chủ sở hữu"], ans: 1, group: "A" },
+            { id: 7, q: "Giải pháp nào dưới đây được áp dụng để tăng ROE?", options: ["Thay đổi kết cấu mặt hàng sản xuất", "Điều chỉnh chất lượng sản phẩm", "Điều chỉnh mức hạ giá thành đơn vị sản phẩm", "Điều chỉnh cơ cấu nguồn vốn giữa tỷ lệ nợ vay và vốn chủ sở hữu"], ans: 3, group: "A" },
+            { id: 8, q: "Chi phí nguyên vật liệu trực tiếp trong giá thành sản xuất sản phẩm chịu tác động của nhân tố nào sau đây?", options: ["Mức hao hụt về vật liệu nhập kho.", "Giá vật liệu xuất dùng", "Năng suất lao động của công nhân sản xuất trực tiếp", "Số lượng công nhân sản xuất"], ans: 1, group: "A" },
+            { id: 9, q: "Chi phí quản lý doanh nghiệp chịu sự tác động của nhân tố nào dưới đây?", options: ["Chi phí khấu hao cửa hàng, quầy hàng", "Chi phí về tiền lương của bộ phận kế toán", "Chi phí dịch vụ mua ngoài phục vụ cho sản xuất", "Chi phí quảng cáo hàng bán"], ans: 1, group: "A" },
+            { id: 10, q: "Trong nội dung phân tích kết quả hoạt động kinh doanh, cần thiết phải phân tích nội dung chủ yếu nào sau đây?", options: ["Phân tích lợi nhuận của từng mặt hàng", "Phân tích lợi nhuận bán hàng và cung cấp dịch vụ", "Phân tích kết cấu mặt hàng sản xuất", "Phân tích kết cấu chi phí"], ans: 1, group: "A" },
+            { id: 11, q: "Nhân tố nào dưới đây không tác động trực tiếp đến tổng lợi nhuận trước thuế?", options: ["Doanh thu bán hàng và cung cấp dịch vụ", "Chi phí tài chính", "Tỷ suất chi phí", "Giá vốn của hàng xuất bán"], ans: 2, group: "A" },
+            { id: 12, q: "Tổng lợi nhuận thuần từ hoạt động kinh doanh không chịu tác động trực tiếp của nhân tố nào dưới đây?", options: ["Giá vốn của hàng xuất bán", "Chi phí bán hàng", "Chi phí quản lý doanh nghiệp", "Chi phí khác"], ans: 3, group: "A" },
+            { id: 13, q: "Nhân tố nào dưới đây không tác động trực tiếp đến tổng số lợi nhuận thuần từ hoạt động kinh doanh?", options: ["Doanh thu hoạt động tài chính", "Doanh thu thuần", "Thu nhập khác", "Doanh thu bán hàng và cung cấp dịch vụ"], ans: 2, group: "A" },
+            { id: 14, q: "Lợi nhuận thuần từ hoạt động kinh doanh chịu sự tác động chủ yếu của nhân tố nào dưới đây?", options: ["Thu nhập khác và chi phí khác", "Thu nhập khác", "Giá vốn của hàng xuất bán", "Chi phí khác"], ans: 2, group: "A" },
+            { id: 15, q: "Lợi nhuận bán hàng chịu sự tác động chủ yếu của nhân tố nào dưới đây?", options: ["Doanh thu thuần từ bán hàng và cung cấp dịch vụ", "Doanh thu hoạt động tài chính", "Thu nhập khác", "Chi phí tài chính"], ans: 0, group: "A" },
+            { id: 16, q: "Nhân tố nào dưới đây không tác động trực tiếp đến lợi nhuận bán hàng?", options: ["Doanh thu thuần từ bán hàng và cung cấp dịch vụ", "Doanh thu hoạt động tài chính", "Giá vốn của hàng xuất bán", "Chi phí bán hàng phân bổ cho hàng xuất bán."], ans: 1, group: "A" },
+            { id: 17, q: "Chi phí nhân công trực tiếp trong giá thành sản xuất sản phẩm chịu tác động của nhân tố nào sau đây?", options: ["Năng suất lao động của công nhân sản xuất trực tiếp", "Giá vật liệu mua vào", "Mức hao hụt về vật liệu nhập kho", "Giá trị phế liệu thải loại"], ans: 0, group: "A" },
+            { id: 18, q: "Xét về mức độ ảnh hưởng, nhân tố mức tiêu hao về vật liệu ảnh hưởng như thế nào đến khoản chi vật liệu trong giá thành sản xuất sản phẩm?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng tỉ lệ nghịch."], ans: 0, group: "A" },
+            { id: 19, q: "Xét về mức độ, nhân tố giá vật liệu xuất dùng ảnh hưởng như thế nào đến khoản chi vật liệu trong giá thành sản xuất sản phẩm?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng tỉ lệ nghịch"], ans: 0, group: "A" },
+            { id: 20, q: "Biện pháp quan trọng nào sau đây để giảm được mức tiêu hao nguyên vật liệu?", options: ["Cải tiến mẫu mã sản phẩm.", "Giảm giá vật liệu mua vào.", "Sử dụng vật liệu rẻ tiền để thay thế", "Giảm mức hao hụt vật liệu trong khi thu mua vật liệu"], ans: 0, group: "A" },
+            { id: 21, q: "Nhân tố nào sau đây ảnh hưởng đến chi phí bán hàng?", options: ["Chi phí trích lập dự phòng nợ phải thu khó đòi", "Chi phí về hoa hồng môi giới hàng bán", "Tiền thuế môn bài", "Chi phí khấu hao TSCĐ phục vụ quản lý doanh nghiệp"], ans: 1, group: "A" },
+            { id: 22, q: "Nguyên nhân nào dưới đây được đánh giá là nguyên nhân chủ quan ảnh hưởng đến doanh thu bán hàng?", options: ["Nguyên nhân thuộc về bản thân doanh nghiệp", "Nguyên nhân thuộc về người mua", "Nguyên nhân thuộc nhà nước", "Nguyên nhân thuộc đối thủ cạnh tranh"], ans: 0, group: "A" },
+            { id: 23, q: "Xét về mức độ, khối lượng (số lượng) hàng hoá bán ra ảnh hưởng như thế nào đến lợi nhuận bán hàng?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ nghịch"], ans: 0, group: "A" },
+            { id: 24, q: "Nhân tố nào sau đây ảnh hưởng đến chi phí tài chính?", options: ["Chi phí phát hành trái phiếu", "Chi phí lãi vay", "Chi phí thuê văn phòng", "Chi phí thu hồi công nợ"], ans: 1, group: "A" },
+            { id: 25, q: "Xét về mức độ, kết cấu mặt hàng bán ra ảnh hưởng như thế nào đến lợi nhuận bán hàng?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng tỉ lệ thuận", "Vừa thuận chiều, vừa nghịch chiều", "Không ảnh hưởng đến lợi nhuận bản hàng"], ans: 2, group: "A" },
+            { id: 26, q: "Doanh thu hoạt động tài chính chịu sự tác động của nhân tố nào dưới đây?", options: ["Chiết khấu thanh toán cho người mua hàng của doanh nghiệp", "Chiết khấu thương mại cho người mua hàng của doanh nghiệp", "Chiết khấu thanh toán được hưởng khi doanh nghiệp mua hàng", "Khoản giảm giá hàng bán"], ans: 2, group: "A" },
+            { id: 27, q: "Số lượng sản phẩm bán ra chịu sự ảnh hưởng trực tiếp của nhân tố nào dưới đây?", options: ["Chất lượng sản phẩm", "Chi phí quản lý doanh nghiệp", "Chính sách mua hàng", "Chiết khấu thanh toán cho khách hàng"], ans: 0, group: "A" },
+            { id: 28, q: "Doanh thu bán hàng chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Chính sách mua hàng", "Chính sách bán hàng", "Chiết khấu thanh toán cho khách hàng", "Chi phí dịch vụ mua ngoài"], ans: 1, group: "A" },
+            { id: 29, q: "Thông tin của phân tích tình hình tài chính doanh nghiệp được sự quan tâm chủ yếu của đối tượng nào dưới đây?", options: ["Người mua hàng", "Các nhà đầu tư, các nhà cho vay", "Các cơ quan quản lý nhà nước thuộc đơn vị hành chính sự nghiệp", "Người bán hàng"], ans: 1, group: "A" },
+            { id: 30, q: "Để phân tích tình hình tài chính doanh nghiệp, người ta phân tích nội dung chủ yếu nào dưới đây?", options: ["Phân tích tình hình tài sản và nguồn vốn", "Phân tích tình hình tổ chức sản xuất kinh doanh.", "Phân tích đánh giá kết quả lao động", "Phân tích đánh giá việc lựa chọn nhà cung cấp"], ans: 0, group: "A" },
+            { id: 31, q: "Để phân tích, đánh giá thực trạng tình hình tài chính doanh nghiệp, cần thiết phải phân tích nội dung chủ yếu nào dưới đây?", options: ["Phân tích tình hình lao động", "Phân tích rủi ro tài chính", "Phân tích môi trường kinh doanh", "Phân tích người mua hàng"], ans: 1, group: "A" },
+            { id: 32, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán tổng quát của doanh nghiệp?", options: ["Tài sản ngắn hạn", "Tài sản dài hạn", "Nợ phải trả", "Vốn chủ sở hữu"], ans: 2, group: "A" },
+            { id: 33, q: "Nếu lượng dự trữ hàng tồn kho quá mức cần thiết sẽ gây ra tác động tiêu cực nào cho doanh nghiệp?", options: ["Tăng chi phí quản lý doanh nghiệp", "Tăng chi phí bảo quản vật tư hàng hóa", "Tăng chi phí bán hàng", "Tăng chi phí khác"], ans: 1, group: "A" },
+            { id: 34, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán hiện thời của doanh nghiệp?", options: ["Tài sản dài hạn", "Vốn chủ sở hữu", "Tài sản ngắn hạn", "Nợ phải trả"], ans: 2, group: "A" },
+            { id: 35, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán nhanh của doanh nghiệp?", options: ["Vay dài hạn", "Hàng tồn kho", "Tiền và tương đương tiền", "Vốn chủ sở hữu"], ans: 2, group: "A" },
+            { id: 36, q: "Khi phân tích nợ phải trả, cần phân tích nội dung nào là chủ yếu?", options: ["Nợ phải thu ngắn hạn và dài hạn", "Nợ phải trả ngắn hạn và dài hạn", "Vốn chủ sở hữu.", "Tài sản ngắn hạn và dài hạn"], ans: 1, group: "A" },
+            { id: 37, q: "Khi phân tích nguồn vốn chủ sở hữu, cần phân tích nội dung chủ yếu nào sau đây?", options: ["Vốn góp của chủ sở hữu", "Nguồn vốn tín dụng", "Nguồn vốn đi chiếm dụng;", "Nguồn vốn vay"], ans: 0, group: "A" },
+            { id: 38, q: "Để tiến hành phân tích tình hình đầu tư và nguồn tự tài trợ, cần phân tích nội dung chủ yếu nào sau đây?", options: ["Phân tích, đánh giá khái quát và đánh giá cụ thể tình hình đầu tư", "Phân tích, đánh giá môi trường đầu tư", "Phân tích đánh giá chính sách đầu tư", "Phân tích môi trường kinh doanh"], ans: 0, group: "A" },
+            { id: 39, q: "Để đánh giá khái quát tình hình đầu tư, cần đánh giá nội dung chủ yếu nào sau đây?", options: ["Đánh giá về hướng đầu tư (đầu tư vào đâu)", "Đánh giá hiệu quả đầu tư", "Đánh giá về thời hạn thu hồi vốn đầu tư", "Đánh giá tỷ suất lợi nhuận trên vốn đầu tư"], ans: 0, group: "A" },
+            { id: 40, q: "Tỷ suất nào dưới đây được sử dụng để đánh giá cụ thể tình hình đầu tư?", options: ["Tỷ suất đầu tư tài chính", "Tỷ suất lợi nhuận trên vốn đầu tư", "Tỷ suất vốn đầu tư trên vốn chủ sở hữu", "Tỷ suất lợi nhuận trên vốn đầu tư tài chính ngắn hạn và dài hạn"], ans: 0, group: "A" },
+            { id: 41, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất đầu tư tài chính?", options: ["Tổng tài sản", "Tài sản ngắn hạn", "Đầu tư tài chính ngắn hạn", "Đầu tư tài chính dài hạn"], ans: 1, group: "A" },
+            { id: 42, q: "Chỉ tiêu nào dưới không được sử dụng để xác định tỷ suất đầu tư về TSCĐ hữu hình?", options: ["Tổng tài sản cố định và đầu tư dài hạn", "Tổng tài sản", "TSCĐ hữu hình", "Chi phí XDCB dở dang"], ans: 0, group: "A" },
+            { id: 43, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất tự tài trợ cho đầu tư tài chính?", options: ["Nguồn vốn chủ sở hữu", "Tổng nguồn vốn", "Đầu tư tài chính ngắn hạn", "Đầu tư tài chính dài hạn"], ans: 1, group: "A" },
+            { id: 44, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất tự tài trợ về TSCĐ hữu hình?", options: ["Tổng nguồn vốn", "Nguồn vốn chủ sở hữu", "TSCĐ hữu hình", "Chi phí XDCB dở dang"], ans: 0, group: "A" },
+            { id: 45, q: "Chỉ tiêu nào dưới đây không được sử dụng để đánh giá hiệu quả của vốn đầu tư (nhìn từ quan điểm kinh tế) đối với các dự án đầu tư riêng biệt?", options: ["Tỷ suất lợi nhuận trên vốn đầu tư", "Tỷ suất đầu tư ngắn hạn và dài hạn", "Thời hạn thu hồi vốn đầu tư", "Mức nộp ngân sách do sử dụng vốn đầu tư"], ans: 1, group: "A" },
+            { id: 46, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán lãi vay của doanh nghiệp?", options: ["Lợi nhuận sau thuế", "Lợi nhuận trước thuế và lãi vay", "Tổng tài sản", "Nợ phải trả"], ans: 1, group: "A" },
+            { id: 47, q: "Để phân tích khả năng thanh toán tổng quát cần sử dụng chỉ tiêu nào dưới đây?", options: ["Nợ phải trả", "Nợ ngắn hạn", "Tài sản ngắn hạn", "Nợ dài hạn"], ans: 0, group: "A" },
+            { id: 48, q: "Để phân tích khả năng thanh toán nhanh không cần sử dụng chỉ tiêu nào dưới đây?", options: ["Nợ ngắn hạn", "Tài sản ngắn hạn", "Hàng tồn kho", "Nợ phải trả"], ans: 3, group: "A" },
+            { id: 49, q: "Để phân tích khả năng thanh toán hiện thời cần sử dụng chỉ tiêu nào dưới đây?", options: ["Tài sản dài hạn", "Khoản nhận ký quỹ", "Nợ ngắn hạn", "Nợ dài hạn"], ans: 2, group: "A" },
+            { id: 50, q: "Để phân tích khả năng thanh toán tức thời cần sử dụng chỉ tiêu dưới đây?", options: ["Hàng tồn kho", "Tiền và các khoản tương đương tiền", "Các khoản phải thu ngắn hạn", "Nợ dài hạn"], ans: 1, group: "A" },
+            { id: 51, q: "Chỉ tiêu nào dưới đây không được sử dụng để phân tích hiệu quả sử dụng vốn lưu động?", options: ["Mức nộp ngân sách nhà nước", "Mức doanh thu tính cho một đồng vốn lưu động", "Số vốn tiết kiệm hay lãng phí vốn lưu động", "Mức giá trị sản xuất tính cho một đồng vốn lưu động"], ans: 0, group: "A" },
+            { id: 52, q: "Nguyên nhân chủ yếu nào dưới đây ảnh hưởng đến mức tiêu hao về nguyên vật liệu?", options: ["Do thiết kế sản phẩm", "Do công tác an toàn lao động", "Do sử dụng vật liệu thay thế", "Do công tác mua hàng"], ans: 0, group: "A" },
+            { id: 53, q: "Nhân tố nào dưới đây tác động trực tiếp đến ROA của doanh nghiệp?", options: ["Hệ số tài sản trên vốn CSH", "Mức độ sử dụng nợ trong doanh nghiệp", "Số vòng quay toàn bộ tài sản", "Hệ số nợ trên tài sản"], ans: 2, group: "A" },
+            { id: 54, q: "Nhân tố nào dưới đây không tác động trực tiếp đến ROE của doanh nghiệp?", options: ["Mức độ sử dụng nợ trong doanh nghiệp", "Tỷ suất lợi nhuận doanh thu", "Số vòng quay toàn bộ tài sản", "Tỷ suất chi phí doanh thu"], ans: 3, group: "A" },
+            { id: 55, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên tổng tài sản (ROA) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Tỷ suất chi phí trên doanh thu", "Tỷ suất lợi nhuận trên vốn lưu động", "Tỷ suất lợi nhuận doanh thu", "Tỷ suất lợi nhuận trên vốn cố định"], ans: 2, group: "A" },
+            { id: 56, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên tổng tài sản (ROA) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Số vòng quay vốn lưu động", "Số vòng quay toàn bộ tài sản", "Số vòng quay vốn cố định", "Số vòng quay hàng tồn kho"], ans: 1, group: "A" },
+            { id: 57, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên vốn chủ sở hữu (ROE) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Tỷ suất giá vốn hàng bán trên doanh thu", "Tỷ suất lợi nhuận trên tài sản (ROA)", "Tỷ suất lợi nhuận trên vốn lưu động", "Tỷ suất lợi nhuận trên vốn cố định"], ans: 1, group: "A" },
+            { id: 58, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên vốn chủ sở hữu (ROE) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Hệ số nợ ngắn hạn", "Hệ số thanh toán lãi vay", "Hệ số nợ", "Hệ số thu hồi nợ"], ans: 2, group: "A" },
+
+            // NHÓM B (59-96)
+            { id: 59, q: "Phương pháp số chênh lệch được sử dụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ tổng số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ hiệu số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tổng số và thương số với nhau để hình thành chỉ tiêu phân tích"], ans: 1, group: "B" },
+            { id: 60, q: "Phương pháp thay thế liên hoàn không được sử dụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ tổng số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ kết hợp cả tích và thương số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ thương số với nhau để hình thành chỉ tiêu phân tích"], ans: 0, group: "B" },
+            { id: 61, q: "Phương pháp cân đối được sử sụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ thương số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ kết hợp cả tích và thương số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tổng đại số với nhau để hình thành chỉ tiêu phân tích"], ans: 3, group: "B" },
+            { id: 62, q: "Nguyên nhân chủ yếu nào dưới đây ảnh hưởng đến giá mua của vật liệu xuất dùng?", options: ["Do nguồn mua, phương thức mua", "Do chất lượng của công tác sản xuất", "Do chi phí bốc xếp thuê kho bãi", "Do chi phí vận chuyển hàng mua"], ans: 0, group: "B" },
+            { id: 63, q: "Phương pháp so sánh không thể sử dụng trong trường hợp nào sau đây?", options: ["Tồn tại một chỉ tiêu, đại lượng cần so sánh", "Tồn tại ít nhất hai chỉ tiêu hoặc hai đại lượng cần so sánh", "Các chỉ tiêu, các đại lượng khi so sánh với nhau có cùng một nội dung kinh tế", "Các chỉ tiêu, các đại lượng khi so sánh với nhau có cùng một đơn vị đo lường"], ans: 0, group: "B" },
+            { id: 64, q: "Phương pháp phân tích tài chính Dupont được sử dụng để phân tích chỉ tiêu tài chính nào sau đây?", options: ["ROE", "RI", "ROI", "EPS"], ans: 0, group: "B" },
+            { id: 65, q: "Chỉ tiêu nào sau đây phản ánh hiệu quả sinh lời của tài sản?", options: ["ROA", "ROS", "ROE", "EBIT"], ans: 0, group: "B" },
+            { id: 66, q: "Để đánh giá sự biến động của chỉ tiêu cần phân tích, người ta sử dụng phương pháp nào?", options: ["Phương pháp so sánh", "Phương pháp số chênh lệch", "Phương pháp thay thế liên hoàn", "Phương pháp cân đối"], ans: 0, group: "B" },
+            { id: 67, q: "Chi phí sản xuất chung chịu sự tác động của nhân tố nào dưới đây?", options: ["Chi phí nguyên vật liệu sử dụng để sản xuất ra sản phẩm", "Chi phí tiền lương của công nhân sản xuất trực tiếp", "Chi phí khấu hao TSCĐ phục vụ sản xuất ra sản phẩm", "Chi phí khấu hao TSCĐ phục vụ quản lý doanh nghiệp"], ans: 2, group: "B" },
+            { id: 68, q: "Doanh nghiệp có hệ số khả năng thanh toán hiện thời là 1,2, phân tích nào sau đây là đúng?", options: ["Giá trị tài sản ngắn hạn lớn hơn nợ ngắn hạn, doanh nghiệp có khả năng thanh toán các khoản nợ ngắn hạn", "Giá trị tài sản dài hạn nhỏ hơn nguồn vốn dài hạn, doanh nghiệp không có khả năng thanh toán các khoản nợ dài hạn", "Giá trị tài sản ngắn hạn nhỏ hơn nợ ngắn hạn, doanh nghiệp không có khả năng thanh toán các khoản nợ ngắn hạn", "Giá trị tài sản dài hạn lớn hơn nguồn vốn dài hạn, doanh nghiệp có khả năng thanh toán các khoản nợ dài hạn"], ans: 0, group: "B" },
+            { id: 69, q: "Một doanh nghiệp có ROS = 8%. Điều này có nghĩa là:", options: ["Cứ đưa 100 đồng tài sản vào SXKD, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Trong 100 đồng doanh thu thuần bán hàng, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Cứ đưa 100 đồng vốn chủ sở hữu vào SXKD, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Trong 100 đồng doanh thu bán hàng, doanh nghiệp tạo ra 8 đồng doanh thu thuần"], ans: 1, group: "B" },
+            { id: 70, q: "Doanh nghiệp A có ROA = 10%, trong khi doanh nghiệp B có ROA = 6%. Nếu các yếu tố khác tương đương, nhận định nào sau đây phù hợp nhất?", options: ["Doanh nghiệp A sử dụng tài sản hiệu quả hơn trong việc tạo ra lợi nhuận", "Doanh nghiệp B sử dụng vốn chủ sở hữu hiệu quả hơn", "Doanh nghiệp A chắc chắn có ROS cao hơn doanh nghiệp B", "Doanh nghiệp B chắc chắn có mức lợi nhuận sau thuế cao hơn A"], ans: 0, group: "B" },
+            { id: 71, q: "Doanh nghiệp X có ROA = 8% nhưng ROE = 16%. Nhận định nào sau đây có khả năng giải thích phù hợp nhất?", options: ["Doanh nghiệp không sử dụng nợ trong hoạt động kinh doanh", "Doanh nghiệp sử dụng nợ (đòn bẩy tài chính) trong hoạt động kinh doanh, làm ROE cao hơn ROA", "Doanh nghiệp chắc chắn có ROS rất cao", "Doanh nghiệp có khả năng thanh toán ngắn hạn rất tốt"], ans: 1, group: "B" },
+            { id: 72, q: "Công ty có thể cải thiện khả năng thanh toán các khoản nợ ngắn hạn bằng cách nào sau đây?", options: ["Giảm dự trữ hàng tồn kho", "Tiếp tục vay ngắn hạn ngân hàng", "Thu hồi các khoản nợ phải thu", "Vay dài hạn lấy tiền để trả nợ ngắn hạn"], ans: 3, group: "B" },
+            { id: 73, q: "Công ty X có bảng số liệu: TS ngắn hạn (N: 780, N+1: 900, N+2: 1.250); Nợ ngắn hạn (N: 400, N+1: 500, N+2: 700). Hệ số thanh toán hiện thời bình quân ngành là 1,7. Nhận xét nào đúng?", options: ["Năng lực thanh toán nợ ngắn hạn có xu hướng giảm qua các năm, luôn ở mức thấp hơn mức trung bình ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng giảm qua các năm, nhưng luôn ở mức cao hơn mức trung bình của ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng tăng qua các năm và luôn ở mức cao hơn mức trung bình ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng tăng qua các năm, luôn ở mức thấp hơn mức trung bình ngành"], ans: 1, group: "B" },
+            { id: 74, q: "Công ty X: Doanh thu thuần năm N là 120.000, năm N-1 là 90.000 (triệu đ). Phân tích nào sau đây là đúng?", options: ["Doanh thu thuần về bán hàng năm N tăng 30.000 so với năm N-1 với tỷ lệ tăng là 33,33%. cho thấy doanh nghiệp đã đẩy mạnh tiêu thụ sản phẩm ra thị trường và tăng giá bán sản phẩm.", "Doanh thu thuần về bán hàng năm N giảm 30.000 so với năm N-1, với tỷ lệ giảm là 33,33%.", "Doanh thu thuần về bán hàng năm N tăng 30.000 so với năm N-1, với tỷ lệ tăng là 25%.", "Doanh thu thuần về bán hàng năm N giảm 30.000 so với năm N-1, với tỷ lệ giảm là 25%."], ans: 0, group: "B" },
+            { id: 75, q: "Công ty X: Doanh thu năm N-1 (A: 60k, B: 100k, C: 240k). Năm N (A: 80k, B: 110k, C: 310k). Phân tích đúng về CH A năm N?", options: ["Tỷ trọng doanh thu cửa hàng A năm N là 16%, chiếm tỷ trọng khá lớn.", "Tỷ trọng doanh thu cửa hàng A năm N là 26%, chiếm tỷ trọng khá lớn.", "Tỷ trọng doanh thu bán hàng cửa hàng A trong tổng doanh thu năm N là 16%, chiếm tỷ trọng nhỏ trong tổng doanh thu của công ty.", "Tỷ trọng doanh thu cửa hàng A năm N là 20%, chiếm tỷ trọng nhỏ."], ans: 2, group: "B" },
+            { id: 76, q: "Công ty X: DT bán hàng N-1: 10.000, N: 12.000; Chiết khấu thương mại N-1: 300, N: 500. Tỷ lệ tăng/giảm DT thuần năm N so với N-1?", options: ["15%", "15,65%", "18%", "18,56%"], ans: 3, group: "B" },
+            { id: 77, q: "Công ty X: DT bán hàng N-1: 10.000, N: 12.000; Chiết khấu thương mại N-1: 500, N: 650. Phân tích đúng?", options: ["Chiết khấu thương mại năm N tăng 150 trđ so với N-1 với tỷ lệ tăng là 23,1%...", "Chiết khấu thương mại năm N tăng 150 trđ so với năm N-1 với tỷ lệ tăng là 30% làm cho doanh thu thuần về bán hàng và cung cấp dịch vụ giảm 150 trđ.", "Chiết khấu thương mại năm N giảm 150 trđ...", "Chiết khấu thương mại năm N tăng 150 trđ... làm doanh thu thuần tăng 150 trđ."], ans: 1, group: "B" },
+            { id: 78, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (300), N: (500); LN khác N-1: 100, N: 150. Phân tích đúng về LN bán hàng?", options: ["Lợi nhuận từ hoạt động bán hàng và cung cấp dịch vụ năm N giảm 700 trđ so với năm N-1 làm cho lợi nhuận trước thuế giảm 700 trđ.", "Lợi nhuận từ hoạt động bán hàng tăng 700 trđ...", "Lợi nhuận từ hoạt động bán hàng giảm 700 trđ làm LN trước thuế tăng 700 trđ.", "Lợi nhuận từ hoạt động bán hàng tăng 700 trđ..."], ans: 0, group: "B" },
+            { id: 79, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (500), N: (300); LN khác N-1: 200, N: 150. Phân tích đúng về LN tài chính?", options: ["Khoản lỗ từ hoạt động tài chính năm N tăng 200 trđ... làm LN trước thuế tăng 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N giảm 200 trđ... làm LN trước thuế giảm 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N tăng 200 trđ... làm LN trước thuế giảm 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N giảm 200 trđ so với năm N-1 làm cho lợi nhuận trước thuế tăng 200 trđ."], ans: 3, group: "B" },
+            { id: 80, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (500), N: (300); LN khác N-1: 200, N: 150. Phân tích đúng về LN khác?", options: ["Lợi nhuận khác năm N giảm 50 trđ làm LN trước thuế tăng 50 trđ.", "Lợi nhuận khác năm N giảm 50 trđ so với năm N-1 làm cho lợi nhuận trước thuế giảm 50 trđ.", "Lợi nhuận khác năm N tăng 50 trđ...", "Lợi nhuận khác năm N tăng 50 trđ... làm LN trước thuế tăng 50 trđ."], ans: 1, group: "B" },
+            { id: 81, q: "Công ty X: DTT bán hàng N-1: 5.000, N: 4.300; Giá vốn hàng bán N-1: 3.700, N: 3.540. Phân tích đúng về GVHB?", options: ["Giá vốn hàng bán năm N tăng 160 trđ...", "Giá vốn hàng bán năm N tăng 160 trđ...", "Giá vốn hàng bán năm N giảm 160 trđ... làm LNBH giảm 160 trđ.", "Giá vốn hàng bán năm N giảm 160 trđ so với năm N-1 làm cho lợi nhuận từ hoạt động bán hàng và cung cấp dịch vụ tăng 160 trđ."], ans: 3, group: "B" },
+            { id: 82, q: "Công ty X: Số lượng bán N-1: 300, N: 400. LN bán hàng đơn vị N-1: 55, N: 48 (1000đ). Ảnh hưởng của LN đơn vị đến tổng LN?", options: ["Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 2.800.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 2.600.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 3.500.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 3.000."], ans: 0, group: "B" },
+            { id: 83, q: "Tổng LNBH kế hoạch: 16.500, thực tế: 19.200. Tỷ lệ sản lượng thực tế/kế hoạch = 1,05. Mức ảnh hưởng của sản lượng đến LNBH?", options: ["655.000", "960.000", "785.000", "825.000"], ans: 3, group: "B" },
+            { id: 84, q: "Số lượng N: A(300), B(400). LNBH đơn vị N-1: A(55), B(50). Tỷ lệ sản lượng N/N-1 = 1,05. Tổng LNBH N-1 = 40.100. Mức ảnh hưởng kết cấu mặt hàng?", options: ["(5.705)", "(5.505)", "(5.605)", "(5.305)"], ans: 2, group: "B" },
+            { id: 85, q: "Số lượng N: A(300), B(400). Giá bán N-1: A(120), B(100). Giá bán N: A(130), B(120). Mức ảnh hưởng của đơn giá bán đến LNBH?", options: ["16.200", "14.000", "11.000", "12.300"], ans: 2, group: "B" },
+            { id: 86, q: "Tỷ suất LNST/DTT N-1 là 5%, năm N là 6,5%. Phân tích đúng?", options: ["Tỷ suất LNST/DTT năm N tăng 2,5%...", "Tỷ suất LNST/DTT năm N giảm 1,5%...", "Tỷ suất lợi nhuận sau thuế trên doanh thu thuần năm N tăng 1,5% so với năm N-1. Điều này cho thấy doanh nghiệp đã nỗ lực để cải thiện tình hình doanh thu, đồng thời chưa tiết kiệm các khoản chi phí trong sản xuất kinh doanh.", "Tỷ suất LNST/DTT năm N giảm 2,5%..."], ans: 2, group: "B" },
+            { id: 87, q: "Tỷ suất ROE năm N là 14%, năm N-1 là 15,4%. Phân tích đúng?", options: ["Tỷ suất ROE năm N tăng 1,4%...", "Tỷ suất ROE năm N giảm 1,4%... tạo ra nhiều hơn...", "Tỷ suất ROE năm N tăng 1,4%...", "Tỷ suất lợi nhuận sau thuế trên vốn chủ sở hữu năm N giảm 1,4% so với năm N-1. Như vậy, với 100 đồng vốn chủ sở hữu đưa vào kinh doanh năm N thì tạo ra ít hơn 1,4 đồng lợi nhuận sau thuế so với năm N-1."], ans: 3, group: "B" },
+            { id: 88, q: "Hệ số thanh toán tổng quát năm N là 0,9, N+1 là 0,8. Phân tích đúng?", options: ["Hệ số thanh toán hiện thời...", "Hệ số thanh toán tổng quát đều rất thấp ở cả hai năm (đều<1) thể hiện khả năng thanh toán của Công ty đối với các khoản nợ phải trả rất thấp và có xu hướng giảm (giảm 0,1 lần).", "Hệ số thanh toán tổng quát... đối với nợ dài hạn...", "Hệ số thanh toán nợ ngắn hạn..."], ans: 1, group: "B" },
+            { id: 89, q: "Hệ số thu hồi nợ năm N là 5, năm N+1 là 6. Đánh giá đúng?", options: ["Thể hiện Công ty thu hồi nợ năm N+1 chậm đi 1 lần...", "Thể hiện Công ty thu hồi nợ năm N+1 nhanh hơn 1 lần so với năm N, rủi ro tài chính giảm đi", "Thể hiện hàng tồn kho quay nhanh hơn...", "Thể hiện hàng tồn kho quay chậm hơn..."], ans: 1, group: "B" },
+            { id: 90, q: "Hệ số quay vòng hàng tồn kho năm N là 6, N+1 là 5. Nhận xét đúng?", options: ["Thu hồi nợ chậm đi...", "Thu hồi nợ nhanh hơn...", "Hàng tồn kho quay nhanh hơn...", "Thể hiện hàng tồn kho của Công ty năm N+1 quay chậm hơn 1 vòng so với năm N, rủi ro tài chính tăng lên"], ans: 3, group: "B" },
+            { id: 91, q: "Hệ số thanh toán hiện thời năm N là 1,5, N+1 là 1,8. Phân tích đúng?", options: ["Hệ số thanh toán hiện thời đều thấp...", "Hệ số thanh toán tổng quát...", "Hệ số thanh toán hiện thời đều >1 ở cả hai năm thể hiện khả năng thanh toán của Công ty đối với các khoản nợ ngắn hạn khá tốt và có xu hướng tăng (tăng 0,3 lần).", "Hệ số thanh toán tổng quát đều thấp..."], ans: 2, group: "B" },
+            { id: 92, q: "Năm N: Hệ số thanh toán tổng quát (Đầu N: 1.6, Cuối N: 1.7); Hiện thời (0.7 -> 0.8); Nhanh (0.2 -> 0.3). Phân tích đúng?", options: ["Hệ số thanh toán tổng quát tăng 0,1, đều lớn hơn 1 cả ở thời điểm đầu năm và cuối năm N, cho thấy khả năng thanh toán các khoản nợ phải trả năm N tại công ty X khá tốt.", "Hệ số thanh toán hiện thời... khá tốt.", "Công ty không có khả năng thanh toán...", "Khả năng thanh toán nhanh... khá tốt."], ans: 0, group: "B" },
+            { id: 93, q: "Năm N: Nợ/Tài sản (0.6 -> 0.7); Hệ số thu hồi nợ (36 -> 30); Thời hạn thu hồi nợ (10 -> 12 ngày). Đánh giá đúng?", options: ["Hệ số nợ/TS tăng làm rủi ro tài chính giảm.", "Hệ số thu hồi nợ giảm làm rủi ro tài chính giảm.", "Thời hạn thu hồi nợ tăng 2 ngày cho thấy rủi ro tài chính tăng lên", "Thời hạn thu hồi nợ tăng 2 ngày cho thấy rủi ro tài chính giảm đi"], ans: 2, group: "B" },
+            { id: 94, q: "Thanh toán lãi vay (2.5 -> 3); Quay vòng HTK (20 -> 30 vòng); Thời hạn quay vòng HTK (18 -> 12 ngày). Đánh giá đúng?", options: ["Thanh toán lãi vay tăng làm rủi ro tài chính tăng.", "Vòng quay HTK tăng làm rủi ro tài chính tăng.", "Thời hạn quay vòng HTK giảm làm rủi ro tài chính tăng.", "Thời hạn quay vòng hàng tồn kho giảm 6 ngày làm rủi ro tài chính giảm đi"], ans: 3, group: "B" },
+            { id: 95, q: "DTT tăng 25% (500tr); GVHB tăng 35% (490tr); CP bán hàng giảm 25% (-50tr); CP QLDN tăng 20% (20tr); LNBH tăng 13,3% (40tr). Phân tích đúng?", options: ["Tốc độ tăng GVHB cao hơn DTT...", "Doanh thu thuần bán hàng tăng 25%, trong khi chi phí bán hàng giảm 25%, đây là nguyên nhân chủ yếu làm lợi nhuận bán hàng tăng", "Tốc độ tăng CP QLDN thấp hơn DTT...", "Chi phí bán hàng giảm... làm LNBH giảm."], ans: 1, group: "B" },
+            { id: 96, q: "DTT giảm 25% (-500tr); GVHB giảm 28,6% (-400tr); CP bán hàng giảm 16,7% (-50tr); CP QLDN giảm 50% (-100tr); LNBH tăng 50% (50tr). Phân tích đúng?", options: ["Giá vốn hàng bán giảm 400 triệu đồng với tỷ lệ giảm là là 28,6%, cao hơn tốc độ giảm của doanh thu thuần bán hàng (25%) là nguyên nhân chính làm lợi nhuận bán hàng tăng.", "CP QLDN giảm 50% là nguyên nhân chính...", "CP bán hàng giảm 16,7% làm LNBH tăng.", "CP QLDN giảm 50% làm LNBH giảm."], ans: 0, group: "B" }
+        ];
+
+        // State variables
+        let appState = {
+            currentIndex: 0,
+            answers: {}, // { questionId: selectedOptionIndex }
+            bookmarks: new Set(),
+            mode: 'practice', // 'practice' or 'exam'
+            filter: 'all', // 'all', 'groupA', 'groupB', 'wrong', 'unanswered', 'bookmarked'
+            examSubmitted: false
+        };
+
+        // DOM Elements
+        const questionText = document.getElementById('questionText');
+        const questionCategory = document.getElementById('questionCategory');
+        const questionGroup = document.getElementById('questionGroup');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const gridMatrix = document.getElementById('gridMatrix');
+        const btnBookmark = document.getElementById('btnBookmark');
+
+        // Stats elements
+        const statCorrect = document.getElementById('statCorrect');
+        const statWrong = document.getElementById('statWrong');
+        const statProgress = document.getElementById('statProgress');
+
+        // Initialize App
+        function initApp() {
+            // Load bookmarks from local storage
+            const savedBookmarks = localStorage.getItem('eduquiz_bookmarks');
+            if (savedBookmarks) {
+                appState.bookmarks = new Set(JSON.parse(savedBookmarks));
+            }
+            renderGrid();
+            loadQuestion(appState.currentIndex);
+            updateStats();
+        }
+
+        // Get filtered questions array
+        function getFilteredQuestions() {
+            return rawQuestions.filter(q => {
+                if (appState.filter === 'groupA') return q.group === 'A';
+                if (appState.filter === 'groupB') return q.group === 'B';
+                if (appState.filter === 'wrong') return appState.answers[q.id] !== undefined && appState.answers[q.id] !== q.ans;
+                if (appState.filter === 'unanswered') return appState.answers[q.id] === undefined;
+                if (appState.filter === 'bookmarked') return appState.bookmarks.has(q.id);
+                return true;
+            });
+        }
+
+        // Load Question to UI
+        function loadQuestion(index) {
+            const filtered = getFilteredQuestions();
+            if (filtered.length === 0) {
+                questionText.innerText = "Không có câu hỏi nào khớp với bộ lọc!";
+                optionsContainer.innerHTML = "";
+                questionCategory.innerText = "0 / 0";
+                return;
+            }
+
+            if (index < 0) index = 0;
+            if (index >= filtered.length) index = filtered.length - 1;
+            appState.currentIndex = index;
+
+            const q = filtered[index];
+            questionCategory.innerText = `Câu ${q.id} / 96`;
+            questionGroup.innerText = `Nhóm ${q.group} - ${q.group === 'A' ? 'Trung bình' : 'Khó'}`;
+            questionText.innerText = q.q;
+
+            // Bookmark status
+            if (appState.bookmarks.has(q.id)) {
+                btnBookmark.className = "text-amber-400 text-xl transition";
+            } else {
+                btnBookmark.className = "text-slate-300 hover:text-amber-400 dark:text-slate-600 dark:hover:text-amber-400 text-xl transition";
+            }
+
+            // Render Options
+            optionsContainer.innerHTML = "";
+            const selectedOpt = appState.answers[q.id];
+            const isAnswered = selectedOpt !== undefined;
+
+            const optionPrefixes = ["A", "B", "C", "D"];
+
+            q.options.forEach((optText, optIdx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-start space-x-3 group relative cursor-pointer ";
+                
+                // Styling based on state and mode
+                if (appState.mode === 'practice' && isAnswered) {
+                    if (optIdx === q.ans) {
+                        // Correct option ALWAYS GREEN if answered
+                        btn.className += "bg-emerald-50 border-emerald-500 text-emerald-900 dark:bg-emerald-950/60 dark:border-emerald-500 dark:text-emerald-200 font-medium shadow-xs";
+                    } else if (optIdx === selectedOpt && selectedOpt !== q.ans) {
+                        // Wrong option selected -> RED
+                        btn.className += "bg-rose-50 border-rose-500 text-rose-900 dark:bg-rose-950/60 dark:border-rose-500 dark:text-rose-200 font-medium shadow-xs";
+                    } else {
+                        // Normal unselected option
+                        btn.className += "border-slate-200 dark:border-slate-700 opacity-60 text-slate-500 dark:text-slate-400";
+                    }
+                } else if (appState.mode === 'exam' && appState.examSubmitted) {
+                    if (optIdx === q.ans) {
+                        btn.className += "bg-emerald-50 border-emerald-500 text-emerald-900 dark:bg-emerald-950/60 dark:border-emerald-500 dark:text-emerald-200 font-medium";
+                    } else if (optIdx === selectedOpt && selectedOpt !== q.ans) {
+                        btn.className += "bg-rose-50 border-rose-500 text-rose-900 dark:bg-rose-950/60 dark:border-rose-500 dark:text-rose-200 font-medium";
+                    } else {
+                        btn.className += "border-slate-200 dark:border-slate-700 opacity-60";
+                    }
+                } else if (isAnswered && optIdx === selectedOpt) {
+                    // Selected state in exam mode (before submit)
+                    btn.className += "bg-blue-50 border-blue-500 text-blue-900 dark:bg-blue-950/60 dark:border-blue-500 dark:text-blue-200 font-medium";
+                } else {
+                    // Default State
+                    btn.className += "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-200";
+                }
+
+                // Click event
+                btn.onclick = () => selectOption(q.id, optIdx);
+
+                // Option Badge (A, B, C, D)
+                let badgeClass = "w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 transition-colors ";
+                if (appState.mode === 'practice' && isAnswered) {
+                    if (optIdx === q.ans) badgeClass += "bg-emerald-500 text-white";
+                    else if (optIdx === selectedOpt && selectedOpt !== q.ans) badgeClass += "bg-rose-500 text-white";
+                    else badgeClass += "bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400";
+                } else if (isAnswered && optIdx === selectedOpt) {
+                    badgeClass += "bg-blue-600 text-white";
+                } else {
+                    badgeClass += "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 group-hover:bg-emerald-500 group-hover:text-white";
+                }
+
+                // Icon status
+                let statusIcon = "";
+                if (appState.mode === 'practice' && isAnswered) {
+                    if (optIdx === q.ans) statusIcon = `<i class="fa-solid fa-circle-check text-emerald-500 text-lg ml-auto"></i>`;
+                    else if (optIdx === selectedOpt && selectedOpt !== q.ans) statusIcon = `<i class="fa-solid fa-circle-xmark text-rose-500 text-lg ml-auto"></i>`;
+                }
+
+                btn.innerHTML = `
+                    <span class="${badgeClass}">${optionPrefixes[optIdx]}</span>
+                    <span class="text-sm pt-0.5 leading-snug flex-1">${optText}</span>
+                    ${statusIcon}
+                `;
+
+                optionsContainer.appendChild(btn);
+            });
+
+            renderGrid();
+        }
+
+        // Handle option selection
+        function selectOption(qId, optIdx) {
+            if (appState.mode === 'exam' && appState.examSubmitted) return;
+            
+            appState.answers[qId] = optIdx;
+            loadQuestion(appState.currentIndex);
+            updateStats();
+        }
+
+        // Navigation
+        function nextQuestion() {
+            const filtered = getFilteredQuestions();
+            if (appState.currentIndex < filtered.length - 1) {
+                loadQuestion(appState.currentIndex + 1);
+            }
+        }
+
+        function prevQuestion() {
+            if (appState.currentIndex > 0) {
+                loadQuestion(appState.currentIndex - 1);
+            }
+        }
+
+        function resetCurrentQuestion() {
+            const filtered = getFilteredQuestions();
+            if (filtered.length > 0) {
+                const qId = filtered[appState.currentIndex].id;
+                delete appState.answers[qId];
+                loadQuestion(appState.currentIndex);
+                updateStats();
+            }
+        }
+
+        function resetAll() {
+            if (confirm("Bạn có chắc chắn muốn xóa toàn bộ kết quả đã làm?")) {
+                appState.answers = {};
+                appState.examSubmitted = false;
+                loadQuestion(0);
+                updateStats();
+            }
+        }
+
+        // Render Matrix Grid Buttons
+        function renderGrid() {
+            gridMatrix.innerHTML = "";
+            const filtered = getFilteredQuestions();
+
+            filtered.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                const isSelected = idx === appState.currentIndex;
+                const userAns = appState.answers[q.id];
+                const isAnswered = userAns !== undefined;
+
+                let btnClass = "w-full aspect-square rounded-xl text-xs font-bold transition-all duration-150 flex items-center justify-center relative shadow-2xs ";
+
+                if (isSelected) {
+                    btnClass += "ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-slate-800 scale-105 z-10 ";
+                }
+
+                if (appState.mode === 'practice' && isAnswered) {
+                    if (userAns === q.ans) {
+                        btnClass += "bg-emerald-500 text-white shadow-emerald-200 dark:shadow-none";
+                    } else {
+                        btnClass += "bg-rose-500 text-white shadow-rose-200 dark:shadow-none";
+                    }
+                } else if (isAnswered) {
+                    btnClass += "bg-blue-600 text-white";
+                } else {
+                    btnClass += "bg-slate-100 dark:bg-slate-700/70 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300";
+                }
+
+                btn.className = btnClass;
+                btn.innerText = q.id;
+
+                // Bookmark Indicator Dot
+                if (appState.bookmarks.has(q.id)) {
+                    const dot = document.createElement('span');
+                    dot.className = "absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full border-2 border-white dark:border-slate-800";
+                    btn.appendChild(dot);
+                }
+
+                btn.onclick = () => loadQuestion(idx);
+                gridMatrix.appendChild(btn);
+            });
+        }
+
+        // Bookmark Toggle
+        function toggleBookmarkCurrent() {
+            const filtered = getFilteredQuestions();
+            if (filtered.length === 0) return;
+            const qId = filtered[appState.currentIndex].id;
+
+            if (appState.bookmarks.has(qId)) {
+                appState.bookmarks.delete(qId);
+            } else {
+                appState.bookmarks.add(qId);
+            }
+            localStorage.setItem('eduquiz_bookmarks', JSON.stringify([...appState.bookmarks]));
+            loadQuestion(appState.currentIndex);
+        }
+
+        // Stats Calculation
+        function updateStats() {
+            let correctCount = 0;
+            let wrongCount = 0;
+            const total = rawQuestions.length;
+
+            Object.keys(appState.answers).forEach(qId => {
+                const q = rawQuestions.find(item => item.id == qId);
+                if (q) {
+                    if (appState.answers[qId] === q.ans) correctCount++;
+                    else wrongCount++;
+                }
+            });
+
+            const answeredCount = Object.keys(appState.answers).length;
+            const progressPct = Math.round((answeredCount / total) * 100);
+
+            statCorrect.innerText = correctCount;
+            statWrong.innerText = wrongCount;
+            statProgress.innerText = `${progressPct}%`;
+        }
+
+        // Set App Mode
+        function setMode(mode) {
+            appState.mode = mode;
+            const practiceBtn = document.getElementById('modePractice');
+            const examBtn = document.getElementById('modeExam');
+            const examSubmitContainer = document.getElementById('examSubmitContainer');
+
+            if (mode === 'practice') {
+                practiceBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400";
+                examBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all";
+                examSubmitContainer.classList.add('hidden');
+            } else {
+                examBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400";
+                practiceBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all";
+                examSubmitContainer.classList.remove('hidden');
+            }
+            loadQuestion(appState.currentIndex);
+        }
+
+        // Submit Exam
+        function submitExam() {
+            appState.examSubmitted = true;
+            updateStats();
+            loadQuestion(appState.currentIndex);
+            alert(`Nộp bài thành công!\nSố câu đúng: ${statCorrect.innerText} / 96`);
+        }
+
+        // Set Filter
+        function setFilter(filterType) {
+            appState.filter = filterType;
+            
+            // Update Tab active UI
+            ['All', 'A', 'B'].forEach(type => {
+                const btn = document.getElementById(`filter${type}`);
+                if (btn) {
+                    if (filterType.toLowerCase().includes(type.toLowerCase())) {
+                        btn.className = "py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-xs text-emerald-600 dark:text-emerald-400 font-bold";
+                    } else {
+                        btn.className = "py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900";
+                    }
+                }
+            });
+
+            loadQuestion(0);
+        }
+
+        // Sidebar Toggle (Mobile)
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        }
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Start App
+        window.onload = initApp;
+    </script>
+</body>
+</html>
