@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn tập Khởi sự kinh doanh - 179 câu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{--card:#fff;--tx:#0f172a;--mu:#64748b;--br:#e2e8f0;--ob:#f8fafc;--g:#16a34a;--gb:#dcfce7;--r:#dc2626;--rb:#fee2e2;background:#f1f5f9;color:var(--tx);min-height:100vh}
+body.dark{--card:#111a2e;--tx:#e2e8f0;--mu:#94a3b8;--br:#243147;--ob:#16223c;--gb:rgba(22,163,74,.18);--rb:rgba(220,38,38,.18);background:#0b1220}
+.w{max-width:840px;margin:0 auto;padding:20px 14px 60px}
+.tb{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.bd{font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px}
+.lg{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff}
+.ib{width:40px;height:40px;border-radius:12px;border:1px solid var(--br);background:var(--card);color:var(--tx);cursor:pointer;font-size:17px}
+.card{background:var(--card);border:1px solid var(--br);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;font-weight:700;border-radius:14px;font-size:15px;padding:13px 24px;transition:.2s}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.bp{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff}
+.bg{background:var(--ob);color:var(--tx);border:1px solid var(--br)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--ob);border:1px solid var(--br);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:600;color:var(--mu)}
+.ct{text-align:center}
+h1{font-size:24px;margin:14px 0 8px}
+.sub{color:var(--mu);line-height:1.6;margin-bottom:20px}
+.st3{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+.st4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.st{background:var(--ob);border:1px solid var(--br);border-radius:14px;padding:14px}
+.st b{display:block;font-size:20px}
+.st span{font-size:12px;color:var(--mu)}
+.pbx{height:10px;background:var(--ob);border-radius:99px;overflow:hidden;margin:12px 0 18px}
+.pbx div{height:100%;background:linear-gradient(90deg,#4f46e5,#7c3aed);transition:width .4s}
+.qm{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.qtext{font-size:16.5px;font-weight:600;line-height:1.6;margin-bottom:16px;white-space:pre-line}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--ob);border:2px solid var(--br);border-radius:14px;padding:13px 15px;margin-bottom:11px;cursor:pointer;font-size:15px;line-height:1.5;color:var(--tx);transition:.15s}
+button.opt:hover:not(:disabled){border-color:#4f46e5}
+.opt:disabled{cursor:default}
+.lt{flex:0 0 30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--card);border:1px solid var(--br)}
+.cr{background:var(--gb)!important;border-color:var(--g)!important;color:var(--g)!important}
+.cr .lt{background:var(--g);color:#fff;border-color:var(--g)}
+.wr{background:var(--rb)!important;border-color:var(--r)!important;color:var(--r)!important}
+.wr .lt{background:var(--r);color:#fff;border-color:var(--r)}
+.fb{margin-top:4px;font-weight:700;padding:12px 16px;border-radius:12px;display:none}
+.fb.g{display:block;background:var(--gb);color:var(--g)}
+.fb.r{display:block;background:var(--rb);color:var(--r)}
+.nr{display:flex;justify-content:flex-end;margin-top:14px}
+.ring{position:relative;width:200px;height:200px;margin:0 auto 10px}
+.ring svg{transform:rotate(-90deg)}
+#rg{transition:stroke-dashoffset .9s ease}
+.rvv{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rvv b{font-size:40px}.rvv span{font-size:13px;color:var(--mu)}
+.msg{font-size:16px;font-weight:600;margin:6px 0 4px}
+.br2{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.wt{text-align:left;margin:20px 0 10px;font-size:16px}
+.wi{border:1px solid var(--br);border-radius:14px;padding:14px;margin-bottom:11px;background:var(--ob);text-align:left}
+.wq{font-weight:600;font-size:14px;margin-bottom:8px;line-height:1.5}
+.wa{font-size:13px;margin-top:4px}.wa.g{color:var(--g);font-weight:700}.wa.r{color:var(--r);font-weight:700}
+.allok{color:var(--g);font-weight:700;margin-top:16px}
+.rv{margin-bottom:14px}
+.rm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.cg{color:var(--g)!important;border-color:var(--g)!important}.cr2{color:var(--r)!important;border-color:var(--r)!important}
+.ro{cursor:default}
+@media(max-width:600px){.st4{grid-template-columns:1fr 1fr}h1{font-size:21px}.card{padding:18px}}
+.scr{display:none}
+</style>
+</head>
+<body>
+<div class="w">
+
+<div class="scr" id="home1" style="display:block">
+ <div class="tb"><div class="bd"><div class="lg">🚀</div> KSKD</div><button class="ib thm" onclick="theme()">🌙</button></div>
+ <div class="card ct">
+  <div style="font-size:50px">📝</div>
+  <h1>Ôn tập Khởi sự kinh doanh</h1>
+  <p class="sub">Ngân hàng 179 câu trắc nghiệm<br>Đúng hiện <b style="color:var(--g)">XANH</b> · Sai hiện <b style="color:var(--r)">ĐỎ</b> · Điểm /10 · Làm lại câu sai</p>
+  <div class="st3">
+   <div class="st"><b>179</b><span>Tổng số câu</span></div>
+   <div class="st"><b>10</b><span>Thang điểm</span></div>
+  </div>
+  <p id="bl" style="color:var(--mu);font-weight:600;margin-bottom:16px">Chưa có lịch sử làm bài</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+   <button class="btn bp" onclick="start(0)">🚀 Bắt đầu làm bài</button>
+   <button class="btn bg" id="btrain" onclick="start(1)" disabled>🔄 Luyện câu đã sai (0)</button>
+  </div>
+ </div>
+</div>
+
+<div class="scr" id="quiz">
+ <div class="tb"><div class="bd"><div class="lg">🚀</div> KSKD</div>
+  <div style="display:flex;gap:8px"><button class="ib thm" onclick="theme()">🌙</button><button class="ib" onclick="exitQ()">✖</button></div></div>
+ <div class="card">
+  <div class="qm">
+   <span class="chip" id="cnt">Câu 1/179</span>
+   <span class="chip" id="okc">Đúng: 0</span>
+   <span class="chip" id="tm">⏱ 00:00</span>
+  </div>
+  <div class="pbx"><div id="pbr" style="width:0%"></div></div>
+  <div class="qtext" id="qt"></div>
+  <div id="ob"></div>
+  <div class="fb" id="fb"></div>
+  <div class="nr"><button class="btn bp" id="nx" style="display:none" onclick="next()">Câu tiếp theo →</button></div>
+ </div>
+</div>
+
+<div class="scr" id="res">
+ <div class="tb"><div class="bd"><div class="lg">📊</div> Kết quả</div><button class="ib thm" onclick="theme()">🌙</button></div>
+ <div class="card ct">
+  <div class="ring">
+   <svg width="200" height="200">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--ob)" stroke-width="14"/>
+    <circle id="rg" cx="100" cy="100" r="80" fill="none" stroke="url(#gd)" stroke-width="14" stroke-linecap="round" stroke-dasharray="503" stroke-dashoffset="503"/>
+    <defs><linearGradient id="gd"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+   </svg>
+   <div class="rvv"><b id="pt">0</b><span>điểm / 10</span></div>
+  </div>
+  <p class="chip" id="sub">Đúng 0/179 câu</p>
+  <p class="msg" id="msg"></p>
+  <div class="st4">
+   <div class="st"><b id="rc" style="color:var(--g)">0</b><span>Câu đúng</span></div>
+   <div class="st"><b id="rw" style="color:var(--r)">0</b><span>Câu sai</span></div>
+   <div class="st"><b id="ra">0%</b><span>Chính xác</span></div>
+   <div class="st"><b id="rt">00:00</b><span>Thời gian</span></div>
+  </div>
+  <div class="br2">
+   <button class="btn bp" id="bwr" style="display:none" onclick="start(1)">🔄 Làm lại câu sai</button>
+   <button class="btn bg" onclick="start(0)">📝 Làm lại toàn bộ</button>
+   <button class="btn bg" onclick="review()">👁 Xem lại bài làm</button>
+  </div>
+  <div id="wl"></div>
+ </div>
+</div>
+
+<div class="scr" id="rvw">
+ <div class="tb"><div class="bd"><div class="lg">👁</div> Xem lại bài làm</div><button class="ib" onclick="show('res')">↩</button></div>
+ <div id="rvb"></div>
+</div>
+
+</div>
+<script>
+var LT=["A","B","C","D","E"],order=[],cur=0,ans={},ok=0,wrong=[],sec=0,timer=0;
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function show(id){var a=document.querySelectorAll(".scr");for(var i=0;i<a.length;i++)a[i].style.display="none";$(id).style.display="block";window.scrollTo(0,0)}
+function bank(){try{return JSON.parse(localStorage.getItem("kskd_wrong")||"[]")}catch(e){return[]}}
+function saveB(b){try{localStorage.setItem("kskd_wrong",JSON.stringify(b))}catch(e){}}
+function fmt(s){return("0"+Math.floor(s/60)).slice(-2)+":"+("0"+s%60).slice(-2)}
+function start(f){order=f?bank().slice():Q.map(function(_,i){return i});
+if(!order.length){alert("Chưa có câu sai nào để luyện! Hãy làm bài trước nhé.");return}
+cur=0;ans={};ok=0;wrong=[];sec=0;clearInterval(timer);
+timer=setInterval(function(){sec++;$("tm").innerHTML="⏱ "+fmt(sec)},1000);
+show("quiz");draw()}
+function draw(){var q=Q[order[cur]];
+ $("cnt").innerHTML="Câu "+(cur+1)+"/"+order.length;
+ $("okc").innerHTML="Đúng: "+ok;
+ $("pbr").style.width=(cur/order.length*100)+"%";
+ $("qt").innerHTML=esc(q.t);
+var b="";for(var i=0;i<q.o.length;i++)b+='<button class="opt" onclick="pick('+i+')"><span class="lt">'+LT[i]+"</span><span>"+esc(q.o[i])+"</span></button>";
+ $("ob").innerHTML=b;
+ $("fb").className="fb";$("fb").innerHTML="";
+ $("nx").style.display="none";
+ $("nx").innerHTML=(cur+1==order.length)?"✅ Hoàn thành":"Câu tiếp theo →"}
+function pick(i){var q=Q[order[cur]],bs=$("ob").children;
+if(bs.length&&bs[0].disabled)return;
+for(var x=0;x<bs.length;x++)bs[x].disabled=true;
+ans[order[cur]]=i;
+if(i==q.a){bs[i].className="opt cr";ok++;$("fb").className="fb g";$("fb").innerHTML="✅ Chính xác!"}
+else{bs[i].className="opt wr";bs[q.a].className="opt cr";wrong.push(order[cur]);$("fb").className="fb r";$("fb").innerHTML="❌ Sai rồi! Đáp án đúng là "+LT[q.a]}
+ $("okc").innerHTML="Đúng: "+ok;
+ $("pbr").style.width=((cur+1)/order.length*100)+"%";
+ $("nx").style.display="inline-flex"}
+function next(){if(cur+1<order.length){cur++;draw()}else done()}
+function done(){
+clearInterval(timer);
+var n=order.length,pc=n?ok/n:0,pt=Math.round(pc*1000)/100,i,j;
+var b=bank(),f={};
+for(i=0;i<order.length;i++){var qi=order[i];if(ans[qi]==Q[qi].a)f[qi]=1}
+b=b.filter(function(x){return!f[x]});
+for(j=0;j<wrong.length;j++)if(b.indexOf(wrong[j])<0)b.push(wrong[j]);
+saveB(b);
+ $("pt").innerHTML=String(pt).replace(".",",");
+ $("sub").innerHTML="Đúng "+ok+"/"+n+" câu";
+ $("rc").innerHTML=ok;$("rw").innerHTML=n-ok;
+ $("ra").innerHTML=Math.round(pc*100)+"%";$("rt").innerHTML=fmt(sec);
+ $("msg").innerHTML=pc==1?"🏆 Hoàn hảo! 100% chính xác!":pc>=.8?"🎉 Giỏi lắm! Giữ phong độ nhé!":pc>=.5?"💪 Khá ổn! Luyện thêm câu sai nha!":"📚 Đừng nản, bấm Làm lại câu sai nhé!";
+var w=$("wl");w.innerHTML="";
+if(wrong.length){var hh="<h3 class='wt'>📌 "+wrong.length+" câu sai của bạn:</h3>";
+for(i=0;i<wrong.length;i++){var qj=wrong[i],q=Q[qj];
+hh+="<div class='wi'><div class='wq'>Câu "+(qj+1)+": "+esc(q.t)+"</div>";
+if(ans[qj]!=null)hh+="<div class='wa r'>❌ Bạn chọn: "+LT[ans[qj]]+"</div>";
+hh+="<div class='wa g'>✅ Đáp án đúng: "+LT[q.a]+". "+esc(q.o[q.a])+"</div></div>"}
+w.innerHTML=hh}else w.innerHTML="<p class='allok'>🎉 Không sai câu nào. Quá đỉnh!</p>";
+var bw=$("bwr");
+bw.style.display=wrong.length?"inline-flex":"none";
+bw.innerHTML="🔄 Làm lại câu sai ("+wrong.length+")";
+try{var C=503,rg=$("rg");rg.style.strokeDasharray=C;rg.style.strokeDashoffset=C;
+setTimeout(function(){rg.style.strokeDashoffset=C*(1-pc)},100)}catch(e){}
+try{var bs=parseFloat(localStorage.getItem("kskd_best")||"0");if(n==Q.length&&pt>bs)localStorage.setItem("kskd_best",String(pt))}catch(e){}
+show("res");home()}
+function home(){var b=bank();
+ $("btrain").innerHTML="🔄 Luyện câu đã sai ("+b.length+")";
+ $("btrain").disabled=!b.length;
+var t="";try{t=localStorage.getItem("kskd_best")}catch(e){}
+ $("bl").innerHTML=t?("🏆 Kỷ lục của bạn: "+t+" điểm"):"Chưa có lịch sử làm bài"}
+function review(){var h="";
+for(var i=0;i<order.length;i++){var qi=order[i],q=Q[qi],ua=ans[qi],gd=ua==q.a;
+h+="<div class='card rv'><div class='rm'><span class='chip'>Câu "+(qi+1)+"</span><span class='chip "+(gd?"cg":"cr2")+"'>"+(gd?"ĐÚNG ✔":"SAI ✘")+"</span></div>";
+h+="<div class='qtext'>"+esc(q.t)+"</div>";
+for(var j=0;j<q.o.length;j++){var c="opt ro";if(j==q.a)c+=" cr";else if(j==ua)c+=" wr";
+h+="<div class='"+c+"'><span class='lt'>"+LT[j]+"</span><span>"+esc(q.o[j])+"</span></div>"}
+h+="</div>"}
+ $("rvb").innerHTML=h;show("rvw")}
+function exitQ(){if(confirm("Thoát bài làm? Tiến độ lượt này sẽ mất.")){clearInterval(timer);show("home1");home()}}
+function theme(){var d=document.body.classList.toggle("dark");
+var a=document.querySelectorAll(".thm");for(var i=0;i<a.length;i++)a[i].innerHTML=d?"☀️":"🌙";
+try{localStorage.setItem("kskd_theme",d?"d":"l")}catch(e){}}
+try{if(localStorage.getItem("kskd_theme")=="d"){document.body.classList.add("dark");
+var a2=document.querySelectorAll(".thm");for(var i2=0;i2<a2.length;i2++)a2[i2].innerHTML="☀️"}}catch(e){}
+var Q=[
+{t:"Doanh nhân cần có phẩm chất gì để lập nghiệp?",o:["Có trách nhiệm, kiên quyết, bền bỉ, nhạy cảm và thích ứng","Thành ích, chân thành, tạc phong ý nghiệp","Ham học hỏi, thực tiến, sáng tạo, nhạy bén, thích ứng","Ham học hỏi, thực tiến, tự kiềm chế, có sức dưỡng"],a:2},
+{t:"Tại sao nghiên cứu môi trường ngành là công việc có ý nghĩa quan trọng trước khi lập nghiệp?",o:["Lường trước mức độ rủi ro và khuynh hướng thất bại ở các ngành khác nhau","Biết được những nhân tố tích cực và ảnh hưởng của chúng","Nhận ra được những nhân tố ngành để hoạch định chiến lược cạnh tranh","Biết được rủi ro đối với công việc kinh doanh tương lai"],a:2},
+{t:"Thiết kế cấu trúc tổ chức trong bản đề án kinh doanh để làm gì?",o:["Cho biết khi cần thì phải liên hệ với ai","Cho biết cách thức chọn người và sự ứng người điều hành của công ty","Thể hiện tính chất quy cụ nghiệp tức của những người sáng lập công ty","Thể hiện các trách nhiệm chủ chốt trong công ty và mối quan hệ"],a:3},
+{t:"Bảng tổng kết tài sản cá nhân cho biết thông tin?",o:["Tài sản của chủ doanh nghiệp sử dụng vào công việc kinh doanh","Phần trách nhiệm \u201chữu hạn\u201d mà chủ muốn cam kết","Tài sản còn lại (sau khi trừ nghĩa vụ tài chính) mà chủ doanh nghiệp có thể sử dụng","Cam kết của chủ doanh nghiệp đối với công việc kinh doanh"],a:3},
+{t:"Tìm câu trả lời sai: Bản kế hoạch kinh doanh bao gồm:",o:["Phần nêu ý tưởng kinh doanh","Phần tìm kiếm trợ giúp kiểm tra bản kế hoạch kinh doanh","Phần đánh giá thị trường","Phần tóm tắt tổng hợp"],a:1},
+{t:"Mục đích của việc lập bản kế hoạch hành động:",o:["Giúp bạn gắn mình với công việc","Giúp bạn thực hiện công việc theo đúng thời điểm thích hợp","Giúp bạn biết được ai sẽ làm gì và phải làm khi nào","Giúp bạn thực hiện công việc đúng trình tự, đúng thời điểm, tránh quên bất kỳ việc nào cần làm"],a:2},
+{t:"Điều kiện chính để vay vốn kinh doanh từ người thân, bạn bè:",o:["Cung cấp và giải trình bản kế hoạch kinh doanh khả thi đó","Giải thích cho họ biết những rủi ro của việc đầu tư vào kinh doanh","Giải thích cho họ biết đây là cách phổ biến để bắt đầu kinh doanh","Thông báo điều dặn sự tiến triển trong hoạt động kinh doanh của bạn"],a:1},
+{t:"Phương pháp gạt hải nhanh là:",o:["Biện pháp làm tăng khả năng các đối thủ khác nhanh vào thị trường với giá thấp hơn","Phương pháp thu lợi nhuận nhanh nhất","Phương pháp áp dụng thu lợi nhuận nhanh khi sản phẩm có ưu thế cạnh tranh hơn đối thủ","Phương pháp định giá hấp dẫn hơn so với đối thủ"],a:2},
+{t:"Những yếu tố quyết định nhất giúp bạn thành công trong kinh doanh",o:["Quyết tâm, động cơ, chữ tín","Có quyết tâm, động cơ, sức khỏe, kỹ năng quản lý","Quyết tâm, động cơ, sức khỏe","Có khả năng quản lý kinh doanh, có tay nghề kỹ thuật"],a:1},
+{t:"Tìm câu trả lời sai: Trong nền kinh tế thị trường:",o:["Kinh doanh là điều không tránh khỏi","Kinh doanh có cạnh tranh là có rủi ro","Cạnh tranh trong kinh doanh là đường đầu voi mạo hiểm, là mạnh dạn","Đối với người tài năng muốn khẳng định mình thì cạnh tranh có sức hấp dẫn lớn"],a:2},
+{t:"Điều quan tâm trước tiên khi đưa ra ý tưởng kinh doanh mới:",o:["Khách hàng của họ là ai","Thời gian và địa điểm nào là thuận tiện nhất","Loại hàng hóa nào thị trường cần","Phương pháp bán ra sao"],a:2},
+{t:"Các điều kiện cần có khi vay vốn kinh doanh từ ngân hàng",o:["Tư chất của người vay vốn, tài sản thế chấp của người vay nợ","Khả năng thanh toán, thời hạn vay nợ, tài sản thế chấp, tính khả thi của phương án kinh doanh","Tình trạng công việc kinh doanh đề xuất, tài sản thế chấp","Trình độ năng lực của người vay vốn, chứng minh được đã thành công trong quá khứ"],a:1},
+{t:"Tầm quan trọng của marketing trong kinh doanh là:",o:["Tạo và tìm được khách hàng, thông qua việc thỏa mãn nhu cầu của họ để thu lợi nhuận","Đáp ứng một cách tốt nhất trong điều kiện hiện có","Cung cấp thông tin và thu hút khách hàng để họ mua sản phẩm","Đưa sản phẩm, dịch vụ đến với khách hàng một cách nhanh nhất"],a:0},
+{t:"Điểm cơ bản nhất làm cho một chủ doanh nghiệp kém thành công:",o:["Chưa làm tốt công tác tuyển dụng, đào tạo nhân viên","Cung cách đối xử, ngoại giao với bán hàng, đối tác chưa thuyết phục, chưa tâm lý với khách hàng","Chưa năng động sáng tạo và đổi mới kịp thời, thiếu tố chất của một nhà doanh nghiệp","Quản trị nhân sự yếu kém, xếp chưa đúng người, đúng chỗ"],a:2},
+{t:"Tồn kho là:",o:["Tất cả các hàng hóa đang có trong kho hoặc trên các quầy bán của doanh nghiệp cũng như ký gửi ở cửa hàng của người khác","Các sản phẩm dở dang (chưa hoàn chỉnh) và các sản phẩm hoàn chỉnh chưa bán hoặc chưa bán được đang lưu giữ tại doanh nghiệp","Một khoản tiền đầu tư dưới dạng hàng hóa","Việc lưu kho các nhiên liệu, nguyên vật liệu dùng để làm ra sản phẩm, dịch vụ của doanh nghiệp"],a:0},
+{t:"Mục đích của việc kiểm kê tồn kho là:",o:["Xác định được số lượng, chất lượng, chủng loại, giá trị thành tiền đối với nguyên vật liệu và hàng hóa của doanh nghiệp","Ghi số lượng và giá vốn của từng mặt hàng có trong thể kho vào danh mục kiểm kê","Xác định được chênh lệch giữa số liệu kiểm kê và số liệu trên kế hoạch","Cân dòng, đo, đếm từng mặt hàng quay nguyên vật liệu và lô kết quả vào trong danh mục kiểm kê"],a:0},
+{t:"Mục tiêu của việc tính vòng quay tài chính trong cơ hội kinh doanh là?",o:["Biết được phác thảo về dự kiến doanh số, chi phí, lãi, nguồn","Biết được khởi sự một công việc kinh doanh tốn kém bao nhiêu","Biết được những người khác cần đóng góp bao nhiêu","Biết được mỗi cơ hội có thể mang lại thu nhập là bao nhiêu"],a:0},
+{t:"Đặc trưng của hình thức doanh nghiệp một chủ sở hữu là?",o:["Doanh nghiệp gia đình","Tiền vốn chỉ do một người bỏ ra","Người điều hành có thể chỉ phải bỏ một phần vốn không đáng kể hoặc thậm chí không phải bỏ đóng nào","Chỉ một người có quyền ra quyết định về mọi công việc của doanh nghiệp"],a:3},
+{t:"Thành viên \u201chữu hạn\u201d trong một doanh nghiệp liên danh có trách nhiệm?",o:["Nhận thông tin tổng hợp và ra quyết định tổng hợp","Chịu rủi ro kinh doanh chỉ liên quan đến phần tài sản đóng góp","Tham gia ra các quyết định tạc nghiệp","Ra quyết định liên quan đến những vấn đề chiến lược"],a:1},
+{t:"Điểm nào có thể phát sinh dưới đây không thuộc những lợi điểm khi khởi sự kinh doanh:",o:["Được sáng tạo, đóng góp, đem lại sự thỏa mãn cho cộng đồng","Không phải tuân thủ mệnh lệnh, được quyền tự chủ trong kinh doanh","Chịu rủi ro với các khoản tiền tiết kiệm của mình","Có khả năng tự kiểm soát cuộc sống của mình"],a:2},
+{t:"Mục không thuộc lý do dẫn đến sự thất bại của các chủ doanh nghiệp nhỏ",o:["Việc phân biệt, hạch toán không rõ các vấn đề giữa gia đình với hoạt động kinh doanh và vốn kinh doanh","Có quá nhiều hàng tồn trong kho, có nhiều tiền đóng dưới dạng tài sản cố định","Có kinh nghiệm về tài chính nhưng không có kinh nghiệm về sản xuất và bán hàng","Có kỹ năng quản lý tiền, quản lý nhân viên, có khi chưa tính hết những nhu cầu của khách hàng"],a:3},
+{t:"Trước khi khởi sự kinh doanh cần",o:["Nghiên cứu các xu thế dân số, kinh tế, xã hội","Phân tích điều kiện thị trường hiện tại","Phân tích tiềm lực của bản thân","Phân tích các nhu cầu của khách hàng"],a:2},
+{t:"Việc xây dựng kế hoạch kinh doanh nhằm",o:["Quản lý được doanh nghiệp theo định hướng","Thấy được tính khả thi và chủ động của việc kinh doanh","Cung cấp thông tin cần thiết cho nhiều nhà đầu tư","Chỉ dẫn cách thức hoạt động"],a:0},
+{t:"Nội dung chính trình bày phần tóm tắt tổng hợp trong bản kế hoạch kinh doanh",o:["Trình bày ngắn gọn về dự kiến kinh doanh, các thị trường cụ thể sẽ được phục vụ","Trình bày được các ưu thế cạnh tranh, mức tăng trưởng dự kiến, mức thu hồi vốn của doanh nghiệp","Trình bày được những nghiên cứu cụ thể khi chuẩn bị kế hoạch kinh doanh của bạn","Trình bày được thực chất của công việc kinh doanh dự kiến"],a:0},
+{t:"Nội dung chính trình bày phần ý tưởng kinh doanh trong bản kế hoạch kinh doanh:",o:["Trình bày được các ưu thế cạnh tranh, mức tăng trưởng dự kiến của doanh nghiệp","Mô tả ngắn gọn chi tiết các thị trường cụ thể","Trình bày được những nghiên cứu cụ thể khi chuẩn bị kế hoạch kinh doanh của bạn","Là bức thông điệp chi tiết về sản phẩm, dịch vụ chuẩn bị cung cấp"],a:3},
+{t:"Nội dung chính trình bày phần đánh giá thị trường trong bản kế hoạch kinh doanh của bạn cần:",o:["Nêu được địa điểm kinh doanh và phương thức phân phối sản phẩm","Ghi chi tiết các sản phẩm hay dịch vụ bán ra","Mô tả cách thức bán hàng và phân phối sản phẩm của mình ra thị trường, cách thức nắm bắt và đáp ứng nhu cầu của khách hàng","Mô tả kế hoạch quảng cáo doanh nghiệp của bạn"],a:2},
+{t:"Mục không thuộc về quản lý tồn kho",o:["Tham quan các hội chợ triển lãm để tìm và gặp trực tiếp các nhà cung ứng","Nhập nguyên vật liệu và hàng hóa khi được nhập về doanh nghiệp","Ghi các dữ liệu về nguyên vật liệu, hàng hóa, lập mức dự trữ","Đặt mua thêm nguyên vật liệu và hàng hóa bổ sung","Sắp xếp và bảo quản nguyên vật liệu"],a:0},
+{t:"Công việc không thuộc các hoạt động nhập hàng vào doanh nghiệp",o:["Nhận các bản thành phẩm, các sản phẩm đã làm xong chờ bán","Loại bỏ những nguyên vật liệu và hàng hóa bị hỏng, không sử dụng được nữa","Nhận lô mới nguyên vật liệu và hàng hóa","Nhận các hàng đã bán rồi nhưng bị khách hàng trả lại"],a:1},
+{t:"Kỹ năng cần có để tiến hành kinh doanh:",o:["Tính chi phí và sổ sách","Dự báo về thị trường","Quản lý","Tìm đối tác"],a:2},
+{t:"Phẩm chất quyết định nhất cần có ở một người khi khởi sự kinh doanh:",o:["Có tầm nhìn xa cho sự hình thành và phát triển doanh nghiệp","Khát vọng làm giàu chính đáng","Sáng tạo","Quyết tâm"],a:0},
+{t:"Tìm câu trả lời sai: Khái niệm sản phẩm còn bao hàm các đặc tính khác của hàng hóa và dịch vụ như:",o:["Dịch vụ đi kèm","Chất lượng hàng hóa của sản phẩm","Cách hướng dẫn sử dụng","Tất cả các câu ở đây đều sai"],a:3},
+{t:"Kinh doanh là",o:["Hoạt động được một hay một nhóm người thực hiện với mục đích lợi nhuận","Hoạt động phức tạp được một hay một nhóm người thực hiện với mục đích cụ thể","Công việc của những người ưa mạo hiểm và thích thử sức mình","Hoạt động được một nhóm người thực hiện với mục đích giải quyết công ăn việc làm cho xã hội"],a:0},
+{t:"Các doanh nghiệp nhỏ và vừa có phát triển tốt nhờ",o:["Phù hợp với ngành kinh doanh có quy mô tương đối lớn","Khả năng đáp ứng yêu cầu đa dạng của thị trường","Thay đổi linh hoạt và năng động","Phương pháp quản lý có hiệu quả"],a:1},
+{t:"Cơ hội kinh doanh hấp dẫn phụ thuộc vào",o:["Khả năng của bản thân","Động cơ kinh doanh","Mục tiêu kinh doanh","Nhu cầu của thị trường"],a:3},
+{t:"Trong lĩnh vực quản lý, khâu quan trọng nhất là:",o:["Tổ chức","Điều khiển","Kiểm tra, giám sát","Hoạch định"],a:3},
+{t:"Thứ tự sắp xếp đúng nhất trình bày trong bản kế hoạch kinh doanh:",o:["Tóm tắt tổng hợp, ý tưởng kinh doanh, tổ chức doanh nghiệp, tài chính doanh nghiệp, phụ lục","Ý tưởng kinh doanh, tóm tắt tổng hợp, tổ chức doanh nghiệp, tài chính doanh nghiệp, phụ lục","Ý tưởng kinh doanh, tóm tắt tổng hợp, tổ chức doanh nghiệp, tài chính doanh nghiệp","Tóm tắt tổng hợp, ý tưởng kinh doanh, tổ chức doanh nghiệp, tài chính doanh nghiệp"],a:0},
+{t:"Giá nhập một chai rượu vang Pháp là 4 USD. Công ty đưa ra mức giá bán lẻ theo một mức giá nhất định là 5,5 USD; cách định giá này dựa vào",o:["Phương pháp định giá cộng thêm","Phương pháp dựa vào thị trường để định giá","Phương pháp hớt váng để đặt giá","Phương pháp theo thị trường"],a:0},
+{t:"Tìm câu trả lời ít đúng nhất: Đặc tính của cơ hội là",o:["Giá trị của cơ hội không tồn tại ở hình thái chủ quan và tính phụ thuộc","Tồn tại khách quan không theo ý muốn của con người","Có tính chất bất ngờ","Là tài nguyên có giá trị, phù hợp với từng hoàn cảnh"],a:0},
+{t:"Cốt lõi của nghệ thuật tìm ra khe hở thị trường là",o:["Tìm ra nhà cung ứng với giá rẻ nhất","Phân tích tìm ra nhu cầu của thị trường mà bạn dự định kinh doanh","Tìm hiểu khả năng mua của khách hàng","Tìm ra nơi tiêu thụ hàng nhanh chóng"],a:1},
+{t:"Trách nhiệm đầu tiên của chủ kinh doanh trong khởi sự kinh doanh:",o:["Tuân thủ luật lao động","Nộp thuế","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai tính thuế"],a:2},
+{t:"Điều quan trọng nhất của bản thân với tư cách là một chủ doanh nghiệp để có thể thành đạt trong cơ chế thị trường hiện nay:",o:["Đánh giá đúng tình hình tài chính gia đình","Sự quyết tâm","Có tinh thần sáng tạo","Có ý thức cạnh tranh cùng sự quyết tâm"],a:3},
+{t:"Điều bổ ích nhất trong việc tự điều chỉnh để một chủ doanh nghiệp có tinh thần sáng tạo trong kinh doanh:",o:["Có nhiều phương án giải quyết khác nhau","Bồi dưỡng đức tính bền bỉ, nhẫn nại và nhạy cảm","Thường xuyên tự hỏi mình, nếu có cơ hội như vậy, mình có thể làm được tốt hơn hay không?","Lắng nghe ý kiến của những người có nhiều kinh nghiệm"],a:2},
+{t:"Điểm có ý nghĩa quyết định nhất đến sự thành công hay thất bại trong kinh doanh của một chủ doanh nghiệp:",o:["Chữ tín","Động cơ","Chấp nhận rủi ro","Quyết tâm"],a:3},
+{t:"Yếu tố chủ yếu dẫn tới thất bại trong kinh doanh",o:["Không biết hoặc chọn nhầm cơ hội kinh doanh","Không đủ khách hàng, doanh thu thấp","Hiểu biết rất ít về ngành mà mình kinh doanh","Marketing yếu kém"],a:1},
+{t:"Mục khó khăn nhất khi tiến hành khởi sự kinh doanh",o:["Làm việc suốt ngày đêm, không có ngày nghỉ và thời gian dưỡng bệnh khi ốm đau","Trách nhiệm với các khoản tài chính và các hoạt động kinh doanh khi bị rủi ro","Thời gian chăm sóc gia đình và dành cho bạn bè ngày một co hẹp","Phải làm một số việc lặt vặt mà trước đây bạn không thích"],a:0},
+{t:"Tìm ra cơ hội kinh doanh từ đâu",o:["Từ những sản phẩm chưa có trên thị trường","Từ những sản phẩm, dịch vụ có nhu cầu cao đã và đang thịnh hành ở nước ngoài","Từ việc tìm tòi, thỏa mãn các nhu cầu chưa được đáp ứng","Từ khả năng nhạy bén và tính sáng tạo của bạn"],a:3},
+{t:"Tìm cơ hội kinh doanh là",o:["Tìm những nhu cầu mà các doanh nghiệp chưa đáp ứng hoặc đáp ứng chưa tốt","Tìm những nhu cầu mà các doanh nghiệp đáp ứng chưa hợp lý","Tìm và xóa bỏ những điều bất hợp lý trong việc đáp ứng các nhu cầu","Tìm những nhu cầu mà các doanh nghiệp đáp ứng chưa tốt"],a:0},
+{t:"Phát hiện ra cơ hội kinh doanh",o:["Từ những khó khăn mà chính bạn đang gặp phải","Từ các vấn đề, khó khăn mà người khác đang gặp phải","Từ những gì còn thiếu trong cộng đồng của bạn","Từ việc tìm ra khoảng trống trong quá trình đáp ứng các nhu cầu khác nhau trong cộng đồng"],a:3},
+{t:"Bước có ý nghĩa quyết định nhất khi tiến hành lựa chọn cơ hội kinh doanh:",o:["Xác lập quy mô về tài chính của các cơ hội, sắp xếp ưu tiên các cơ hội và lựa chọn cơ hội","Liệt kê những vấn đề có trên thị trường cần quan tâm","Xác định những năng lực và nguồn lực cần thiết để thực hiện cơ hội","Chỉ ra các cơ hội kinh doanh thích hợp đã được liệt kê"],a:0},
+{t:"Câu trả lời đúng nhất:",o:["Ý tưởng kinh doanh tốt là hãy bán những thứ thị trường cần","Ý tưởng kinh doanh xuất phát điểm tốt sẽ tránh được những thua lỗ mất mát sau này","Ý tưởng kinh doanh đúng, là tiền đề cho sự ra đời của các cơ sở kinh doanh là yếu tố cơ bản dẫn tới thành công","Ý tưởng kinh doanh không tốt sẽ dẫn kinh doanh tới thất bại"],a:0},
+{t:"Nội dung chính trình bày phần tài chính doanh nghiệp trong bản kế hoạch kinh doanh của bạn cần:",o:["Mô tả về nhân sự và trách nhiệm pháp lý của bạn trong kinh doanh","Nêu các điều kiện về tài chính của doanh nghiệp bạn","Nêu mục đích và cách thức của việc tạo ra lợi nhuận cho doanh nghiệp của bạn","Tính toán được doanh số, chi phí lãi lỗ, số vốn ban đầu cần thiết"],a:3},
+{t:"Cách định giá theo thị trường có hạn chế:",o:["Khó cạnh tranh về giá với sản phẩm cạnh tranh","Mức giá thường thấp hơn mức của sản phẩm thay thế","Không thể hiện hoặc khai thác được ưu thế cạnh tranh","Sức cạnh tranh yếu"],a:2},
+{t:"Hạn chế của cách định giá phân biệt:",o:["Tăng khả năng các đối thủ tiềm ẩn với mức giá thấp hơn","Không định hình được chiến lược cạnh tranh nhất quán","Chiến tranh về giá cả","Phản ứng của khách hàng"],a:0},
+{t:"Hạn chế của việc định giá hớt váng:",o:["Không khai thác được ưu thế cạnh tranh đặc biệt","Năng lực cạnh tranh bằng giá yếu so với đối thủ","Giá cao","Chỉ phục vụ một số đối tượng hạn chế"],a:1},
+{t:"Trong kế hoạch thu lợi nhuận của công ty kinh doanh taxi chất lượng cao thường áp dụng phương pháp",o:["Định giá cạnh tranh và định giá cộng thêm","Định giá cộng thêm","Giá linh hoạt theo thị trường","Định giá cạnh tranh"],a:0},
+{t:"Hãng sản xuất đầu gói đầu Daso chọn nhiều nhà cung ứng cùng một lúc sẽ có lợi hơn trong kinh doanh. Lợi ích cơ bản của chính sách này là:",o:["Tránh việc đầu cơ của một số nhà cung ứng","Được hưởng ưu đãi về khách hàng quen","Hưởng lợi thông qua cạnh tranh của các nhà cung ứng khác nhau","Chủ động trong việc duy trì lượng dự trữ"],a:2},
+{t:"Lý do chính giúp cho các doanh nghiệp vừa và nhỏ thành công trên thị trường",o:["Gần lợi ích với các doanh nghiệp lớn, các hoạt động quản lý và kinh doanh có hiệu quả","Có khả năng đáp ứng nhu cầu đa dạng về sản phẩm, dịch vụ trên thị trường. Thay đổi linh hoạt, năng động","Cho phép thay đổi linh hoạt, năng động trong môi trường cạnh tranh gay gắt","Vai trò và ưu thế của doanh nghiệp lớn giảm dần giúp cho doanh nghiệp nhỏ chiếm dần ưu thế trên thị trường"],a:1},
+{t:"Quản lý tồn kho yếu kém sẽ",o:["Ảnh hưởng tới hiệu quả sản xuất và kinh doanh, làm tăng các chi phí","Gây ra tình trạng động vốn","Tăng chi phí bảo quản và lưu kho, phí bảo hiểm","Làm tăng các chi phí như: lãi vay, hao hụt hữu hình và vô hình"],a:0},
+{t:"Câu trả lời đúng nhất:",o:["Ý tưởng kinh doanh thường được nảy sinh từ những người có óc quan sát nhạy bén và tài năng sáng tạo đặc biệt","Ý tưởng kinh doanh không chỉ xuất hiện từ những người có học vấn cao, trí tuệ sắc sảo mà còn từ những người bình thường có đầu óc quan sát tìm tòi","Ý tưởng kinh doanh xuất phát từ những người có mặt tài chính và rủi ro có thể chấp nhận được","Ý tưởng kinh doanh độc đáo ngày hôm qua sẽ là những sản phẩm, dịch vụ quen thuộc của ngày hôm nay"],a:1},
+{t:"Phát hiện ra cơ hội kinh doanh tiềm ẩn trên cơ sở",o:["Sử dụng các thông tin có được từ việc quan sát tổ chức sản xuất hoặc buôn bán các sản phẩm, dịch vụ, hàng hóa","Quá trình bản thân hay gia đình bạn khó khăn đi tìm mua một mặt hàng hay dịch vụ nào đó","Sử dụng các thông tin có được từ các sách báo, tài liệu, bản tin đại, vô tuyến hàng ngày","Phân tích thông tin, nghe ngóng, quan sát trên thị trường"],a:3},
+{t:"Nguồn ý tưởng kinh doanh tốt nhất:",o:["Khách hàng, sản phẩm và dịch vụ hiện hành","Thư viện, tạp chí nghiên cứu khoa học chuyên ngành","Phòng quản lý R&D, phòng thí nghiệm, nghiên cứu","Sự sáng tạo và nguồn cảm hứng ở người chủ, những ý nghĩ đặc sắc, độc đáo ở những cái đầu độc đáo"],a:3},
+{t:"Mục tiêu của việc liệt kê những vấn đề trên thị trường là gì?",o:["Lập danh mục những nhân tố tiền đề cho công việc kinh doanh","Lập danh mục các sản phẩm, dịch vụ tiềm năng trên thị trường","Lập danh mục các vấn đề có trên thị trường","Lập danh mục các sản phẩm, dịch vụ tiềm năng cho một đối tượng khách hàng"],a:2},
+{t:"Bản mô tả thị trường và địa điểm kinh doanh cho biết những thông tin chủ yếu nhất nào?",o:["Loại khách hàng và địa bàn sẽ phục vụ","Yếu tố thể hiện ưu thế cạnh tranh","Loại hàng hoá sẽ cung ứng","Tất cả các thông tin trên"],a:3},
+{t:"Lý do quan trọng nhất dẫn đến việc Ngân hàng từ chối cho doanh nghiệp vay vốn theo phương án",o:["Không mang tính chất thuyết phục","Kinh doanh không khả thi","Với lợi nhuận thấp","Không liên quan đến hoạt động sản xuất kinh doanh hiện tại của doanh nghiệp"],a:1},
+{t:"Các sản phẩm coi là mới được phân loại theo mức độ độc đáo như sau",o:["Kết hợp những cái đã có thành một cái mới","Tạo nên những công dụng đa dạng hoá tính năng, tác dụng","Mới hoàn toàn","Sao chép có cải tiến"],a:2},
+{t:"Lợi nhuận mà doanh nghiệp bạn có được phụ thuộc vào",o:["Giá nhập nguyên vật liệu thấp hơn so với thị trường (mặt bằng chung)","Chi phí cho một đơn vị sản phẩm (giá thành) thấp hơn chi phí chung bình quân của xã hội","Giá bán sản phẩm cao hơn chi phí","Lượng lợi nhuận thu được trên một đơn vị sản phẩm"],a:3},
+{t:"Yếu tố cần quan tâm trước tiên đối với doanh nghiệp bán lẻ",o:["Địa điểm","Cách thức phân phối","Giá cả","Chất lượng"],a:0},
+{t:"Xúc tiến bán hàng là",o:["Quảng cáo để đưa sản phẩm tới tay người tiêu dùng","Đưa sản phẩm thông qua hệ thống phân phối tới tay người mua","Tuyên truyền và quảng cáo sản phẩm của mình","Quảng cáo, thu hút khách hàng quan tâm, mua sản phẩm của mình"],a:3},
+{t:"Tìm câu trả lời sai: Lập kế hoạch thu lợi nhuận nhằm",o:["Lên kế hoạch doanh thu và chi phí","Xác định căn cứ đặt giá cho sản phẩm của bạn","Xác định lại tính tối ưu của sản phẩm","Lên kế hoạch lưu chuyển tiền mặt"],a:2},
+{t:"Tìm câu đúng nhất: Để hoàn thiện các kỹ năng bán hàng cần",o:["Tỏ ra lịch sự nhã nhặn khiến cho khách hàng có cảm giác họ được quan tâm chủ đạo","Đưa ra lời khuyên đồng thời cung cấp loại sản phẩm hay dịch vụ cho phù hợp","Hiểu và nhận biết khách hàng, luôn luôn thích, trao đổi cách ứng xử với khách hàng một cách khéo léo","Đừng phát lồng nếu như khách hàng không mua, tuyệt đối không tranh cải với khách hàng"],a:2},
+{t:"Ảnh hưởng quan trọng nhất của các hình thức pháp lý trong kinh doanh",o:["Chi phí đăng ký và thành lập doanh nghiệp","Hiệu quả về mặt tài chính của doanh nghiệp","Các thuận lợi khi bắt đầu kinh doanh","Khả năng thu hút thêm người hùn vốn"],a:2},
+{t:"Lợi điểm quan trọng nhất khi bạn tiến hành kinh doanh",o:["Tự làm chủ bản thân mình, không bị ai sai khiến","Bạn là người tự ra những quyết định cần thiết để công việc kinh doanh thành đạt","Được sáng tạo, ngoài lợi nhuận ra còn gặt hái cả sự đam mê kính trọng của xã hội","Có cơ may thành đạt về tiền bạc, cuộc sống có chất lượng cao"],a:0},
+{t:"Người chủ doanh nghiệp trước hết cần có những phẩm chất",o:["Khát vọng thành đạt để thúc giục kéo kéo mọi người","Luôn tự hoàn thiện các kỹ năng","Biết lắng nghe, chọn lọc, mưu trí trong việc dùng người","Có tầm nhìn xa để xây dựng, định hướng phát triển lâu dài cho doanh nghiệp"],a:3},
+{t:"Để có khả năng, có tinh thần sáng tạo cần",o:["Lắng nghe những nhận xét và kiến nghị của những người có nhiều kinh nghiệm","Bồi dưỡng đức tính bền bỉ, nhẫn nại và nhạy cảm; mỗi vấn đề có nhiều hướng giải quyết khác nhau","Khi gặp khó khăn phải nhìn nhận một cách thực tế, không thôi phóng","Thường xuyên tự hỏi nếu có cơ hội sẽ làm tốt hơn không?"],a:0},
+{t:"Câu trả lời không thuộc nội dung ở bước liệt kê những vấn đề trên thị trường",o:["Xác định cơ hội theo cách của Richard White là chia cuộc sống con người ra hai phần, lao động và nghỉ ngơi","Lập một danh sách các lĩnh vực mà nhu cầu con người chưa được thỏa mãn đầy đủ hoặc còn bỏ trống","Cố gắng trả lời câu hỏi: Khởi sự công việc này sẽ phải chi phí hết bao nhiêu tiền","Trong công việc này chỉ nên quan tâm tới số lượng các vấn đề có ý nghĩa quan trọng"],a:2},
+{t:"Vấn đề không thuộc nội dung ở bước: sắp xếp ưu tiên các cơ hội",o:["Cân nhắc để lựa chọn các cơ hội phù hợp với khả năng tài chính của mình","Sắp xếp các cơ hội theo: Sở thích, giá trị về mặt tài chính và rủi ro có thể chấp nhận được","Chỉ ra các yếu tố gây nguy hiểm cho mỗi cơ hội kinh doanh","Trả lời câu hỏi: Có bao nhiêu cách để giải quyết một vấn đề"],a:3},
+{t:"Vấn đề không thuộc nội dung ở bước: lựa chọn cơ hội kinh doanh sẽ theo đuổi",o:["Nếu thấy mình không đủ các điều kiện cần thiết, hãy gạt bỏ cơ hội này khỏi danh sách","Thu hẹp danh sách chỉ còn một, hai cơ hội tiềm năng khả thi","Sắp xếp thứ tự cơ hội theo thang điểm từ thấp tới cao cho cả 3 yếu tố: sở thích, tài chính, hay rủi ro có thể chấp nhận","Lựa chọn cơ hội đạt điểm cao cả 3 yếu tố với mức đầu tư ban đầu không quá lớn"],a:0},
+{t:"Kinh doanh thương mại",o:["Là hình thức kinh doanh phổ biến hiện nay","Là cầu nối giữa người sản xuất và tiêu dùng","Là động lực thúc đẩy xã hội ngày một phát triển","Là mua hàng từ người này bán cho người khác để tìm kiếm lợi nhuận"],a:1},
+{t:"Cách nào dưới đây không nên dùng để thu thập thông tin về khách hàng tiềm năng của doanh nghiệp",o:["Dự đoán dựa trên hiểu biết sẵn có","Tham khảo ý kiến các khách hàng dự kiến được lựa chọn","Sử dụng các nguồn thông tin trong ngành","Hỏi các đối thủ cạnh tranh của mình"],a:3},
+{t:"Đối với một doanh nghiệp vừa và nhỏ, yếu tố nào là quan trọng nhất để thành công",o:["Khả năng tài chính mạnh","Coi trọng việc xây dựng văn hoá doanh nghiệp","Đội ngũ nhân viên và quản lý giỏi","Có lực lượng lao động dồi dào"],a:2},
+{t:"Để thử nghiệm ý tưởng kinh doanh cần phải phân tích các yếu tố bên trong và bên ngoài (phân tích SWOT). Đánh dấu vào mục đúng",o:["Điểm mạnh và yếu là các yếu tố bên trong, cơ hội và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm yếu và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm mạnh và cơ hội là các yếu tố bên trong doanh nghiệp, điểm yếu và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm mạnh và cơ hội là các yếu tố bên trong doanh nghiệp"],a:0},
+{t:"Để ước tính được lượng hàng bán ra cần dựa vào các cách sau",o:["So sánh với các cơ sở khác kinh doanh cùng mặt hàng, qua thư đặt hàng, hỏi hàng, tiến hành điều tra qua khách hàng","So sánh với các cơ sở khác kinh doanh cùng mặt hàng, qua thư đặt hàng, dựa vào kinh nghiệm sẵn có","Bán thử trên thị trường, qua thư đặt hàng, hỏi hàng, điều tra qua khách hàng, dựa vào kinh nghiệm sẵn có","Dựa vào kinh nghiệm sẵn có, so sánh với các cơ sở khác kinh doanh cùng mặt hàng"],a:2},
+{t:"Mục nào không thuộc về tài sản cố định của một doanh nghiệp",o:["Chi phí về bảng phát minh sáng chế","Nhà xưởng, thiết bị","Quyền sử dụng đất","Hàng tồn kho"],a:3},
+{t:"Bộ phận chủ yếu nhất trong kế hoạch kinh doanh phải lập khi khởi sự doanh nghiệp",o:["Kế hoạch tài chính","Kế hoạch nhân sự","Kế hoạch vật tư","Kế hoạch Marketing, sản xuất và tiêu thụ"],a:3},
+{t:"Khi khởi sự kinh doanh muốn biết kinh doanh có lãi cần dựa vào",o:["Báo cáo kết quả hoạt động kinh doanh","Báo cáo lưu chuyển tiền tệ","Bảng cân đối kế toán","Báo cáo doanh thu hàng tháng"],a:0},
+{t:"Lĩnh vực kinh doanh là cầu nối giữa nhà sản xuất và người tiêu dùng:",o:["Kinh doanh sản xuất","Kinh doanh dịch vụ","Kinh doanh thương mại","Kinh doanh trong các ngành nông, lâm nghiệp"],a:2},
+{t:"Lĩnh vực kinh doanh có tác dụng tăng giá trị và sức cạnh tranh của sản phẩm ở các vùng phi thành thị hiện nay ở nước ta cần được đặc biệt chú ý khuyến khích:",o:["Kinh doanh chế biến nông lâm thuỷ sản","Tổ chức tiêu thụ sản phẩm trên địa bàn","Cung cấp giống cây trồng vật nuôi tiên tiến","Kinh tế trang trại"],a:3},
+{t:"Yếu tố cần được chuẩn bị tốt cho khởi sự kinh doanh:",o:["Năng lực thực hiện cùng các kỹ năng quản lý","Tập trung đầy đủ các nguồn lực (tài chính, nhân sự)","Cơ hội kinh doanh chắc chắn, hiện thực","Tất cả các yếu tố nêu ở đây"],a:3},
+{t:"Các ứng xử quan trọng nhất để có thể tạo ra và duy trì được lâu dài đội ngũ khách hàng đông đảo, tin cậy của doanh nghiệp:",o:["Trung thực","Kiên nhẫn","Hiểu và thoả mãn yêu cầu của khách hàng","Lịch sự, nhã nhặn"],a:2},
+{t:"Yếu tố cực kỳ quan trọng, nhất thiết bạn phải cần nhắc ngay từ đầu trong việc lựa chọn loại hình tổ chức công việc kinh doanh:",o:["Kinh nghiệm và khả năng quản lý của bản thân","Mức độ phức tạp và quy mô của công việc kinh doanh định làm","Mức vốn cần cho khởi sự kinh doanh","Đặc điểm cá tính của bạn: bạn dễ hay khó hợp tác với người khác trong làm doanh chung"],a:3},
+{t:"Nhiệm vụ không nhất thiết chỉ có chủ doanh nghiệp/người quản lý mới có thể thực hiện:",o:["Tiến hành các hoạt động mua sắm vật tư, tiêu thụ sản phẩm","Bảo đảm thực hiện kế hoạch để đạt được mục đích kinh doanh","Phát triển các ý tưởng kinh doanh, mục đích và kế hoạch hành động","Tổ chức và động viên mọi người thực hiện kế hoạch hành động"],a:0},
+{t:"Kinh doanh dịch vụ là",o:["Là hoạt động tìm kiếm lợi nhuận ngoài lĩnh vực sản xuất và thương mại","Tạo ra các sản phẩm dịch vụ đa dạng từ cắt tóc tới tư vấn","Gồm các công ty kinh doanh lớn như hàng không, bảo hiểm, ngân hàng","Hoạt động sẽ tạo ra nhiều công việc hơn khi xã hội ngày một phát triển"],a:0},
+{t:"Xác định nhu cầu mua hàng và nguyên liệu nhằm",o:["Đảm bảo chất lượng cao để đáp ứng yêu cầu mục tiêu của khách hàng","Đảm bảo đúng lúc tránh tồn kho, gián đoạn quá trình kinh doanh","Đảm bảo quá trình sản xuất kinh doanh liên tục","Đảm bảo mức doanh số dự kiến và mức dự trữ trong kho"],a:1},
+{t:"Mục không thuộc các lợi ích nếu chọn nhà cung ứng duy nhất khi mua hàng",o:["Có giá hạ hơn khi mua nhiều hàng hoặc trả tiền ngay khi lấy hàng","Được mua trả chậm một thời gian","Được lợi dụng sự cạnh tranh để thương lượng giá cả khi mua hàng","Được ưu tiên mua hàng khi khan hiếm"],a:2},
+{t:"Yếu tố có ý nghĩa quan trọng nhất của loại hình kinh doanh thương mại",o:["Địa điểm và hình thức đẹp","Phương pháp bán hàng tốt, tôn trọng và giữ chữ tín với khách hàng","Chủng loại hàng hoá phong phú, giá phải chăng","Sự thoả mãn cao nhất về sản phẩm, giá cả và chữ tín với khách hàng"],a:3},
+{t:"Yếu tố là mục tiêu chủ yếu nhất của loại hình kinh doanh sản xuất",o:["Sản xuất đáp ứng nhu cầu thị trường và có lãi","Bố trí nhà xưởng hợp lý, công nghệ hiện đại","Cung cấp nguyên vật liệu kịp thời, nguồn năng lượng ổn định","Sử dụng hiệu quả và bảo tồn nguồn vốn"],a:0},
+{t:"Chủ doanh nghiệp nhỏ đồng thời là người quản lý thường xuyên thực hiện các nhiệm vụ",o:["Phát triển các ý tưởng kinh doanh, tổ chức và công nhận cho mọi người cùng thực hiện","Xây dựng các mục tiêu hành động, tổ chức và hoạt động cho mọi người thực hiện kế hoạch","Đảm bảo thực hiện kế hoạch để đạt được mục tiêu kinh doanh, xây dựng mục tiêu và kế hoạch hành động","Tìm và phát triển các ý tưởng kinh doanh, xây dựng các kế hoạch hành động, tổ chức, động viên cho mọi người thực hiện, có trách nhiệm thực hiện kế hoạch để đạt được mục tiêu kinh doanh"],a:3},
+{t:"Phương pháp định giá cộng dùng để định giá bán cho sản phẩm thường được tiến hành",o:["Cộng các chi phí làm ra sản phẩm với lợi nhuận dự phóng","Cộng thêm một tỷ lệ phần trăm lợi nhuận so với giá thành sản phẩm","Xem xét giá bán của đối thủ để định giá sản phẩm của doanh nghiệp","Cộng thêm các chi phí làm ra sản phẩm và cộng thêm một tỷ lệ phần trăm lợi nhuận biên để định giá bán hợp lý"],a:3},
+{t:"Phương pháp định giá cạnh tranh để định giá bán cho sản phẩm thường được tiến hành",o:["Tìm hiểu giá cả trong khu vực để định giá sản phẩm của doanh nghiệp","So sánh giá bán của nhà sản xuất với hàng bán lẻ để xác định giá sản phẩm của doanh nghiệp","Đặt giá trị sao cho có lợi nhuận cao nhất trên cơ sở phân tích trường","Xác định đúng chi phí, tham khảo giá của đối thủ để xác định giá cả cạnh tranh"],a:3},
+{t:"Các lý do dẫn đến món xin vay vốn bị từ chối",o:["Những lý do vay tiền của bạn không rõ ràng, khoan nhặn, khai ra thiếu tin cậy, thiếu quyết tâm","Ý tưởng kinh doanh không khả thi, lý do rõ ràng, bay to sự thiếu tin cậy, thiếu quyết tâm, kế hoạch kinh doanh thiếu sức thuyết phục","Bạn trình bày không đáng tin cậy, thiếu quyết tâm, thiếu hiểu biết thực tế về các mục tiêu kinh doanh","Ý tưởng kinh doanh được đánh giá là quá mạo hiểm, lý do không rõ ràng, bay to sự thiếu tin cậy"],a:1},
+{t:"Tại công trường đang thi công, một công nhân đang làm việc trên cao thì đột nhiên có một thanh xà xả xã vít người. Kết luận của bác sĩ là người công nhân đó giảm 85% sức khoẻ. Nhưng Giám đốc doanh nghiệp không mua bảo hiểm cho công nhân trong doanh nghiệp mình, theo quy định về an toàn lao động, doanh nghiệp phải đền bù cho người công nhân đó",o:["30 tháng lương","Không phải bù","12 tháng lương","20 tháng lương"],a:0},
+{t:"Điều quan tâm trước khi đưa ra ý tưởng kinh doanh mới",o:["Loại hàng hoá nào cần thiết","Thời gian và địa điểm nào thuận tiện nhất","Phương pháp bán ra sao","Khách hàng của họ là ai"],a:0},
+{t:"Tìm câu trả lời ít nhất đúng: Khách hàng của doanh nghiệp thường là",o:["Những khách hàng trong tương lai sẽ mua hàng doanh nghiệp bán","Những khách hàng hiện tại không mua nữa nhưng trong tương lai sẽ mua hàng của doanh nghiệp","Những khách hàng hiện tại không mua sản phẩm của bạn","Những khách hàng hiện tại trung thành với doanh nghiệp khác"],a:3},
+{t:"Lợi ích đầu tiên của công việc kinh doanh đúng tại nhà là",o:["Quản lý thuận tiện","Kinh doanh gắn kết công việc","Vốn đầu tư thấp hơn","Linh hoạt trong chuyển tiếp"],a:2},
+{t:"Các hình thức kinh doanh đứng trên thị trường bao gồm",o:["Các hoạt động sản xuất sản phẩm, cung cấp các dịch vụ được yêu cầu của thị trường","Các hoạt động sản xuất ra một số loại sản phẩm, mua bán bất cứ thứ gì hoá hoá và ở bất cứ đâu để bán lại cho người khác","Một số hoạt động sản xuất sản phẩm, mua bán sản phẩm","Các hoạt động sản xuất sản phẩm, kinh doanh thương mại, dịch vụ"],a:3},
+{t:"Để đơn giản lựa chọn hình thức kinh doanh phù hợp với cơ thể cần dựa vào",o:["Kinh nghiệm và khả năng quản lý của bản thân, cường độ phức tạp và mô-đun công việc được xác định, tính năng của bản thân","Mức độ phức tạp và quy mô công việc được định nghĩa, mức độ cần thiết cho công việc khởi nghiệp kinh doanh","Kinh nghiệm và khả năng quản lý của bản thân, cường độ phức tạp và công việc quy định","Mức độ cần thiết về vốn để khởi động kinh doanh, kinh nghiệm và khả năng quản lý của bản thân"],a:0},
+{t:"Thứ tự các bước đầu và cuối trong công việc ước tính doanh thu bán hàng là",o:["Liệt kê các sản phẩm, dịch vụ hoặc mặt hàng của doanh nghiệp sẽ bán, số lượng hàng bán được với giá bán tương ứng","Ước tính khối lượng sản phẩm hy vọng bán được, liệt kê các sản phẩm dịch vụ, nhân số lượng hàng bán được với giá bán tương ứng","Ước tính khối lượng sản phẩm hy vọng bán được khi bắt đầu kinh doanh thông qua nghiên cứu thị trường, nhân số lượng hàng bán được với giá bán tương ứng","Xác định giá bán cho mỗi mặt hàng hy vọng bán được, số lượng hàng bán được với giá bán tương ứng"],a:0},
+{t:"Tìm câu trả lời sai: Người đồng sở hữu là",o:["Những người cùng chia sẻ quyền lực và trách nhiệm","Những người cùng bỏ vốn tư nhân để kinh doanh","Những người cho doanh nghiệp vay vốn","Những người có thể đưa ra quyết định dựa trên phạm vi trách nhiệm của mình"],a:2},
+{t:"Vậy với doanh nghiệp lớn, doanh nghiệp nhỏ có hiệu quả trong những lĩnh vực nào?",o:["Thị trường mới, đa dạng, đặc quyền","Sản phẩm định hình, tiêu chuẩn hoá","Công nghệ lắp ráp","Trường lớn"],a:0},
+{t:"Nội dung nào không thuộc kế hoạch kinh doanh",o:["Phần tài chính doanh nghiệp: Mô tả các phần liên quan đến tài chính như tính toán doanh thu, chi phí và lãi cũng như số vốn ban đầu cần thiết","Phần tổ chức nhân sự: Là những văn bản cần thiết đi kèm với kế hoạch kinh doanh như: bản mô tả công việc, bảng giá giấy đăng ký kinh doanh","Tổng hợp các phần tóm tắt: Chứa các thông tin quan trọng nhất từ những phần còn lại của kế hoạch kinh doanh","Phần đánh giá thị trường: Mô tả thị trường như thế nào, mô tả chi tiết sản phẩm, giá bán, địa điểm và cách thức phân phối sản phẩm"],a:1},
+{t:"Các biện pháp khắc phục dưới đây không làm tăng giá trị sản phẩm, hàng hoá",o:["Giảm chi phí nguyên vật liệu trực tiếp bằng cách mua giá rẻ, chất lượng tốt hay được giảm giá nhiều","Cải tiến chất lượng sản phẩm để tăng giá bán","Tăng số lượng bán ra để thu được tổng giá trị giá tăng lớn hơn","Tăng giá bán cho mỗi sản phẩm mà vẫn giữ nguyên chất lượng hoá hoá"],a:3},
+{t:"Tính năng động sáng tạo đúng của doanh nghiệp là",o:["Tạo ra sản phẩm có thêm các tính năng độc đáo từ các sản phẩm cũ có trên thị trường","Tạo ra sản phẩm có tính năng khác biệt đáp ứng tốt hơn nhu cầu của khách hàng so với sản phẩm cùng loại trên thị trường","Tạo ra sản phẩm mới từ công việc đáp ứng tốt hơn nhu cầu của khách hàng","Tạo ra sản phẩm mới bằng cách sao chép quá trình cải tiến để tạo ra sản phẩm có ưu thế"],a:1},
+{t:"Khi khởi nghiệp doanh nghiệp đúng nên",o:["Xem xét mình có đủ tiền để bắt đầu kinh doanh không","Tự đánh giá mình có phù hợp với công việc kinh doanh không","Tự đánh giá bản thân xem có phù hợp với công việc kinh doanh không, có ý tưởng kinh doanh tốt và lập kế hoạch kinh doanh","Phải có ý tưởng kinh doanh tốt và lập kế hoạch kinh doanh"],a:2},
+{t:"Để tìm ra cơ sở kinh doanh mới thường được phát từ đúng",o:["Những lĩnh vực kinh doanh thành công của người khác","Có khả năng tài chính","Những vấn đề khó khăn, thắc mắc của cộng đồng, của khách hàng","Xây dựng một kế hoạch kinh doanh"],a:2},
+{t:"Yếu tố không thuộc vốn lưu động để chi trả cho các tài khoản khi khởi nghiệp doanh nghiệp",o:["Mua nguyên liệu","Tiền lương, bảo hiểm","Tiền thuê nhà xưởng","Mua máy móc thiết bị phục vụ cho nhà sản xuất"],a:3},
+{t:"Bản kế hoạch kinh doanh đúng đáng giúp ích cho doanh nghiệp chủ sở hữu",o:["Suy nghĩ ý nghĩa và đánh giá bất kỳ điểm yếu nào trong ý tưởng kinh doanh","Suy nghĩ ý nghĩa và đánh giá bất kỳ điểm yếu nào trong ý tưởng kinh doanh","Có cơ hội thử nghiệm ý tưởng, mô tả chi tiết tất cả các mạng công việc trong kinh doanh","Mô tả chi tiết các công việc trong doanh nghiệp nếu có cơ hội thử nghiệm và đánh giá ý tưởng kinh doanh"],a:3},
+{t:"Các hình thức kinh doanh trên thị trường",o:["Sản xuất các sản phẩm hoá hoá, dịch vụ","Cung cấp các dịch vụ cho cộng đồng","Kinh doanh bán buôn, bán lẻ, dịch vụ","Các hoạt động kinh doanh sản xuất, thương mại, dịch vụ"],a:3},
+{t:"Các hoạt động marketing giúp doanh nghiệp",o:["Tìm hiểu khách hàng là ai, họ muốn và cần gì, làm thế nào đáp ứng nhu cầu của họ để tạo ra lợi nhuận","Trả giá mà khách hàng chấp nhận trả lời","Cung cấp thông tin và thu hút khách hàng những dịch vụ hoá hoá sẽ mua sản phẩm của doanh nghiệp","Nghiên cứu thị trường cung cấp sản phẩm dịch vụ mà khách hàng cần"],a:0},
+{t:"Khi khởi nghiệp kinh doanh đúng, các nguồn vốn để kinh doanh thường dựa vào",o:["Có thể vay từ các ngân hàng hoặc các tổ chức tài chính khác","Có thể vay từ bạn bè, họ hàng, vay hay ứng trước từ nhà cung cấp","Bằng hình thức liên doanh, liên kết với các hoạt động kinh doanh chủ yếu khác","Nguồn vốn của chủ sở hữu và vốn huy động được"],a:3},
+{t:"Khi muốn vay tiền để khởi động sự kinh doanh cần thuyết phục người cho vay đó",o:["Thực tế cần có sổ tiền đó, nếu cần sẽ đảm bảo tài sản kinh doanh được chấp nhận và trình bày các đề án dự án kinh doanh","Thực tế cần có sổ tiền đó và phải xác định rõ cần mua những loại tài sản nào, đã kiểm tra các loại tài sản chi phí và các loại tài sản khác nhau","Phương án kinh doanh khả thi","Đã kiểm tra các chi phí và các loại tài sản khác, nếu cần thiết sẽ được chấp nhận tài sản kinh doanh"],a:1},
+{t:"Khi chuẩn bị tiếp cận đúng những nơi có thể vay vốn để kinh doanh cần cân nhắc. Bạn chuẩn bị khi gặp gỡ đột ngột, chuẩn bị trả lời bất cứ câu hỏi nào về công việc kinh doanh của bạn",o:["Hẹn trường khi đến, chuẩn bị trả lời các câu hỏi liên quan đến doanh nghiệp, đưa ra kế hoạch kinh doanh, hỏi xem cần cung cấp thêm thông tin nào, bao giờ có câu trả lời thanh tra trả lời?","Hẹn trường khi đến, chuẩn bị trả lời bất kỳ câu hỏi nào về công việc kinh doanh của bạn, nên tuân theo một kế hoạch kinh doanh","Chuẩn bị trả lời bất kỳ câu hỏi nào về công việc kinh doanh của bạn, nên tuân theo một kế hoạch kinh doanh","Nên mang theo một kế hoạch kinh doanh, trước khi đến nơi hỏi khi nào có thể nhận được đơn xin vay của mình, sẵn sàng cung cấp thêm thông tin nếu họ cần"],a:1},
+{t:"Công việc hoàn trả các hoạt động kinh doanh đúng sẽ giúp bạn",o:["Quản lý tiền tệ, quản lý các tài khoản, lập kế hoạch cho tương lai","Quản lý tiền mặt, theo dõi các khoản nợ, hàng tồn kho, tài sản cố định và năng lượng lao động","Quản lý theo dõi các khoản nợ vay, tồn tại kho, cố định tài sản và tài sản lưu động","Nắm bắt thông tin về tình hình hoạt động của doanh nghiệp"],a:2},
+{t:"Mục nào dưới đây là cần thiết khi nghiên cứu đánh giá thị trường",o:["Chụp thông tin về cạnh tranh cạnh tranh","Thu thập thông tin về khách hàng","Tìm hiểu về giá cả mặt hàng cùng loại sản phẩm của doanh nghiệp","Hiểu được nhu cầu của khách hàng"],a:1},
+{t:"Kế hoạch tiếp thị là kế hoạch đúng",o:["Địa điểm kinh doanh, sản phẩm, giá cả, quảng cáo, xúc tiến bán hàng","Quảng cáo, xúc tiến bán hàng, giá cả","Sản phẩm, giá cả, quảng cáo, xúc tiến bán hàng","Địa điểm kinh doanh, sản phẩm, giá cả"],a:0},
+{t:"Khi khởi sự kinh doanh cần phải chuẩn bị những yếu tố cơ bản của một doanh nghiệp nhỏ",o:["Phải có sở kinh doanh, có kỹ năng, có các nguồn lực để thực hiện cơ hội thực hiện","Có cơ sở kinh doanh hiện thực, có kỹ năng quản lý và có các nguồn lực thực hiện cơ hội thực hiện","Phải có năng lực chính và kinh nghiệm","Phải có kỹ năng quản lý và kỹ năng thực hiện, phải có cơ sở kinh doanh thực hiện"],a:1},
+{t:"Cơ sở kinh doanh có đặc tính đúng bất ngờ",o:["Không biết trước cơ hội sẽ xuất hiện vào lúc nào, ở đâu?","Không biết cơ hội nào sẽ xuất hiện bền dưới biểu thức nào?","Không biết trước cơ hội xuất hiện có kèm theo những nhân tố gì, bất lợi hay không?","Khi kinh doanh không thể biết chắc chắn rằng sẽ có cơ hội"],a:3},
+{t:"Cơ hội kinh doanh đúng",o:["Có giá trị khác nhau đối với những người có nhu cầu khác nhau","Có giá trị biểu hiện ở trạng thái chủ và thuộc tính phụ thuộc","Có giá trị dương khi người có nhu cầu được cơ hội","Có giá trị cho người có nhu cầu"],a:3},
+{t:"Có thể phát hiện ra cơ hội kinh doanh đúng dần bởi vì",o:["Cơ sở kinh doanh có rất nhiều và có ở mọi nơi","Đòi hỏi đáp ứng được những nhu cầu mới phát sinh từ khách hàng","Cơ hội xuất hiện để thay đổi trưởng","Hỗ trợ các tính năng năng động và sáng tạo của chính bạn"],a:3},
+{t:"Ý tưởng kinh doanh tạo ra sản phẩm mới",o:["Là mới hoàn toàn mà trước đó chưa hề có","Là những sản phẩm đã có trên thị trường nhưng lại tạo ra nhiều tính năng hoạt động hơn","Các sản phẩm đã được kết hợp lại thành sản phẩm mới","Là những sản phẩm được sao chép nhưng có quá trình cải tiến"],a:0},
+{t:"Mục tiêu chính của việc lập kế hoạch mục tiêu:",o:["Tìm nguyên nhân công việc không trả nợ và không đòi tiền từ khách hàng","Tìm nhân vật tồn tại quá nhiều hàng trong kho không có kế hoạch","Tìm nguyên nhân việc bán trà chậm nhiều, phải đi vay để bù đắp cho vốn lưu động","Tìm nguyên nhân cố gắng để giúp đỡ, điều chỉnh vốn kinh doanh tốt"],a:3},
+{t:"Điểm nổi bật trong vai trò của các doanh nghiệp nhỏ và vừa là vườn cây của các doanh nghiệp mới đang hình thành trên thị trường:",o:["Bổ sung cho hoạt động của các doanh nghiệp lớn","Chi phí đầu tư, tạo khả năng thử nghiệm các sản phẩm mới","Có những đóng góp đáng kể cho xuất khẩu, thu ngoại tệ cho đất nước","Thúc đẩy tăng trưởng kinh tế, góp phần tăng khối lượng, chất lượng, hàng hoá tiêu dùng và dịch vụ trong dân cư các vùng"],a:1},
+{t:"Ấn tượng nhất mà một bản tóm tắt có thể tạo ra:",o:["Lô-gích của dự án","Viễn cảnh về phát triển triển vọng trong tương lai của một công việc kinh doanh","Khả năng hoàn vốn của hoạt động kinh doanh","Năng lực của chủ doanh nghiệp"],a:0},
+{t:"Mục tiêu của việc xác định đúng khách hàng tương lai:",o:["Xác định cấu hình cơ sở mua tương lai","Xác định người mua địa chỉ","Phác ra được tượng trung mà doanh nghiệp sẽ phục vụ trong tương lai","Xác định các khu vực sẽ đặt điểm bán"],a:2},
+{t:"Mục tiêu của việc xác định đúng mục tiêu trưởng?",o:["Xác định doanh thu dự kiến","Đánh giá khu vực thị trường theo mẫu hàng khách mặt khẩu","Chợ đến thời quen và hành động mua hàng của khách hàng mẫu","Phân chia các loại thị trường theo sự tương đồng về sở hữu và thời quen"],a:0},
+{t:"Mục tiêu chính của công việc nghiên cứu về ngành:",o:["Bi quyết phát triển thị trường của ngành","Biết rõ giai đoạn phát triển của ngành","Chụp được đặc điểm cạnh tranh của ngành","Chụp được đặc điểm công nghệ của các doanh nghiệp trong ngành"],a:2},
+{t:"Kinh doanh thương mại là đúng loại hình kinh doanh",o:["Sau đó mua sản phẩm từ người này, bán cho người khác để kiếm lời","Kết hợp để tạo ra sản phẩm tiêu dùng giữa nhiều người","Làm ra sản phẩm rồi bán cho người khác","Trả lời nhu cầu được phục vụ của con người"],a:0},
+{t:"Yếu tố cơ bản nhất làm cho không đủ vốn để duy trì kinh doanh:",o:["Mua sắm tài sản cố định nhiều hơn hoặc hiện đại hơn cần thiết","Không biết cách lập kế hoạch kinh doanh, không biết huy động vốn","Không thể kiểm soát các chi phí","Để hàng tồn kho quá nhiều, công tác kế toán yếu"],a:0},
+{t:"Điều cần luôn tâm niệm đúng khi hình thành các ý tưởng kinh doanh:",o:["Gần như mỗi sản phẩm, dịch vụ quá quen thuộc ngày hôm nay đã là sản phẩm độc nhất của ngày hôm qua","Cần phải có một sản phẩm phát hiện tốt để tránh thất vọng, thua lỗ sau này","Hãy bán những thứ cần thiết","Nhu cầu các loại sản phẩm, dịch vụ mới dành cho mọi người trong cuộc sống hàng ngày là không có điểm dừng"],a:2},
+{t:"Không có điểm nào trong kế hoạch lưu chuyển tiền:",o:["Khấu hao","Trả lãi vay","Hoàn trả tiền gốc","Doanh thu"],a:0},
+{t:"Để xác lập quy mô tài chính của cơ hội kinh doanh, sau khi xem xét các nguồn thông tin về tài chính, bạn cần suy nghĩ kỹ hơn về các vấn đề:",o:["Lợi nhuận mà cơ hội kinh doanh cung cấp lại","Lợi nhuận trung bình, yêu cầu vốn đầu tư ban đầu, cấp và thời gian hoàn vốn","Thời gian bao lâu thì công việc kinh doanh mới có lãi","Phải chi phí hết bao nhiêu tiền"],a:1},
+{t:"Mục không thuộc lợi ích nếu chọn nhiều nhà cung cấp ứng dụng một lần khi mua hàng",o:["Bạn có khả năng nhận được trợ giúp về tư vấn hoá hoá và thị trường từ các nhà cung cấp này","Bạn được hưởng lợi từ sự cạnh tranh để giảm giá cả khi mua hàng","Bạn sẽ không bị ảnh hưởng gì nhiều khi một số hoạt động kinh doanh liên tục của họ","Bạn sẽ có cơ hội và những điều kiện thuận lợi trong kinh doanh khi trở thành độc quyền duy nhất trong việc tiêu thụ sản phẩm và dịch vụ của các nhà cung cấp"],a:0},
+{t:"Trách nhiệm có thể hiện mối quan hệ về hữu ích kinh tế giữa doanh nghiệp với nhà nước mà người chủ doanh nghiệp phải thực hiện đầy đủ:",o:["Nộp thuế","Tuân thủ luật lao động","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai thuế"],a:0},
+{t:"Trách nhiệm hiện tại mối quan hệ giữa doanh nghiệp chủ doanh nghiệp với người lao động:",o:["Bảo hiểm xã hội","Nộp thuế","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai thuế"],a:0},
+{t:"Trong điều kiện hiện tại của cơ chế kinh tế, phần đặc biệt cần lưu ý trong nội dung kế hoạch kinh doanh của doanh nghiệp:",o:["Tổ chức doanh nghiệp","Tài chính doanh nghiệp","Đánh giá thị trường","Ý tưởng kinh doanh"],a:2},
+{t:"Điểm không có trong kế hoạch thu và chi phí:",o:["Trả lãi vay","Khấu hao","Hoàn trả gốc tiền vay","Doanh thu"],a:2},
+{t:"Khi phân tích công việc tại một phân xưởng sản xuất bao bì, công việc nào thuộc về bộ phận kho:",o:["Sắp xếp và quản lý hàng hoá","Khảo sát thị trường và đưa ra quyết định sản xuất","Lập báo cáo tài chính và nâng cấp lên trên","Đặt mua hoá và giao hàng tới khách hàng"],a:0},
+{t:"Để trở thành một doanh nghiệp đúng dân cần thiết",o:["Tất cả các nội dung nêu ở đây","Quyết tâm, có động cơ xóa, son chấp nhận rủi ro","Có sức khoẻ, chấp nhận rủi ro, có quyết tâm","Giữ uy tín với khách hàng, có quyết tâm"],a:0},
+{t:"Để thành công trong kinh doanh đúng",o:["Cần có kỹ năng quản lý, chấp nhận rủi ro và hiểu biết về đơn hàng kinh doanh và thị trường","Cần có năng lực tài chính, có tâm","Cần có năng lực tài chính và sức khoẻ","Cần có khả năng tài chính và chấp nhận rủi ro"],a:0},
+{t:"Một doanh nghiệp nhỏ khi đúng bắt đầu kinh doanh nên",o:["Đầu tư với quy mô lớn bằng cách vay nhiều tiền","Đầu tư với quy mô lớn bằng cách vay nhiều tiền, cố gắng sản xuất thật nhiều hàng và mở rộng thị trường","Cố gắng sản xuất thật nhiều hàng và chưa cần chú ý đến chất lượng","Bắt đầu từ mô tả nhỏ và chú trọng tới chất lượng ngay từ đầu"],a:3},
+{t:"Khi khởi nghiệp doanh nghiệp đúng, công việc thường xuyên nhất của bạn sẽ là",o:["Giám sát nhân viên, mua hàng hoá, nguyên vật liệu, kiểm soát chi phí, định giá","Kiểm soát quá trình sản xuất, phục vụ khách hàng, kiểm soát chi phí, định giá","Kiểm soát chi phí, định giá, ghi sổ về những gì đang diễn ra trong doanh nghiệp","Tất cả nội dung nêu ở đây"],a:1},
+{t:"Để phát hiện cơ hội kinh doanh thường xuyên sử dụng các phương pháp",o:["Phân tích thông tin","Nghe ngóng, quan sát trên thị trường","Lựa chọn","Tổng hợp"],a:1},
+{t:"Những mục dưới đây không có trong các bước cơ bản được lựa chọn trong kinh doanh",o:["Chỉ ra các cơ sở kinh doanh thích hợp","Xác định năng lực và nguồn lực cần thiết","Xác định mô-đun về tài chính của cơ sở","Extended long line"],a:3},
+{t:"Những mục dưới đây không cần thiết trong Kế hoạch Tiếp thị",o:["Xác định địa điểm kinh doanh","Sản phẩm được khách hàng mong đợi","Xác định phương thức sản xuất sản phẩm","Giá cả phù hợp với thị trường chung"],a:2},
+{t:"Bước đầu tiên và bước cuối cùng khi tiến hành nghiên cứu các cơ hội kinh doanh là",o:["Liệt kê những vấn đề trên thị trường và quyết định cơ hội kinh doanh sẽ theo đuổi","Liệt kê các vấn đề trên thị trường và chỉ ra các cơ sở kinh doanh thích hợp","Xác định các năng lực và nguồn lực cần thiết và sắp xếp thứ tự các cơ sở","Chỉ hợp lý các cơ sở kinh doanh thích hợp và xác định những nguồn lực và nguồn lực cần thiết"],a:0},
+{t:"Phân phối sản phẩm qua hệ thống bán lẻ hiệu quả khi",o:["Khách hàng phân bố trên địa bàn thu gọn, tập trung","Sản xuất với số lượng lớn, đồng loạt","Phân bố trên mạng Internet","Sản xuất ra mà không cần nhiều liên hệ với khách hàng"],a:1},
+{t:"Bảo hiểm xã hội đúng quy định bắt buộc đối với các doanh nghiệp có từ",o:["10 công nhân trở lên","15 công nhân trở lên","20 công nhân trở lên","30 công nhân trở lên"],a:0},
+{t:"Thời gian công nhân nghỉ đúng việc làm tai nạn hay bệnh nghề nghiệp, doanh nghiệp phải trả",o:["Trả 50% lương + chi phí","Trả 70% lương + chi phí","Trả 100% lương + chi phí","Trả 50% lương"],a:2},
+{t:"Chi phí nào không phải là chi phí cố định",o:["Đầu tư dây chuyền sản xuất","Giấy phép kinh doanh bảo hiểm","Thuê nhà xưởng","Mua sản phẩm nguyên liệu"],a:3},
+{t:"Tìm câu trả lời sai: Việc ước tính doanh thu bao gồm",o:["Liệt kê các sản phẩm mà doanh nghiệp sẽ bán","Ước tính khối lượng bán ra trong một khoảng thời gian","Xác định giá bán cho từng sản phẩm","Xác định lợi nhuận thu được từ mỗi sản phẩm"],a:3},
+{t:"Bản sơ yếu về mẫu khách hàng KHÔNG trả lời câu hỏi:",o:["Địa điểm cư trú","Ai","Nghề nghiệp","Giới tính"],a:1},
+{t:"Marketing là",o:["Công việc tìm hiểu và đưa ra mức giá mà khách hàng chấp nhận và màn nguyên","Công việc tìm hiểu khách hàng của bạn là ai, họ cần gì, làm thế nào để đáp ứng nhu cầu đó","Công việc cung cấp sản phẩm hoặc dịch vụ mà người khác cần","Công việc cung cấp thông tin và thu hút khách hàng để họ mua sản phẩm và dịch vụ của bạn"],a:1},
+{t:"Khách hàng của bạn là đúng",o:["Những người đang mua hàng hoá, sản phẩm dịch vụ của bạn","Những người hiện tại đã thôi không mua hàng của bạn nữa nhưng vẫn vọng họ sẽ quay trở lại","Những cá nhân, tổ chức hay những doanh nghiệp cần thiết và chấp nhận mua hàng hoá, dịch vụ của bạn","Những người tương lai sẽ mua hàng hoá, sản phẩm dịch vụ của bạn"],a:2},
+{t:"Ưu thế của doanh nghiệp đúng nhỏ:",o:["Doanh nghiệp rút ngắn khoảng cách về kỹ thuật so với doanh nghiệp lớn","Chuyển đổi nhanh chóng và dễ dàng, thích nghi với những thay đổi mới","Dễ dàng bắt đầu với việc thay đổi thị trường, tự động thay đổi mới, làm chủ về công nghệ, kỹ thuật, sử dụng hiệu quả vốn","Việc sử dụng vốn có hiệu quả nên nguồn vốn sẽ ít khó khăn hơn"],a:2},
+{t:"Các biện pháp tìm ra cơ hội kinh doanh đúng đắn",o:["Sử dụng các thông tin thông qua các tài liệu, đài, báo, vô tuyến, học hỏi kinh nghiệm ở người khác, nơi khác","Đi tìm nhu cầu trên thị trường thông qua thăm tơ nghe ngóng, ý kiến, sự phàn nàn của khách hàng","Sử dụng các thông tin qua quan sát ngón tay, thu tập từ khách hàng","Sử dụng thông tin để tìm cơ hội thông qua nghe ngóng, quan sát, phân tích, đáp ứng nhu cầu, các vấn đề của khách hàng"],a:3},
+{t:"Đặc điểm nổi bật nhất nói lên cơ hội kinh doanh là tài nguyên, là có giá trị:",o:["Chỉ có giá trị đối với người có nhu cầu","Cơ sở có tính chất bất ngờ","Cơ hội có đặc tính khách hàng","Cơ sở có tính động chỉ"],a:0},
+{t:"Cơ sở kinh doanh được sắp xếp thứ tự ưu tiên theo tiêu chuẩn cơ bản: Sở thích riêng (a), giá trị về mặt tài chính (b), rủi ro có thể được chấp nhận (c):",o:["c - a - b","a - b - c","a - c - b","b - c - a"],a:1},
+{t:"Mục tiêu của nghiên cứu đánh giá đúng giá thị trường mục tiêu",o:["Cung cấp thông tin và thu hút khách hàng để họ sẽ mua sản phẩm và dịch vụ của bạn","Cung cấp hàng hoá dịch vụ mà người khách cần","Trả giá mà khách hàng chấp nhận thanh toán","Tìm hiểu khách hàng để đáp ứng nhu cầu của họ nhằm thu lợi nhuận"],a:3},
+{t:"Các mục dưới đây không thuộc các câu hỏi thu thập thông tin về khách hàng",o:["Doanh nghiệp cần những loại khách hàng nào?","Họ có mua thường xuyên sản phẩm và dịch vụ hay không, tại sao họ lại mua một loại sản phẩm hay dịch vụ nào đó?","Họ cần loại hoá hoá nào, chấp nhận mức giá bao nhiêu?","Họ đặt giá bao nhiêu và có quảng cáo cho hàng hoá và dịch vụ của mình không?"],a:3},
+{t:"Kinh doanh ở lĩnh vực đúng nông lâm ngư nghiệp là",o:["Cung cấp cho thị trường các cây giống, con giống tiên tiến","Sản xuất các sản phẩm nông sản, lâm, ngư nghiệp và dịch vụ đáp ứng nhu cầu thị trường","Chế biến sản phẩm của trang trại","Tổ chức tiêu thụ các sản phẩm nông nghiệp trên thị trường"],a:1},
+{t:"Thu thập thông tin từ nhà cung cấp đúng cần chú ý các vấn đề sau",o:["Loại hàng và chất lượng mà doanh nghiệp cần, các điều kiện, ưu đãi khi mua hàng của họ","Mức giá, thời gian giao hàng, các ưu đãi khi mua hàng của họ","Chủng loại, chất lượng, giá cả hoá hoá, các điều kiện mua hàng, quá trình thực hiện hợp nhất và các cam kết nối kèm theo","Các điều kiện, ưu đãi khi mua hàng của họ, uy tín trong công việc thực hiện hợp đồng cung cấp ứng hàng hoá"],a:2},
+{t:"Mục đích chính của việc sử dụng vốn lưu động là đúng",o:["Phù hợp với giới hạn đầu tư","Thu được nhiều lợi nhuận từ các tài khoản đầu tư khác nhau","Phục vụ nhu cầu chi thường xuyên","Thời gian quay vòng vốn nhanh"],a:2},
+{t:"Trong kế hoạch tài chính chính xác, việc hoàn thành tiền vay được tính toán vào",o:["Kế hoạch chuyển đổi tiền tệ","Kế hoạch thu và chi phí, kế hoạch chuyển đổi tiền tệ","Kế hoạch thu và chi phí","Ở đây không có kế hoạch phụ thuộc nào"],a:3},
+{t:"Tìm ý tưởng kinh doanh cần",o:["Ghi lại mỗi khi có ý tưởng nảy sinh","Duy trì công việc kinh doanh trong thời gian nghiên cứu","Bắt đầu quan sát các bước phát triển trong nhiều lĩnh vực khác nhau","Nghiên cứu các sản phẩm hiện có"],a:1},
+{t:"Quản lý công việc mua hàng thông qua",o:["Xác định và lựa chọn nhà cung cấp ứng dụng","Tuyển chọn nhiều đại lý","Đặt hàng, kiểm tra hoá hoá và thanh toán","Xác định nhu cầu mua hàng"],a:1},
+{t:"Điều kiện giao hàng cần đúng quan tâm là",o:["Hàng được giao tại đâu?","Vận chuyển theo phương thức gì và chân do ai thanh toán?","Bao gồm tất cả các mục ở đây","Thời hạn giao hàng từ khi đặt hàng cho đến khi giao hàng?"],a:2},
+{t:"Bước thứ nhất và bước đúng sau cùng của quản lý công việc mua hàng",o:["Xác định nhu cầu mua hàng và liên hệ quan hệ với nhà cung cấp","Xác định nhà cung cấp ứng dụng và lựa chọn chất lượng với nhà cung cấp ứng dụng","Lựa chọn nhà cung ứng và thanh toán đơn đặt hàng","Xác định nhu cầu mua hàng, đặt hàng, xác định địa điểm và thời hạn giao hàng"],a:0},
+{t:"Mục tiêu của quản lý đúng tồn kho",o:["Giảm mát và làm cho sản phẩm, nguyên vật liệu lưu thông","Giải quyết tốt các khâu về an toàn trong lưu kho và tránh thất bại","Làm cho hàng hoá không bị động ở một khâu nào cả","Sắp xếp hợp lý mọi nguồn hàng hoá xuất nhập kho"],a:0},
+{t:"Hoạt động nhập hàng vào kho khi",o:["Sản phẩm làm xong, chờ bán","Nhận lô mới về nguyên vật liệu hay hàng hoá","Hàng bán rồi nhưng khách hàng trả lại","Hàng hoá, nguyên liệu bị hỏng cần loại bỏ"],a:3},
+{t:"Với tư cách là chủ doanh nghiệp bạn cần",o:["Hạch toán chi phí và lãi, tạo nguồn vốn để hoạt động lâu dài","Tổ chức và thành viên mọi người thực hiện kế hoạch","Phát triển các ý tưởng kinh doanh, mục tiêu và kế hoạch hành động","Đảm bảo thực hiện kế hoạch để đạt được mục tiêu kinh doanh"],a:2}
+];
+home();
+</script>
+</body>
+</html>
