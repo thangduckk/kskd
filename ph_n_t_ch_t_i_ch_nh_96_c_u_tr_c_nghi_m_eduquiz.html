@@ -1,656 +1,401 @@
 <!DOCTYPE html>
-<html lang="vi" class="h-full">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ôn Tập Phân Tích Tài Chính HĐKD - EduQuiz</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        eduGreen: '#10B981',
-                        eduRed: '#EF4444',
-                        eduBlue: '#2563EB',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
-        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #1f2937; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn tập Khởi sự kinh doanh - 179 câu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{--card:#fff;--tx:#0f172a;--mu:#64748b;--br:#e2e8f0;--ob:#f8fafc;--g:#16a34a;--gb:#dcfce7;--r:#dc2626;--rb:#fee2e2;background:#f1f5f9;color:var(--tx);min-height:100vh}
+body.dark{--card:#111a2e;--tx:#e2e8f0;--mu:#94a3b8;--br:#243147;--ob:#16223c;--gb:rgba(22,163,74,.18);--rb:rgba(220,38,38,.18);background:#0b1220}
+.w{max-width:840px;margin:0 auto;padding:20px 14px 60px}
+.tb{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.bd{font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px}
+.lg{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff}
+.ib{width:40px;height:40px;border-radius:12px;border:1px solid var(--br);background:var(--card);color:var(--tx);cursor:pointer;font-size:17px}
+.card{background:var(--card);border:1px solid var(--br);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;font-weight:700;border-radius:14px;font-size:15px;padding:13px 24px;transition:.2s}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.bp{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff}
+.bg{background:var(--ob);color:var(--tx);border:1px solid var(--br)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--ob);border:1px solid var(--br);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:600;color:var(--mu)}
+.ct{text-align:center}
+h1{font-size:24px;margin:14px 0 8px}
+.sub{color:var(--mu);line-height:1.6;margin-bottom:20px}
+.st3{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+.st4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.st{background:var(--ob);border:1px solid var(--br);border-radius:14px;padding:14px}
+.st b{display:block;font-size:20px}
+.st span{font-size:12px;color:var(--mu)}
+.pbx{height:10px;background:var(--ob);border-radius:99px;overflow:hidden;margin:12px 0 18px}
+.pbx div{height:100%;background:linear-gradient(90deg,#4f46e5,#7c3aed);transition:width .4s}
+.qm{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.qtext{font-size:16.5px;font-weight:600;line-height:1.6;margin-bottom:16px;white-space:pre-line}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--ob);border:2px solid var(--br);border-radius:14px;padding:13px 15px;margin-bottom:11px;cursor:pointer;font-size:15px;line-height:1.5;color:var(--tx);transition:.15s}
+button.opt:hover:not(:disabled){border-color:#4f46e5}
+.opt:disabled{cursor:default}
+.lt{flex:0 0 30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--card);border:1px solid var(--br)}
+.cr{background:var(--gb)!important;border-color:var(--g)!important;color:var(--g)!important}
+.cr .lt{background:var(--g);color:#fff;border-color:var(--g)}
+.wr{background:var(--rb)!important;border-color:var(--r)!important;color:var(--r)!important}
+.wr .lt{background:var(--r);color:#fff;border-color:var(--r)}
+.fb{margin-top:4px;font-weight:700;padding:12px 16px;border-radius:12px;display:none}
+.fb.g{display:block;background:var(--gb);color:var(--g)}
+.fb.r{display:block;background:var(--rb);color:var(--r)}
+.nr{display:flex;justify-content:flex-end;margin-top:14px}
+.ring{position:relative;width:200px;height:200px;margin:0 auto 10px}
+.ring svg{transform:rotate(-90deg)}
+#rg{transition:stroke-dashoffset .9s ease}
+.rvv{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rvv b{font-size:40px}.rvv span{font-size:13px;color:var(--mu)}
+.msg{font-size:16px;font-weight:600;margin:6px 0 4px}
+.br2{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.wt{text-align:left;margin:20px 0 10px;font-size:16px}
+.wi{border:1px solid var(--br);border-radius:14px;padding:14px;margin-bottom:11px;background:var(--ob);text-align:left}
+.wq{font-weight:600;font-size:14px;margin-bottom:8px;line-height:1.5}
+.wa{font-size:13px;margin-top:4px}.wa.g{color:var(--g);font-weight:700}.wa.r{color:var(--r);font-weight:700}
+.allok{color:var(--g);font-weight:700;margin-top:16px}
+.rv{margin-bottom:14px}
+.rm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.cg{color:var(--g)!important;border-color:var(--g)!important}.cr2{color:var(--r)!important;border-color:var(--r)!important}
+.ro{cursor:default}
+@media(max-width:600px){.st4{grid-template-columns:1fr 1fr}h1{font-size:21px}.card{padding:18px}}
+.scr{display:none}
+</style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-full flex flex-col font-sans transition-colors duration-200">
-
-    <!-- Header -->
-    <header class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-30 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo & Title -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-lg font-bold bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">
-                            EduQuiz - Phân Tích Tài Chính
-                        </h1>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">96 Câu Trắc Nghiệm Ngành QTKD (2 TC)</p>
-                    </div>
-                </div>
-
-                <!-- Global Actions -->
-                <div class="flex items-center space-x-2 sm:space-x-4">
-                    <!-- Mode Toggle -->
-                    <div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-700 p-1 rounded-lg">
-                        <button id="modePractice" onclick="setMode('practice')" class="px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">
-                            <i class="fa-solid fa-book-open mr-1"></i> Ôn Tập Tức Thì
-                        </button>
-                        <button id="modeExam" onclick="setMode('exam')" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all">
-                            <i class="fa-solid fa-clock mr-1"></i> Thi Thử
-                        </button>
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-700 transition">
-                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
-                        <i class="fa-solid fa-sun hidden dark:inline text-lg text-amber-400"></i>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button onclick="toggleSidebar()" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-
-        <!-- Left Column: Quiz Engine -->
-        <div class="lg:col-span-8 flex flex-col space-y-6">
-
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-4 gap-3 bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
-                    <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-medium">Tổng số</span>
-                    <p class="text-lg sm:text-xl font-bold text-slate-800 dark:text-slate-100" id="statTotal">96</p>
-                </div>
-                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
-                    <span class="text-xs text-emerald-600 dark:text-emerald-400 uppercase font-medium">Đúng</span>
-                    <p class="text-lg sm:text-xl font-bold text-emerald-600 dark:text-emerald-400" id="statCorrect">0</p>
-                </div>
-                <div class="text-center border-r border-slate-100 dark:border-slate-700 pr-2">
-                    <span class="text-xs text-rose-600 dark:text-rose-400 uppercase font-medium">Sai</span>
-                    <p class="text-lg sm:text-xl font-bold text-rose-600 dark:text-rose-400" id="statWrong">0</p>
-                </div>
-                <div class="text-center">
-                    <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-medium">Tiến độ</span>
-                    <p class="text-lg sm:text-xl font-bold text-blue-600 dark:text-blue-400" id="statProgress">0%</p>
-                </div>
-            </div>
-
-            <!-- Question Card -->
-            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md p-6 flex-1 flex flex-col justify-between relative transition-all">
-                
-                <!-- Question Header -->
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="flex items-center space-x-2">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300" id="questionCategory">
-                                Câu 1 / 96
-                            </span>
-                            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300" id="questionGroup">
-                                Nhóm A
-                            </span>
-                        </div>
-                        <button onclick="toggleBookmarkCurrent()" id="btnBookmark" class="text-slate-300 hover:text-amber-400 dark:text-slate-600 dark:hover:text-amber-400 text-xl transition">
-                            <i class="fa-solid fa-bookmark"></i>
-                        </button>
-                    </div>
-
-                    <!-- Question Text -->
-                    <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 mb-6 leading-relaxed" id="questionText">
-                        Đang tải câu hỏi...
-                    </h2>
-
-                    <!-- Options Container -->
-                    <div class="space-y-3" id="optionsContainer">
-                        <!-- Options injected by JS -->
-                    </div>
-                </div>
-
-                <!-- Question Footer / Controls -->
-                <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700 flex flex-wrap justify-between items-center gap-3">
-                    <button onclick="prevQuestion()" id="btnPrev" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium transition flex items-center">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Câu trước
-                    </button>
-
-                    <div class="flex items-center space-x-2">
-                        <button onclick="resetCurrentQuestion()" class="px-3 py-2 text-xs font-medium text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
-                            <i class="fa-solid fa-rotate-right mr-1"></i> Làm lại
-                        </button>
-                        <button onclick="nextQuestion()" id="btnNext" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md transition flex items-center">
-                            Câu tiếp <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Submit Exam Button (Visible in Exam mode) -->
-            <div id="examSubmitContainer" class="hidden">
-                <button onclick="submitExam()" class="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition">
-                    <i class="fa-solid fa-paper-plane mr-2"></i> Nộp Bài Thi
-                </button>
-            </div>
-
-        </div>
-
-        <!-- Right Column: Question Navigator & Filters -->
-        <div id="sidebar" class="lg:col-span-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-sm flex flex-col max-h-[calc(100vh-120px)]">
-            
-            <!-- Filter Bar -->
-            <div class="mb-4 space-y-3">
-                <div class="flex justify-between items-center">
-                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm">Danh sách câu hỏi</h3>
-                    <button onclick="resetAll()" class="text-xs text-rose-500 hover:underline">
-                        <i class="fa-solid fa-trash-can mr-1"></i> Xóa làm lại
-                    </button>
-                </div>
-
-                <!-- Filter Tabs -->
-                <div class="grid grid-cols-3 gap-1 bg-slate-100 dark:bg-slate-700 p-1 rounded-xl text-xs font-medium">
-                    <button onclick="setFilter('all')" id="filterAll" class="py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-xs text-emerald-600 dark:text-emerald-400 font-bold">
-                        Tất cả (96)
-                    </button>
-                    <button onclick="setFilter('groupA')" id="filterA" class="py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900">
-                        Nhóm A (58)
-                    </button>
-                    <button onclick="setFilter('groupB')" id="filterB" class="py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900">
-                        Nhóm B (38)
-                    </button>
-                </div>
-
-                <!-- Sub-filters -->
-                <div class="flex space-x-2 text-xs">
-                    <button onclick="setFilter('wrong')" id="filterWrong" class="px-2.5 py-1 rounded-lg border border-rose-200 text-rose-600 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950 transition">
-                        <i class="fa-solid fa-xmark mr-1"></i> Sai
-                    </button>
-                    <button onclick="setFilter('unanswered')" id="filterUnanswered" class="px-2.5 py-1 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-700 transition">
-                        <i class="fa-regular fa-circle mr-1"></i> Chưa làm
-                    </button>
-                    <button onclick="setFilter('bookmarked')" id="filterBookmarked" class="px-2.5 py-1 rounded-lg border border-amber-200 text-amber-600 hover:bg-amber-50 dark:border-amber-900 dark:text-amber-400 dark:hover:bg-amber-950 transition">
-                        <i class="fa-solid fa-bookmark mr-1"></i> Đã lưu
-                    </button>
-                </div>
-            </div>
-
-            <!-- Grid Matrix -->
-            <div class="flex-1 overflow-y-auto custom-scrollbar pr-1">
-                <div class="grid grid-cols-6 sm:grid-cols-8 lg:grid-cols-6 gap-2" id="gridMatrix">
-                    <!-- Buttons generated by JS -->
-                </div>
-            </div>
-
-            <!-- Legend -->
-            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700 grid grid-cols-3 gap-2 text-[11px] text-slate-500 dark:text-slate-400">
-                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-emerald-500 mr-1.5"></span> Đúng</div>
-                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-rose-500 mr-1.5"></span> Sai</div>
-                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-700 mr-1.5"></span> Chưa làm</div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- Quiz Data & Script -->
-    <script>
-        // Full Question Bank (96 Questions matched with User's Answer Key)
-        const rawQuestions = [
-            // NHÓM A (1-58)
-            { id: 1, q: "Nhiệm vụ nào sau đây không phải là nhiệm vụ của phân tích tài chính doanh nghiệp?", options: ["Phản ánh, ghi chép các nghiệp vụ kinh tế phát sinh", "Đánh giá các hiện tượng, kết quả kinh tế", "Xác định, chỉ rõ các nguyên nhân và tính các nhân tố ảnh hưởng", "Đề xuất, kiến nghị các giải pháp"], ans: 0, group: "A" },
-            { id: 2, q: "Phương pháp phân tích TCDN nào sau đây xác định mức độ ảnh hưởng của từng nhân tố đến kết quả kinh tế?", options: ["Phương pháp phân chia", "Phương pháp thay thế liên hoàn", "Phương pháp so sánh", "Phương pháp đồ thị, đồ biểu."], ans: 1, group: "A" },
-            { id: 3, q: "Phương pháp phân tích TCDN nào sau đây không xác định mức độ ảnh hưởng của từng nhân tố đến kết quả kinh tế?", options: ["Phương pháp thay thế liên hoàn", "Phương pháp so sánh", "Phương pháp số chênh lệch", "Phương pháp cân đối."], ans: 1, group: "A" },
-            { id: 4, q: "Giai đoạn nào sau đây không thuộc giai đoạn của phân tích tài chính?", options: ["Giai đoạn lập kế hoạch phân tích", "Giai đoạn sưu tầm tài liệu", "Giai đoạn thực hiện phân tích", "Giai đoạn phát hiện các sai sót."], ans: 3, group: "A" },
-            { id: 5, q: "Chức năng nào sau đây không thuộc chức năng của phân tích tài chính doanh nghiệp?", options: ["Chức năng đánh giá", "Chức năng dự báo", "Chức năng điều chỉnh", "Chức năng phân phối"], ans: 3, group: "A" },
-            { id: 6, q: "Giải pháp nào dưới đây được áp dụng để tăng ROA?", options: ["Tăng sử dụng nợ vay", "Tăng hiệu suất sử dụng tài sản", "Thay đổi kết cấu mặt hàng sản xuất", "Tăng cường vốn chủ sở hữu"], ans: 1, group: "A" },
-            { id: 7, q: "Giải pháp nào dưới đây được áp dụng để tăng ROE?", options: ["Thay đổi kết cấu mặt hàng sản xuất", "Điều chỉnh chất lượng sản phẩm", "Điều chỉnh mức hạ giá thành đơn vị sản phẩm", "Điều chỉnh cơ cấu nguồn vốn giữa tỷ lệ nợ vay và vốn chủ sở hữu"], ans: 3, group: "A" },
-            { id: 8, q: "Chi phí nguyên vật liệu trực tiếp trong giá thành sản xuất sản phẩm chịu tác động của nhân tố nào sau đây?", options: ["Mức hao hụt về vật liệu nhập kho.", "Giá vật liệu xuất dùng", "Năng suất lao động của công nhân sản xuất trực tiếp", "Số lượng công nhân sản xuất"], ans: 1, group: "A" },
-            { id: 9, q: "Chi phí quản lý doanh nghiệp chịu sự tác động của nhân tố nào dưới đây?", options: ["Chi phí khấu hao cửa hàng, quầy hàng", "Chi phí về tiền lương của bộ phận kế toán", "Chi phí dịch vụ mua ngoài phục vụ cho sản xuất", "Chi phí quảng cáo hàng bán"], ans: 1, group: "A" },
-            { id: 10, q: "Trong nội dung phân tích kết quả hoạt động kinh doanh, cần thiết phải phân tích nội dung chủ yếu nào sau đây?", options: ["Phân tích lợi nhuận của từng mặt hàng", "Phân tích lợi nhuận bán hàng và cung cấp dịch vụ", "Phân tích kết cấu mặt hàng sản xuất", "Phân tích kết cấu chi phí"], ans: 1, group: "A" },
-            { id: 11, q: "Nhân tố nào dưới đây không tác động trực tiếp đến tổng lợi nhuận trước thuế?", options: ["Doanh thu bán hàng và cung cấp dịch vụ", "Chi phí tài chính", "Tỷ suất chi phí", "Giá vốn của hàng xuất bán"], ans: 2, group: "A" },
-            { id: 12, q: "Tổng lợi nhuận thuần từ hoạt động kinh doanh không chịu tác động trực tiếp của nhân tố nào dưới đây?", options: ["Giá vốn của hàng xuất bán", "Chi phí bán hàng", "Chi phí quản lý doanh nghiệp", "Chi phí khác"], ans: 3, group: "A" },
-            { id: 13, q: "Nhân tố nào dưới đây không tác động trực tiếp đến tổng số lợi nhuận thuần từ hoạt động kinh doanh?", options: ["Doanh thu hoạt động tài chính", "Doanh thu thuần", "Thu nhập khác", "Doanh thu bán hàng và cung cấp dịch vụ"], ans: 2, group: "A" },
-            { id: 14, q: "Lợi nhuận thuần từ hoạt động kinh doanh chịu sự tác động chủ yếu của nhân tố nào dưới đây?", options: ["Thu nhập khác và chi phí khác", "Thu nhập khác", "Giá vốn của hàng xuất bán", "Chi phí khác"], ans: 2, group: "A" },
-            { id: 15, q: "Lợi nhuận bán hàng chịu sự tác động chủ yếu của nhân tố nào dưới đây?", options: ["Doanh thu thuần từ bán hàng và cung cấp dịch vụ", "Doanh thu hoạt động tài chính", "Thu nhập khác", "Chi phí tài chính"], ans: 0, group: "A" },
-            { id: 16, q: "Nhân tố nào dưới đây không tác động trực tiếp đến lợi nhuận bán hàng?", options: ["Doanh thu thuần từ bán hàng và cung cấp dịch vụ", "Doanh thu hoạt động tài chính", "Giá vốn của hàng xuất bán", "Chi phí bán hàng phân bổ cho hàng xuất bán."], ans: 1, group: "A" },
-            { id: 17, q: "Chi phí nhân công trực tiếp trong giá thành sản xuất sản phẩm chịu tác động của nhân tố nào sau đây?", options: ["Năng suất lao động của công nhân sản xuất trực tiếp", "Giá vật liệu mua vào", "Mức hao hụt về vật liệu nhập kho", "Giá trị phế liệu thải loại"], ans: 0, group: "A" },
-            { id: 18, q: "Xét về mức độ ảnh hưởng, nhân tố mức tiêu hao về vật liệu ảnh hưởng như thế nào đến khoản chi vật liệu trong giá thành sản xuất sản phẩm?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng tỉ lệ nghịch."], ans: 0, group: "A" },
-            { id: 19, q: "Xét về mức độ, nhân tố giá vật liệu xuất dùng ảnh hưởng như thế nào đến khoản chi vật liệu trong giá thành sản xuất sản phẩm?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng tỉ lệ nghịch"], ans: 0, group: "A" },
-            { id: 20, q: "Biện pháp quan trọng nào sau đây để giảm được mức tiêu hao nguyên vật liệu?", options: ["Cải tiến mẫu mã sản phẩm.", "Giảm giá vật liệu mua vào.", "Sử dụng vật liệu rẻ tiền để thay thế", "Giảm mức hao hụt vật liệu trong khi thu mua vật liệu"], ans: 0, group: "A" },
-            { id: 21, q: "Nhân tố nào sau đây ảnh hưởng đến chi phí bán hàng?", options: ["Chi phí trích lập dự phòng nợ phải thu khó đòi", "Chi phí về hoa hồng môi giới hàng bán", "Tiền thuế môn bài", "Chi phí khấu hao TSCĐ phục vụ quản lý doanh nghiệp"], ans: 1, group: "A" },
-            { id: 22, q: "Nguyên nhân nào dưới đây được đánh giá là nguyên nhân chủ quan ảnh hưởng đến doanh thu bán hàng?", options: ["Nguyên nhân thuộc về bản thân doanh nghiệp", "Nguyên nhân thuộc về người mua", "Nguyên nhân thuộc nhà nước", "Nguyên nhân thuộc đối thủ cạnh tranh"], ans: 0, group: "A" },
-            { id: 23, q: "Xét về mức độ, khối lượng (số lượng) hàng hoá bán ra ảnh hưởng như thế nào đến lợi nhuận bán hàng?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng tỉ lệ thuận", "Ảnh hưởng nghịch chiều", "Ảnh hưởng tỉ lệ nghịch"], ans: 0, group: "A" },
-            { id: 24, q: "Nhân tố nào sau đây ảnh hưởng đến chi phí tài chính?", options: ["Chi phí phát hành trái phiếu", "Chi phí lãi vay", "Chi phí thuê văn phòng", "Chi phí thu hồi công nợ"], ans: 1, group: "A" },
-            { id: 25, q: "Xét về mức độ, kết cấu mặt hàng bán ra ảnh hưởng như thế nào đến lợi nhuận bán hàng?", options: ["Ảnh hưởng thuận chiều", "Ảnh hưởng tỉ lệ thuận", "Vừa thuận chiều, vừa nghịch chiều", "Không ảnh hưởng đến lợi nhuận bản hàng"], ans: 2, group: "A" },
-            { id: 26, q: "Doanh thu hoạt động tài chính chịu sự tác động của nhân tố nào dưới đây?", options: ["Chiết khấu thanh toán cho người mua hàng của doanh nghiệp", "Chiết khấu thương mại cho người mua hàng của doanh nghiệp", "Chiết khấu thanh toán được hưởng khi doanh nghiệp mua hàng", "Khoản giảm giá hàng bán"], ans: 2, group: "A" },
-            { id: 27, q: "Số lượng sản phẩm bán ra chịu sự ảnh hưởng trực tiếp của nhân tố nào dưới đây?", options: ["Chất lượng sản phẩm", "Chi phí quản lý doanh nghiệp", "Chính sách mua hàng", "Chiết khấu thanh toán cho khách hàng"], ans: 0, group: "A" },
-            { id: 28, q: "Doanh thu bán hàng chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Chính sách mua hàng", "Chính sách bán hàng", "Chiết khấu thanh toán cho khách hàng", "Chi phí dịch vụ mua ngoài"], ans: 1, group: "A" },
-            { id: 29, q: "Thông tin của phân tích tình hình tài chính doanh nghiệp được sự quan tâm chủ yếu của đối tượng nào dưới đây?", options: ["Người mua hàng", "Các nhà đầu tư, các nhà cho vay", "Các cơ quan quản lý nhà nước thuộc đơn vị hành chính sự nghiệp", "Người bán hàng"], ans: 1, group: "A" },
-            { id: 30, q: "Để phân tích tình hình tài chính doanh nghiệp, người ta phân tích nội dung chủ yếu nào dưới đây?", options: ["Phân tích tình hình tài sản và nguồn vốn", "Phân tích tình hình tổ chức sản xuất kinh doanh.", "Phân tích đánh giá kết quả lao động", "Phân tích đánh giá việc lựa chọn nhà cung cấp"], ans: 0, group: "A" },
-            { id: 31, q: "Để phân tích, đánh giá thực trạng tình hình tài chính doanh nghiệp, cần thiết phải phân tích nội dung chủ yếu nào dưới đây?", options: ["Phân tích tình hình lao động", "Phân tích rủi ro tài chính", "Phân tích môi trường kinh doanh", "Phân tích người mua hàng"], ans: 1, group: "A" },
-            { id: 32, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán tổng quát của doanh nghiệp?", options: ["Tài sản ngắn hạn", "Tài sản dài hạn", "Nợ phải trả", "Vốn chủ sở hữu"], ans: 2, group: "A" },
-            { id: 33, q: "Nếu lượng dự trữ hàng tồn kho quá mức cần thiết sẽ gây ra tác động tiêu cực nào cho doanh nghiệp?", options: ["Tăng chi phí quản lý doanh nghiệp", "Tăng chi phí bảo quản vật tư hàng hóa", "Tăng chi phí bán hàng", "Tăng chi phí khác"], ans: 1, group: "A" },
-            { id: 34, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán hiện thời của doanh nghiệp?", options: ["Tài sản dài hạn", "Vốn chủ sở hữu", "Tài sản ngắn hạn", "Nợ phải trả"], ans: 2, group: "A" },
-            { id: 35, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán nhanh của doanh nghiệp?", options: ["Vay dài hạn", "Hàng tồn kho", "Tiền và tương đương tiền", "Vốn chủ sở hữu"], ans: 2, group: "A" },
-            { id: 36, q: "Khi phân tích nợ phải trả, cần phân tích nội dung nào là chủ yếu?", options: ["Nợ phải thu ngắn hạn và dài hạn", "Nợ phải trả ngắn hạn và dài hạn", "Vốn chủ sở hữu.", "Tài sản ngắn hạn và dài hạn"], ans: 1, group: "A" },
-            { id: 37, q: "Khi phân tích nguồn vốn chủ sở hữu, cần phân tích nội dung chủ yếu nào sau đây?", options: ["Vốn góp của chủ sở hữu", "Nguồn vốn tín dụng", "Nguồn vốn đi chiếm dụng;", "Nguồn vốn vay"], ans: 0, group: "A" },
-            { id: 38, q: "Để tiến hành phân tích tình hình đầu tư và nguồn tự tài trợ, cần phân tích nội dung chủ yếu nào sau đây?", options: ["Phân tích, đánh giá khái quát và đánh giá cụ thể tình hình đầu tư", "Phân tích, đánh giá môi trường đầu tư", "Phân tích đánh giá chính sách đầu tư", "Phân tích môi trường kinh doanh"], ans: 0, group: "A" },
-            { id: 39, q: "Để đánh giá khái quát tình hình đầu tư, cần đánh giá nội dung chủ yếu nào sau đây?", options: ["Đánh giá về hướng đầu tư (đầu tư vào đâu)", "Đánh giá hiệu quả đầu tư", "Đánh giá về thời hạn thu hồi vốn đầu tư", "Đánh giá tỷ suất lợi nhuận trên vốn đầu tư"], ans: 0, group: "A" },
-            { id: 40, q: "Tỷ suất nào dưới đây được sử dụng để đánh giá cụ thể tình hình đầu tư?", options: ["Tỷ suất đầu tư tài chính", "Tỷ suất lợi nhuận trên vốn đầu tư", "Tỷ suất vốn đầu tư trên vốn chủ sở hữu", "Tỷ suất lợi nhuận trên vốn đầu tư tài chính ngắn hạn và dài hạn"], ans: 0, group: "A" },
-            { id: 41, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất đầu tư tài chính?", options: ["Tổng tài sản", "Tài sản ngắn hạn", "Đầu tư tài chính ngắn hạn", "Đầu tư tài chính dài hạn"], ans: 1, group: "A" },
-            { id: 42, q: "Chỉ tiêu nào dưới không được sử dụng để xác định tỷ suất đầu tư về TSCĐ hữu hình?", options: ["Tổng tài sản cố định và đầu tư dài hạn", "Tổng tài sản", "TSCĐ hữu hình", "Chi phí XDCB dở dang"], ans: 0, group: "A" },
-            { id: 43, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất tự tài trợ cho đầu tư tài chính?", options: ["Nguồn vốn chủ sở hữu", "Tổng nguồn vốn", "Đầu tư tài chính ngắn hạn", "Đầu tư tài chính dài hạn"], ans: 1, group: "A" },
-            { id: 44, q: "Chỉ tiêu nào dưới đây không được sử dụng để xác định tỷ suất tự tài trợ về TSCĐ hữu hình?", options: ["Tổng nguồn vốn", "Nguồn vốn chủ sở hữu", "TSCĐ hữu hình", "Chi phí XDCB dở dang"], ans: 0, group: "A" },
-            { id: 45, q: "Chỉ tiêu nào dưới đây không được sử dụng để đánh giá hiệu quả của vốn đầu tư (nhìn từ quan điểm kinh tế) đối với các dự án đầu tư riêng biệt?", options: ["Tỷ suất lợi nhuận trên vốn đầu tư", "Tỷ suất đầu tư ngắn hạn và dài hạn", "Thời hạn thu hồi vốn đầu tư", "Mức nộp ngân sách do sử dụng vốn đầu tư"], ans: 1, group: "A" },
-            { id: 46, q: "Chỉ tiêu nào dưới đây ảnh hưởng đến khả năng thanh toán lãi vay của doanh nghiệp?", options: ["Lợi nhuận sau thuế", "Lợi nhuận trước thuế và lãi vay", "Tổng tài sản", "Nợ phải trả"], ans: 1, group: "A" },
-            { id: 47, q: "Để phân tích khả năng thanh toán tổng quát cần sử dụng chỉ tiêu nào dưới đây?", options: ["Nợ phải trả", "Nợ ngắn hạn", "Tài sản ngắn hạn", "Nợ dài hạn"], ans: 0, group: "A" },
-            { id: 48, q: "Để phân tích khả năng thanh toán nhanh không cần sử dụng chỉ tiêu nào dưới đây?", options: ["Nợ ngắn hạn", "Tài sản ngắn hạn", "Hàng tồn kho", "Nợ phải trả"], ans: 3, group: "A" },
-            { id: 49, q: "Để phân tích khả năng thanh toán hiện thời cần sử dụng chỉ tiêu nào dưới đây?", options: ["Tài sản dài hạn", "Khoản nhận ký quỹ", "Nợ ngắn hạn", "Nợ dài hạn"], ans: 2, group: "A" },
-            { id: 50, q: "Để phân tích khả năng thanh toán tức thời cần sử dụng chỉ tiêu dưới đây?", options: ["Hàng tồn kho", "Tiền và các khoản tương đương tiền", "Các khoản phải thu ngắn hạn", "Nợ dài hạn"], ans: 1, group: "A" },
-            { id: 51, q: "Chỉ tiêu nào dưới đây không được sử dụng để phân tích hiệu quả sử dụng vốn lưu động?", options: ["Mức nộp ngân sách nhà nước", "Mức doanh thu tính cho một đồng vốn lưu động", "Số vốn tiết kiệm hay lãng phí vốn lưu động", "Mức giá trị sản xuất tính cho một đồng vốn lưu động"], ans: 0, group: "A" },
-            { id: 52, q: "Nguyên nhân chủ yếu nào dưới đây ảnh hưởng đến mức tiêu hao về nguyên vật liệu?", options: ["Do thiết kế sản phẩm", "Do công tác an toàn lao động", "Do sử dụng vật liệu thay thế", "Do công tác mua hàng"], ans: 0, group: "A" },
-            { id: 53, q: "Nhân tố nào dưới đây tác động trực tiếp đến ROA của doanh nghiệp?", options: ["Hệ số tài sản trên vốn CSH", "Mức độ sử dụng nợ trong doanh nghiệp", "Số vòng quay toàn bộ tài sản", "Hệ số nợ trên tài sản"], ans: 2, group: "A" },
-            { id: 54, q: "Nhân tố nào dưới đây không tác động trực tiếp đến ROE của doanh nghiệp?", options: ["Mức độ sử dụng nợ trong doanh nghiệp", "Tỷ suất lợi nhuận doanh thu", "Số vòng quay toàn bộ tài sản", "Tỷ suất chi phí doanh thu"], ans: 3, group: "A" },
-            { id: 55, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên tổng tài sản (ROA) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Tỷ suất chi phí trên doanh thu", "Tỷ suất lợi nhuận trên vốn lưu động", "Tỷ suất lợi nhuận doanh thu", "Tỷ suất lợi nhuận trên vốn cố định"], ans: 2, group: "A" },
-            { id: 56, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên tổng tài sản (ROA) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Số vòng quay vốn lưu động", "Số vòng quay toàn bộ tài sản", "Số vòng quay vốn cố định", "Số vòng quay hàng tồn kho"], ans: 1, group: "A" },
-            { id: 57, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên vốn chủ sở hữu (ROE) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Tỷ suất giá vốn hàng bán trên doanh thu", "Tỷ suất lợi nhuận trên tài sản (ROA)", "Tỷ suất lợi nhuận trên vốn lưu động", "Tỷ suất lợi nhuận trên vốn cố định"], ans: 1, group: "A" },
-            { id: 58, q: "Theo phương pháp phân tích tài chính Dupont thì chỉ tiêu tỷ suất lợi nhuận trên vốn chủ sở hữu (ROE) chịu sự ảnh hưởng của nhân tố nào dưới đây?", options: ["Hệ số nợ ngắn hạn", "Hệ số thanh toán lãi vay", "Hệ số nợ", "Hệ số thu hồi nợ"], ans: 2, group: "A" },
-
-            // NHÓM B (59-96)
-            { id: 59, q: "Phương pháp số chênh lệch được sử dụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ tổng số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ hiệu số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tổng số và thương số với nhau để hình thành chỉ tiêu phân tích"], ans: 1, group: "B" },
-            { id: 60, q: "Phương pháp thay thế liên hoàn không được sử dụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ tổng số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ kết hợp cả tích và thương số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ thương số với nhau để hình thành chỉ tiêu phân tích"], ans: 0, group: "B" },
-            { id: 61, q: "Phương pháp cân đối được sử sụng trong trường hợp nào?", options: ["Các nhân tố ảnh hưởng có quan hệ thương số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tích số với với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ kết hợp cả tích và thương số với nhau để hình thành chỉ tiêu phân tích", "Các nhân tố ảnh hưởng có quan hệ tổng đại số với nhau để hình thành chỉ tiêu phân tích"], ans: 3, group: "B" },
-            { id: 62, q: "Nguyên nhân chủ yếu nào dưới đây ảnh hưởng đến giá mua của vật liệu xuất dùng?", options: ["Do nguồn mua, phương thức mua", "Do chất lượng của công tác sản xuất", "Do chi phí bốc xếp thuê kho bãi", "Do chi phí vận chuyển hàng mua"], ans: 0, group: "B" },
-            { id: 63, q: "Phương pháp so sánh không thể sử dụng trong trường hợp nào sau đây?", options: ["Tồn tại một chỉ tiêu, đại lượng cần so sánh", "Tồn tại ít nhất hai chỉ tiêu hoặc hai đại lượng cần so sánh", "Các chỉ tiêu, các đại lượng khi so sánh với nhau có cùng một nội dung kinh tế", "Các chỉ tiêu, các đại lượng khi so sánh với nhau có cùng một đơn vị đo lường"], ans: 0, group: "B" },
-            { id: 64, q: "Phương pháp phân tích tài chính Dupont được sử dụng để phân tích chỉ tiêu tài chính nào sau đây?", options: ["ROE", "RI", "ROI", "EPS"], ans: 0, group: "B" },
-            { id: 65, q: "Chỉ tiêu nào sau đây phản ánh hiệu quả sinh lời của tài sản?", options: ["ROA", "ROS", "ROE", "EBIT"], ans: 0, group: "B" },
-            { id: 66, q: "Để đánh giá sự biến động của chỉ tiêu cần phân tích, người ta sử dụng phương pháp nào?", options: ["Phương pháp so sánh", "Phương pháp số chênh lệch", "Phương pháp thay thế liên hoàn", "Phương pháp cân đối"], ans: 0, group: "B" },
-            { id: 67, q: "Chi phí sản xuất chung chịu sự tác động của nhân tố nào dưới đây?", options: ["Chi phí nguyên vật liệu sử dụng để sản xuất ra sản phẩm", "Chi phí tiền lương của công nhân sản xuất trực tiếp", "Chi phí khấu hao TSCĐ phục vụ sản xuất ra sản phẩm", "Chi phí khấu hao TSCĐ phục vụ quản lý doanh nghiệp"], ans: 2, group: "B" },
-            { id: 68, q: "Doanh nghiệp có hệ số khả năng thanh toán hiện thời là 1,2, phân tích nào sau đây là đúng?", options: ["Giá trị tài sản ngắn hạn lớn hơn nợ ngắn hạn, doanh nghiệp có khả năng thanh toán các khoản nợ ngắn hạn", "Giá trị tài sản dài hạn nhỏ hơn nguồn vốn dài hạn, doanh nghiệp không có khả năng thanh toán các khoản nợ dài hạn", "Giá trị tài sản ngắn hạn nhỏ hơn nợ ngắn hạn, doanh nghiệp không có khả năng thanh toán các khoản nợ ngắn hạn", "Giá trị tài sản dài hạn lớn hơn nguồn vốn dài hạn, doanh nghiệp có khả năng thanh toán các khoản nợ dài hạn"], ans: 0, group: "B" },
-            { id: 69, q: "Một doanh nghiệp có ROS = 8%. Điều này có nghĩa là:", options: ["Cứ đưa 100 đồng tài sản vào SXKD, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Trong 100 đồng doanh thu thuần bán hàng, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Cứ đưa 100 đồng vốn chủ sở hữu vào SXKD, doanh nghiệp tạo ra 8 đồng lợi nhuận sau thuế", "Trong 100 đồng doanh thu bán hàng, doanh nghiệp tạo ra 8 đồng doanh thu thuần"], ans: 1, group: "B" },
-            { id: 70, q: "Doanh nghiệp A có ROA = 10%, trong khi doanh nghiệp B có ROA = 6%. Nếu các yếu tố khác tương đương, nhận định nào sau đây phù hợp nhất?", options: ["Doanh nghiệp A sử dụng tài sản hiệu quả hơn trong việc tạo ra lợi nhuận", "Doanh nghiệp B sử dụng vốn chủ sở hữu hiệu quả hơn", "Doanh nghiệp A chắc chắn có ROS cao hơn doanh nghiệp B", "Doanh nghiệp B chắc chắn có mức lợi nhuận sau thuế cao hơn A"], ans: 0, group: "B" },
-            { id: 71, q: "Doanh nghiệp X có ROA = 8% nhưng ROE = 16%. Nhận định nào sau đây có khả năng giải thích phù hợp nhất?", options: ["Doanh nghiệp không sử dụng nợ trong hoạt động kinh doanh", "Doanh nghiệp sử dụng nợ (đòn bẩy tài chính) trong hoạt động kinh doanh, làm ROE cao hơn ROA", "Doanh nghiệp chắc chắn có ROS rất cao", "Doanh nghiệp có khả năng thanh toán ngắn hạn rất tốt"], ans: 1, group: "B" },
-            { id: 72, q: "Công ty có thể cải thiện khả năng thanh toán các khoản nợ ngắn hạn bằng cách nào sau đây?", options: ["Giảm dự trữ hàng tồn kho", "Tiếp tục vay ngắn hạn ngân hàng", "Thu hồi các khoản nợ phải thu", "Vay dài hạn lấy tiền để trả nợ ngắn hạn"], ans: 3, group: "B" },
-            { id: 73, q: "Công ty X có bảng số liệu: TS ngắn hạn (N: 780, N+1: 900, N+2: 1.250); Nợ ngắn hạn (N: 400, N+1: 500, N+2: 700). Hệ số thanh toán hiện thời bình quân ngành là 1,7. Nhận xét nào đúng?", options: ["Năng lực thanh toán nợ ngắn hạn có xu hướng giảm qua các năm, luôn ở mức thấp hơn mức trung bình ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng giảm qua các năm, nhưng luôn ở mức cao hơn mức trung bình của ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng tăng qua các năm và luôn ở mức cao hơn mức trung bình ngành", "Năng lực thanh toán nợ ngắn hạn có xu hướng tăng qua các năm, luôn ở mức thấp hơn mức trung bình ngành"], ans: 1, group: "B" },
-            { id: 74, q: "Công ty X: Doanh thu thuần năm N là 120.000, năm N-1 là 90.000 (triệu đ). Phân tích nào sau đây là đúng?", options: ["Doanh thu thuần về bán hàng năm N tăng 30.000 so với năm N-1 với tỷ lệ tăng là 33,33%. cho thấy doanh nghiệp đã đẩy mạnh tiêu thụ sản phẩm ra thị trường và tăng giá bán sản phẩm.", "Doanh thu thuần về bán hàng năm N giảm 30.000 so với năm N-1, với tỷ lệ giảm là 33,33%.", "Doanh thu thuần về bán hàng năm N tăng 30.000 so với năm N-1, với tỷ lệ tăng là 25%.", "Doanh thu thuần về bán hàng năm N giảm 30.000 so với năm N-1, với tỷ lệ giảm là 25%."], ans: 0, group: "B" },
-            { id: 75, q: "Công ty X: Doanh thu năm N-1 (A: 60k, B: 100k, C: 240k). Năm N (A: 80k, B: 110k, C: 310k). Phân tích đúng về CH A năm N?", options: ["Tỷ trọng doanh thu cửa hàng A năm N là 16%, chiếm tỷ trọng khá lớn.", "Tỷ trọng doanh thu cửa hàng A năm N là 26%, chiếm tỷ trọng khá lớn.", "Tỷ trọng doanh thu bán hàng cửa hàng A trong tổng doanh thu năm N là 16%, chiếm tỷ trọng nhỏ trong tổng doanh thu của công ty.", "Tỷ trọng doanh thu cửa hàng A năm N là 20%, chiếm tỷ trọng nhỏ."], ans: 2, group: "B" },
-            { id: 76, q: "Công ty X: DT bán hàng N-1: 10.000, N: 12.000; Chiết khấu thương mại N-1: 300, N: 500. Tỷ lệ tăng/giảm DT thuần năm N so với N-1?", options: ["15%", "15,65%", "18%", "18,56%"], ans: 3, group: "B" },
-            { id: 77, q: "Công ty X: DT bán hàng N-1: 10.000, N: 12.000; Chiết khấu thương mại N-1: 500, N: 650. Phân tích đúng?", options: ["Chiết khấu thương mại năm N tăng 150 trđ so với N-1 với tỷ lệ tăng là 23,1%...", "Chiết khấu thương mại năm N tăng 150 trđ so với năm N-1 với tỷ lệ tăng là 30% làm cho doanh thu thuần về bán hàng và cung cấp dịch vụ giảm 150 trđ.", "Chiết khấu thương mại năm N giảm 150 trđ...", "Chiết khấu thương mại năm N tăng 150 trđ... làm doanh thu thuần tăng 150 trđ."], ans: 1, group: "B" },
-            { id: 78, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (300), N: (500); LN khác N-1: 100, N: 150. Phân tích đúng về LN bán hàng?", options: ["Lợi nhuận từ hoạt động bán hàng và cung cấp dịch vụ năm N giảm 700 trđ so với năm N-1 làm cho lợi nhuận trước thuế giảm 700 trđ.", "Lợi nhuận từ hoạt động bán hàng tăng 700 trđ...", "Lợi nhuận từ hoạt động bán hàng giảm 700 trđ làm LN trước thuế tăng 700 trđ.", "Lợi nhuận từ hoạt động bán hàng tăng 700 trđ..."], ans: 0, group: "B" },
-            { id: 79, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (500), N: (300); LN khác N-1: 200, N: 150. Phân tích đúng về LN tài chính?", options: ["Khoản lỗ từ hoạt động tài chính năm N tăng 200 trđ... làm LN trước thuế tăng 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N giảm 200 trđ... làm LN trước thuế giảm 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N tăng 200 trđ... làm LN trước thuế giảm 200 trđ.", "Khoản lỗ từ hoạt động tài chính năm N giảm 200 trđ so với năm N-1 làm cho lợi nhuận trước thuế tăng 200 trđ."], ans: 3, group: "B" },
-            { id: 80, q: "Công ty X: LN bán hàng N-1: 5.000, N: 4.300; LN tài chính N-1: (500), N: (300); LN khác N-1: 200, N: 150. Phân tích đúng về LN khác?", options: ["Lợi nhuận khác năm N giảm 50 trđ làm LN trước thuế tăng 50 trđ.", "Lợi nhuận khác năm N giảm 50 trđ so với năm N-1 làm cho lợi nhuận trước thuế giảm 50 trđ.", "Lợi nhuận khác năm N tăng 50 trđ...", "Lợi nhuận khác năm N tăng 50 trđ... làm LN trước thuế tăng 50 trđ."], ans: 1, group: "B" },
-            { id: 81, q: "Công ty X: DTT bán hàng N-1: 5.000, N: 4.300; Giá vốn hàng bán N-1: 3.700, N: 3.540. Phân tích đúng về GVHB?", options: ["Giá vốn hàng bán năm N tăng 160 trđ...", "Giá vốn hàng bán năm N tăng 160 trđ...", "Giá vốn hàng bán năm N giảm 160 trđ... làm LNBH giảm 160 trđ.", "Giá vốn hàng bán năm N giảm 160 trđ so với năm N-1 làm cho lợi nhuận từ hoạt động bán hàng và cung cấp dịch vụ tăng 160 trđ."], ans: 3, group: "B" },
-            { id: 82, q: "Công ty X: Số lượng bán N-1: 300, N: 400. LN bán hàng đơn vị N-1: 55, N: 48 (1000đ). Ảnh hưởng của LN đơn vị đến tổng LN?", options: ["Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 2.800.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 2.600.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 3.500.", "Lợi nhuận bán hàng đơn vị giảm 7/SP làm cho tổng lợi nhuận bán hàng giảm 3.000."], ans: 0, group: "B" },
-            { id: 83, q: "Tổng LNBH kế hoạch: 16.500, thực tế: 19.200. Tỷ lệ sản lượng thực tế/kế hoạch = 1,05. Mức ảnh hưởng của sản lượng đến LNBH?", options: ["655.000", "960.000", "785.000", "825.000"], ans: 3, group: "B" },
-            { id: 84, q: "Số lượng N: A(300), B(400). LNBH đơn vị N-1: A(55), B(50). Tỷ lệ sản lượng N/N-1 = 1,05. Tổng LNBH N-1 = 40.100. Mức ảnh hưởng kết cấu mặt hàng?", options: ["(5.705)", "(5.505)", "(5.605)", "(5.305)"], ans: 2, group: "B" },
-            { id: 85, q: "Số lượng N: A(300), B(400). Giá bán N-1: A(120), B(100). Giá bán N: A(130), B(120). Mức ảnh hưởng của đơn giá bán đến LNBH?", options: ["16.200", "14.000", "11.000", "12.300"], ans: 2, group: "B" },
-            { id: 86, q: "Tỷ suất LNST/DTT N-1 là 5%, năm N là 6,5%. Phân tích đúng?", options: ["Tỷ suất LNST/DTT năm N tăng 2,5%...", "Tỷ suất LNST/DTT năm N giảm 1,5%...", "Tỷ suất lợi nhuận sau thuế trên doanh thu thuần năm N tăng 1,5% so với năm N-1. Điều này cho thấy doanh nghiệp đã nỗ lực để cải thiện tình hình doanh thu, đồng thời chưa tiết kiệm các khoản chi phí trong sản xuất kinh doanh.", "Tỷ suất LNST/DTT năm N giảm 2,5%..."], ans: 2, group: "B" },
-            { id: 87, q: "Tỷ suất ROE năm N là 14%, năm N-1 là 15,4%. Phân tích đúng?", options: ["Tỷ suất ROE năm N tăng 1,4%...", "Tỷ suất ROE năm N giảm 1,4%... tạo ra nhiều hơn...", "Tỷ suất ROE năm N tăng 1,4%...", "Tỷ suất lợi nhuận sau thuế trên vốn chủ sở hữu năm N giảm 1,4% so với năm N-1. Như vậy, với 100 đồng vốn chủ sở hữu đưa vào kinh doanh năm N thì tạo ra ít hơn 1,4 đồng lợi nhuận sau thuế so với năm N-1."], ans: 3, group: "B" },
-            { id: 88, q: "Hệ số thanh toán tổng quát năm N là 0,9, N+1 là 0,8. Phân tích đúng?", options: ["Hệ số thanh toán hiện thời...", "Hệ số thanh toán tổng quát đều rất thấp ở cả hai năm (đều<1) thể hiện khả năng thanh toán của Công ty đối với các khoản nợ phải trả rất thấp và có xu hướng giảm (giảm 0,1 lần).", "Hệ số thanh toán tổng quát... đối với nợ dài hạn...", "Hệ số thanh toán nợ ngắn hạn..."], ans: 1, group: "B" },
-            { id: 89, q: "Hệ số thu hồi nợ năm N là 5, năm N+1 là 6. Đánh giá đúng?", options: ["Thể hiện Công ty thu hồi nợ năm N+1 chậm đi 1 lần...", "Thể hiện Công ty thu hồi nợ năm N+1 nhanh hơn 1 lần so với năm N, rủi ro tài chính giảm đi", "Thể hiện hàng tồn kho quay nhanh hơn...", "Thể hiện hàng tồn kho quay chậm hơn..."], ans: 1, group: "B" },
-            { id: 90, q: "Hệ số quay vòng hàng tồn kho năm N là 6, N+1 là 5. Nhận xét đúng?", options: ["Thu hồi nợ chậm đi...", "Thu hồi nợ nhanh hơn...", "Hàng tồn kho quay nhanh hơn...", "Thể hiện hàng tồn kho của Công ty năm N+1 quay chậm hơn 1 vòng so với năm N, rủi ro tài chính tăng lên"], ans: 3, group: "B" },
-            { id: 91, q: "Hệ số thanh toán hiện thời năm N là 1,5, N+1 là 1,8. Phân tích đúng?", options: ["Hệ số thanh toán hiện thời đều thấp...", "Hệ số thanh toán tổng quát...", "Hệ số thanh toán hiện thời đều >1 ở cả hai năm thể hiện khả năng thanh toán của Công ty đối với các khoản nợ ngắn hạn khá tốt và có xu hướng tăng (tăng 0,3 lần).", "Hệ số thanh toán tổng quát đều thấp..."], ans: 2, group: "B" },
-            { id: 92, q: "Năm N: Hệ số thanh toán tổng quát (Đầu N: 1.6, Cuối N: 1.7); Hiện thời (0.7 -> 0.8); Nhanh (0.2 -> 0.3). Phân tích đúng?", options: ["Hệ số thanh toán tổng quát tăng 0,1, đều lớn hơn 1 cả ở thời điểm đầu năm và cuối năm N, cho thấy khả năng thanh toán các khoản nợ phải trả năm N tại công ty X khá tốt.", "Hệ số thanh toán hiện thời... khá tốt.", "Công ty không có khả năng thanh toán...", "Khả năng thanh toán nhanh... khá tốt."], ans: 0, group: "B" },
-            { id: 93, q: "Năm N: Nợ/Tài sản (0.6 -> 0.7); Hệ số thu hồi nợ (36 -> 30); Thời hạn thu hồi nợ (10 -> 12 ngày). Đánh giá đúng?", options: ["Hệ số nợ/TS tăng làm rủi ro tài chính giảm.", "Hệ số thu hồi nợ giảm làm rủi ro tài chính giảm.", "Thời hạn thu hồi nợ tăng 2 ngày cho thấy rủi ro tài chính tăng lên", "Thời hạn thu hồi nợ tăng 2 ngày cho thấy rủi ro tài chính giảm đi"], ans: 2, group: "B" },
-            { id: 94, q: "Thanh toán lãi vay (2.5 -> 3); Quay vòng HTK (20 -> 30 vòng); Thời hạn quay vòng HTK (18 -> 12 ngày). Đánh giá đúng?", options: ["Thanh toán lãi vay tăng làm rủi ro tài chính tăng.", "Vòng quay HTK tăng làm rủi ro tài chính tăng.", "Thời hạn quay vòng HTK giảm làm rủi ro tài chính tăng.", "Thời hạn quay vòng hàng tồn kho giảm 6 ngày làm rủi ro tài chính giảm đi"], ans: 3, group: "B" },
-            { id: 95, q: "DTT tăng 25% (500tr); GVHB tăng 35% (490tr); CP bán hàng giảm 25% (-50tr); CP QLDN tăng 20% (20tr); LNBH tăng 13,3% (40tr). Phân tích đúng?", options: ["Tốc độ tăng GVHB cao hơn DTT...", "Doanh thu thuần bán hàng tăng 25%, trong khi chi phí bán hàng giảm 25%, đây là nguyên nhân chủ yếu làm lợi nhuận bán hàng tăng", "Tốc độ tăng CP QLDN thấp hơn DTT...", "Chi phí bán hàng giảm... làm LNBH giảm."], ans: 1, group: "B" },
-            { id: 96, q: "DTT giảm 25% (-500tr); GVHB giảm 28,6% (-400tr); CP bán hàng giảm 16,7% (-50tr); CP QLDN giảm 50% (-100tr); LNBH tăng 50% (50tr). Phân tích đúng?", options: ["Giá vốn hàng bán giảm 400 triệu đồng với tỷ lệ giảm là là 28,6%, cao hơn tốc độ giảm của doanh thu thuần bán hàng (25%) là nguyên nhân chính làm lợi nhuận bán hàng tăng.", "CP QLDN giảm 50% là nguyên nhân chính...", "CP bán hàng giảm 16,7% làm LNBH tăng.", "CP QLDN giảm 50% làm LNBH giảm."], ans: 0, group: "B" }
-        ];
-
-        // State variables
-        let appState = {
-            currentIndex: 0,
-            answers: {}, // { questionId: selectedOptionIndex }
-            bookmarks: new Set(),
-            mode: 'practice', // 'practice' or 'exam'
-            filter: 'all', // 'all', 'groupA', 'groupB', 'wrong', 'unanswered', 'bookmarked'
-            examSubmitted: false
-        };
-
-        // DOM Elements
-        const questionText = document.getElementById('questionText');
-        const questionCategory = document.getElementById('questionCategory');
-        const questionGroup = document.getElementById('questionGroup');
-        const optionsContainer = document.getElementById('optionsContainer');
-        const gridMatrix = document.getElementById('gridMatrix');
-        const btnBookmark = document.getElementById('btnBookmark');
-
-        // Stats elements
-        const statCorrect = document.getElementById('statCorrect');
-        const statWrong = document.getElementById('statWrong');
-        const statProgress = document.getElementById('statProgress');
-
-        // Initialize App
-        function initApp() {
-            // Load bookmarks from local storage
-            const savedBookmarks = localStorage.getItem('eduquiz_bookmarks');
-            if (savedBookmarks) {
-                appState.bookmarks = new Set(JSON.parse(savedBookmarks));
-            }
-            renderGrid();
-            loadQuestion(appState.currentIndex);
-            updateStats();
-        }
-
-        // Get filtered questions array
-        function getFilteredQuestions() {
-            return rawQuestions.filter(q => {
-                if (appState.filter === 'groupA') return q.group === 'A';
-                if (appState.filter === 'groupB') return q.group === 'B';
-                if (appState.filter === 'wrong') return appState.answers[q.id] !== undefined && appState.answers[q.id] !== q.ans;
-                if (appState.filter === 'unanswered') return appState.answers[q.id] === undefined;
-                if (appState.filter === 'bookmarked') return appState.bookmarks.has(q.id);
-                return true;
-            });
-        }
-
-        // Load Question to UI
-        function loadQuestion(index) {
-            const filtered = getFilteredQuestions();
-            if (filtered.length === 0) {
-                questionText.innerText = "Không có câu hỏi nào khớp với bộ lọc!";
-                optionsContainer.innerHTML = "";
-                questionCategory.innerText = "0 / 0";
-                return;
-            }
-
-            if (index < 0) index = 0;
-            if (index >= filtered.length) index = filtered.length - 1;
-            appState.currentIndex = index;
-
-            const q = filtered[index];
-            questionCategory.innerText = `Câu ${q.id} / 96`;
-            questionGroup.innerText = `Nhóm ${q.group} - ${q.group === 'A' ? 'Trung bình' : 'Khó'}`;
-            questionText.innerText = q.q;
-
-            // Bookmark status
-            if (appState.bookmarks.has(q.id)) {
-                btnBookmark.className = "text-amber-400 text-xl transition";
-            } else {
-                btnBookmark.className = "text-slate-300 hover:text-amber-400 dark:text-slate-600 dark:hover:text-amber-400 text-xl transition";
-            }
-
-            // Render Options
-            optionsContainer.innerHTML = "";
-            const selectedOpt = appState.answers[q.id];
-            const isAnswered = selectedOpt !== undefined;
-
-            const optionPrefixes = ["A", "B", "C", "D"];
-
-            q.options.forEach((optText, optIdx) => {
-                const btn = document.createElement('button');
-                btn.className = "w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-start space-x-3 group relative cursor-pointer ";
-                
-                // Styling based on state and mode
-                if (appState.mode === 'practice' && isAnswered) {
-                    if (optIdx === q.ans) {
-                        // Correct option ALWAYS GREEN if answered
-                        btn.className += "bg-emerald-50 border-emerald-500 text-emerald-900 dark:bg-emerald-950/60 dark:border-emerald-500 dark:text-emerald-200 font-medium shadow-xs";
-                    } else if (optIdx === selectedOpt && selectedOpt !== q.ans) {
-                        // Wrong option selected -> RED
-                        btn.className += "bg-rose-50 border-rose-500 text-rose-900 dark:bg-rose-950/60 dark:border-rose-500 dark:text-rose-200 font-medium shadow-xs";
-                    } else {
-                        // Normal unselected option
-                        btn.className += "border-slate-200 dark:border-slate-700 opacity-60 text-slate-500 dark:text-slate-400";
-                    }
-                } else if (appState.mode === 'exam' && appState.examSubmitted) {
-                    if (optIdx === q.ans) {
-                        btn.className += "bg-emerald-50 border-emerald-500 text-emerald-900 dark:bg-emerald-950/60 dark:border-emerald-500 dark:text-emerald-200 font-medium";
-                    } else if (optIdx === selectedOpt && selectedOpt !== q.ans) {
-                        btn.className += "bg-rose-50 border-rose-500 text-rose-900 dark:bg-rose-950/60 dark:border-rose-500 dark:text-rose-200 font-medium";
-                    } else {
-                        btn.className += "border-slate-200 dark:border-slate-700 opacity-60";
-                    }
-                } else if (isAnswered && optIdx === selectedOpt) {
-                    // Selected state in exam mode (before submit)
-                    btn.className += "bg-blue-50 border-blue-500 text-blue-900 dark:bg-blue-950/60 dark:border-blue-500 dark:text-blue-200 font-medium";
-                } else {
-                    // Default State
-                    btn.className += "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-200";
-                }
-
-                // Click event
-                btn.onclick = () => selectOption(q.id, optIdx);
-
-                // Option Badge (A, B, C, D)
-                let badgeClass = "w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 transition-colors ";
-                if (appState.mode === 'practice' && isAnswered) {
-                    if (optIdx === q.ans) badgeClass += "bg-emerald-500 text-white";
-                    else if (optIdx === selectedOpt && selectedOpt !== q.ans) badgeClass += "bg-rose-500 text-white";
-                    else badgeClass += "bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400";
-                } else if (isAnswered && optIdx === selectedOpt) {
-                    badgeClass += "bg-blue-600 text-white";
-                } else {
-                    badgeClass += "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 group-hover:bg-emerald-500 group-hover:text-white";
-                }
-
-                // Icon status
-                let statusIcon = "";
-                if (appState.mode === 'practice' && isAnswered) {
-                    if (optIdx === q.ans) statusIcon = `<i class="fa-solid fa-circle-check text-emerald-500 text-lg ml-auto"></i>`;
-                    else if (optIdx === selectedOpt && selectedOpt !== q.ans) statusIcon = `<i class="fa-solid fa-circle-xmark text-rose-500 text-lg ml-auto"></i>`;
-                }
-
-                btn.innerHTML = `
-                    <span class="${badgeClass}">${optionPrefixes[optIdx]}</span>
-                    <span class="text-sm pt-0.5 leading-snug flex-1">${optText}</span>
-                    ${statusIcon}
-                `;
-
-                optionsContainer.appendChild(btn);
-            });
-
-            renderGrid();
-        }
-
-        // Handle option selection
-        function selectOption(qId, optIdx) {
-            if (appState.mode === 'exam' && appState.examSubmitted) return;
-            
-            appState.answers[qId] = optIdx;
-            loadQuestion(appState.currentIndex);
-            updateStats();
-        }
-
-        // Navigation
-        function nextQuestion() {
-            const filtered = getFilteredQuestions();
-            if (appState.currentIndex < filtered.length - 1) {
-                loadQuestion(appState.currentIndex + 1);
-            }
-        }
-
-        function prevQuestion() {
-            if (appState.currentIndex > 0) {
-                loadQuestion(appState.currentIndex - 1);
-            }
-        }
-
-        function resetCurrentQuestion() {
-            const filtered = getFilteredQuestions();
-            if (filtered.length > 0) {
-                const qId = filtered[appState.currentIndex].id;
-                delete appState.answers[qId];
-                loadQuestion(appState.currentIndex);
-                updateStats();
-            }
-        }
-
-        function resetAll() {
-            if (confirm("Bạn có chắc chắn muốn xóa toàn bộ kết quả đã làm?")) {
-                appState.answers = {};
-                appState.examSubmitted = false;
-                loadQuestion(0);
-                updateStats();
-            }
-        }
-
-        // Render Matrix Grid Buttons
-        function renderGrid() {
-            gridMatrix.innerHTML = "";
-            const filtered = getFilteredQuestions();
-
-            filtered.forEach((q, idx) => {
-                const btn = document.createElement('button');
-                const isSelected = idx === appState.currentIndex;
-                const userAns = appState.answers[q.id];
-                const isAnswered = userAns !== undefined;
-
-                let btnClass = "w-full aspect-square rounded-xl text-xs font-bold transition-all duration-150 flex items-center justify-center relative shadow-2xs ";
-
-                if (isSelected) {
-                    btnClass += "ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-slate-800 scale-105 z-10 ";
-                }
-
-                if (appState.mode === 'practice' && isAnswered) {
-                    if (userAns === q.ans) {
-                        btnClass += "bg-emerald-500 text-white shadow-emerald-200 dark:shadow-none";
-                    } else {
-                        btnClass += "bg-rose-500 text-white shadow-rose-200 dark:shadow-none";
-                    }
-                } else if (isAnswered) {
-                    btnClass += "bg-blue-600 text-white";
-                } else {
-                    btnClass += "bg-slate-100 dark:bg-slate-700/70 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300";
-                }
-
-                btn.className = btnClass;
-                btn.innerText = q.id;
-
-                // Bookmark Indicator Dot
-                if (appState.bookmarks.has(q.id)) {
-                    const dot = document.createElement('span');
-                    dot.className = "absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full border-2 border-white dark:border-slate-800";
-                    btn.appendChild(dot);
-                }
-
-                btn.onclick = () => loadQuestion(idx);
-                gridMatrix.appendChild(btn);
-            });
-        }
-
-        // Bookmark Toggle
-        function toggleBookmarkCurrent() {
-            const filtered = getFilteredQuestions();
-            if (filtered.length === 0) return;
-            const qId = filtered[appState.currentIndex].id;
-
-            if (appState.bookmarks.has(qId)) {
-                appState.bookmarks.delete(qId);
-            } else {
-                appState.bookmarks.add(qId);
-            }
-            localStorage.setItem('eduquiz_bookmarks', JSON.stringify([...appState.bookmarks]));
-            loadQuestion(appState.currentIndex);
-        }
-
-        // Stats Calculation
-        function updateStats() {
-            let correctCount = 0;
-            let wrongCount = 0;
-            const total = rawQuestions.length;
-
-            Object.keys(appState.answers).forEach(qId => {
-                const q = rawQuestions.find(item => item.id == qId);
-                if (q) {
-                    if (appState.answers[qId] === q.ans) correctCount++;
-                    else wrongCount++;
-                }
-            });
-
-            const answeredCount = Object.keys(appState.answers).length;
-            const progressPct = Math.round((answeredCount / total) * 100);
-
-            statCorrect.innerText = correctCount;
-            statWrong.innerText = wrongCount;
-            statProgress.innerText = `${progressPct}%`;
-        }
-
-        // Set App Mode
-        function setMode(mode) {
-            appState.mode = mode;
-            const practiceBtn = document.getElementById('modePractice');
-            const examBtn = document.getElementById('modeExam');
-            const examSubmitContainer = document.getElementById('examSubmitContainer');
-
-            if (mode === 'practice') {
-                practiceBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400";
-                examBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all";
-                examSubmitContainer.classList.add('hidden');
-            } else {
-                examBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md transition-all shadow-sm bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400";
-                practiceBtn.className = "px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 transition-all";
-                examSubmitContainer.classList.remove('hidden');
-            }
-            loadQuestion(appState.currentIndex);
-        }
-
-        // Submit Exam
-        function submitExam() {
-            appState.examSubmitted = true;
-            updateStats();
-            loadQuestion(appState.currentIndex);
-            alert(`Nộp bài thành công!\nSố câu đúng: ${statCorrect.innerText} / 96`);
-        }
-
-        // Set Filter
-        function setFilter(filterType) {
-            appState.filter = filterType;
-            
-            // Update Tab active UI
-            ['All', 'A', 'B'].forEach(type => {
-                const btn = document.getElementById(`filter${type}`);
-                if (btn) {
-                    if (filterType.toLowerCase().includes(type.toLowerCase())) {
-                        btn.className = "py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-xs text-emerald-600 dark:text-emerald-400 font-bold";
-                    } else {
-                        btn.className = "py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900";
-                    }
-                }
-            });
-
-            loadQuestion(0);
-        }
-
-        // Sidebar Toggle (Mobile)
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-        }
-
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-        }
-
-        // Start App
-        window.onload = initApp;
-    </script>
+<body>
+<div class="w">
+
+<div class="scr" id="home1" style="display:block">
+ <div class="tb"><div class="bd"><div class="lg">🚀</div> KSKD</div><button class="ib thm" onclick="theme()">🌙</button></div>
+ <div class="card ct">
+  <div style="font-size:50px">📝</div>
+  <h1>Ôn tập Khởi sự kinh doanh</h1>
+  <p class="sub">Ngân hàng 179 câu trắc nghiệm<br>Đúng hiện <b style="color:var(--g)">XANH</b> · Sai hiện <b style="color:var(--r)">ĐỎ</b> · Điểm /10 · Làm lại câu sai</p>
+  <div class="st3">
+   <div class="st"><b>179</b><span>Tổng số câu</span></div>
+   <div class="st"><b>10</b><span>Thang điểm</span></div>
+  </div>
+  <p id="bl" style="color:var(--mu);font-weight:600;margin-bottom:16px">Chưa có lịch sử làm bài</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+   <button class="btn bp" onclick="start(0)">🚀 Bắt đầu làm bài</button>
+   <button class="btn bg" id="btrain" onclick="start(1)" disabled>🔄 Luyện câu đã sai (0)</button>
+  </div>
+ </div>
+</div>
+
+<div class="scr" id="quiz">
+ <div class="tb"><div class="bd"><div class="lg">🚀</div> KSKD</div>
+  <div style="display:flex;gap:8px"><button class="ib thm" onclick="theme()">🌙</button><button class="ib" onclick="exitQ()">✖</button></div></div>
+ <div class="card">
+  <div class="qm">
+   <span class="chip" id="cnt">Câu 1/179</span>
+   <span class="chip" id="okc">Đúng: 0</span>
+   <span class="chip" id="tm">⏱ 00:00</span>
+  </div>
+  <div class="pbx"><div id="pbr" style="width:0%"></div></div>
+  <div class="qtext" id="qt"></div>
+  <div id="ob"></div>
+  <div class="fb" id="fb"></div>
+  <div class="nr"><button class="btn bp" id="nx" style="display:none" onclick="next()">Câu tiếp theo →</button></div>
+ </div>
+</div>
+
+<div class="scr" id="res">
+ <div class="tb"><div class="bd"><div class="lg">📊</div> Kết quả</div><button class="ib thm" onclick="theme()">🌙</button></div>
+ <div class="card ct">
+  <div class="ring">
+   <svg width="200" height="200">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--ob)" stroke-width="14"/>
+    <circle id="rg" cx="100" cy="100" r="80" fill="none" stroke="url(#gd)" stroke-width="14" stroke-linecap="round" stroke-dasharray="503" stroke-dashoffset="503"/>
+    <defs><linearGradient id="gd"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+   </svg>
+   <div class="rvv"><b id="pt">0</b><span>điểm / 10</span></div>
+  </div>
+  <p class="chip" id="sub">Đúng 0/179 câu</p>
+  <p class="msg" id="msg"></p>
+  <div class="st4">
+   <div class="st"><b id="rc" style="color:var(--g)">0</b><span>Câu đúng</span></div>
+   <div class="st"><b id="rw" style="color:var(--r)">0</b><span>Câu sai</span></div>
+   <div class="st"><b id="ra">0%</b><span>Chính xác</span></div>
+   <div class="st"><b id="rt">00:00</b><span>Thời gian</span></div>
+  </div>
+  <div class="br2">
+   <button class="btn bp" id="bwr" style="display:none" onclick="start(1)">🔄 Làm lại câu sai</button>
+   <button class="btn bg" onclick="start(0)">📝 Làm lại toàn bộ</button>
+   <button class="btn bg" onclick="review()">👁 Xem lại bài làm</button>
+  </div>
+  <div id="wl"></div>
+ </div>
+</div>
+
+<div class="scr" id="rvw">
+ <div class="tb"><div class="bd"><div class="lg">👁</div> Xem lại bài làm</div><button class="ib" onclick="show('res')">↩</button></div>
+ <div id="rvb"></div>
+</div>
+
+</div>
+<script>
+var LT=["A","B","C","D","E"],order=[],cur=0,ans={},ok=0,wrong=[],sec=0,timer=0;
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function show(id){var a=document.querySelectorAll(".scr");for(var i=0;i<a.length;i++)a[i].style.display="none";$(id).style.display="block";window.scrollTo(0,0)}
+function bank(){try{return JSON.parse(localStorage.getItem("kskd_wrong")||"[]")}catch(e){return[]}}
+function saveB(b){try{localStorage.setItem("kskd_wrong",JSON.stringify(b))}catch(e){}}
+function fmt(s){return("0"+Math.floor(s/60)).slice(-2)+":"+("0"+s%60).slice(-2)}
+function start(f){order=f?bank().slice():Q.map(function(_,i){return i});
+if(!order.length){alert("Chưa có câu sai nào để luyện! Hãy làm bài trước nhé.");return}
+cur=0;ans={};ok=0;wrong=[];sec=0;clearInterval(timer);
+timer=setInterval(function(){sec++;$("tm").innerHTML="⏱ "+fmt(sec)},1000);
+show("quiz");draw()}
+function draw(){var q=Q[order[cur]];
+ $("cnt").innerHTML="Câu "+(cur+1)+"/"+order.length;
+ $("okc").innerHTML="Đúng: "+ok;
+ $("pbr").style.width=(cur/order.length*100)+"%";
+ $("qt").innerHTML=esc(q.t);
+var b="";for(var i=0;i<q.o.length;i++)b+='<button class="opt" onclick="pick('+i+')"><span class="lt">'+LT[i]+"</span><span>"+esc(q.o[i])+"</span></button>";
+ $("ob").innerHTML=b;
+ $("fb").className="fb";$("fb").innerHTML="";
+ $("nx").style.display="none";
+ $("nx").innerHTML=(cur+1==order.length)?"✅ Hoàn thành":"Câu tiếp theo →"}
+function pick(i){var q=Q[order[cur]],bs=$("ob").children;
+if(bs.length&&bs[0].disabled)return;
+for(var x=0;x<bs.length;x++)bs[x].disabled=true;
+ans[order[cur]]=i;
+if(i==q.a){bs[i].className="opt cr";ok++;$("fb").className="fb g";$("fb").innerHTML="✅ Chính xác!"}
+else{bs[i].className="opt wr";bs[q.a].className="opt cr";wrong.push(order[cur]);$("fb").className="fb r";$("fb").innerHTML="❌ Sai rồi! Đáp án đúng là "+LT[q.a]}
+ $("okc").innerHTML="Đúng: "+ok;
+ $("pbr").style.width=((cur+1)/order.length*100)+"%";
+ $("nx").style.display="inline-flex"}
+function next(){if(cur+1<order.length){cur++;draw()}else done()}
+function done(){
+clearInterval(timer);
+var n=order.length,pc=n?ok/n:0,pt=Math.round(pc*1000)/100,i,j;
+var b=bank(),f={};
+for(i=0;i<order.length;i++){var qi=order[i];if(ans[qi]==Q[qi].a)f[qi]=1}
+b=b.filter(function(x){return!f[x]});
+for(j=0;j<wrong.length;j++)if(b.indexOf(wrong[j])<0)b.push(wrong[j]);
+saveB(b);
+ $("pt").innerHTML=String(pt).replace(".",",");
+ $("sub").innerHTML="Đúng "+ok+"/"+n+" câu";
+ $("rc").innerHTML=ok;$("rw").innerHTML=n-ok;
+ $("ra").innerHTML=Math.round(pc*100)+"%";$("rt").innerHTML=fmt(sec);
+ $("msg").innerHTML=pc==1?"🏆 Hoàn hảo! 100% chính xác!":pc>=.8?"🎉 Giỏi lắm! Giữ phong độ nhé!":pc>=.5?"💪 Khá ổn! Luyện thêm câu sai nha!":"📚 Đừng nản, bấm Làm lại câu sai nhé!";
+var w=$("wl");w.innerHTML="";
+if(wrong.length){var hh="<h3 class='wt'>📌 "+wrong.length+" câu sai của bạn:</h3>";
+for(i=0;i<wrong.length;i++){var qj=wrong[i],q=Q[qj];
+hh+="<div class='wi'><div class='wq'>Câu "+(qj+1)+": "+esc(q.t)+"</div>";
+if(ans[qj]!=null)hh+="<div class='wa r'>❌ Bạn chọn: "+LT[ans[qj]]+"</div>";
+hh+="<div class='wa g'>✅ Đáp án đúng: "+LT[q.a]+". "+esc(q.o[q.a])+"</div></div>"}
+w.innerHTML=hh}else w.innerHTML="<p class='allok'>🎉 Không sai câu nào. Quá đỉnh!</p>";
+var bw=$("bwr");
+bw.style.display=wrong.length?"inline-flex":"none";
+bw.innerHTML="🔄 Làm lại câu sai ("+wrong.length+")";
+try{var C=503,rg=$("rg");rg.style.strokeDasharray=C;rg.style.strokeDashoffset=C;
+setTimeout(function(){rg.style.strokeDashoffset=C*(1-pc)},100)}catch(e){}
+try{var bs=parseFloat(localStorage.getItem("kskd_best")||"0");if(n==Q.length&&pt>bs)localStorage.setItem("kskd_best",String(pt))}catch(e){}
+show("res");home()}
+function home(){var b=bank();
+ $("btrain").innerHTML="🔄 Luyện câu đã sai ("+b.length+")";
+ $("btrain").disabled=!b.length;
+var t="";try{t=localStorage.getItem("kskd_best")}catch(e){}
+ $("bl").innerHTML=t?("🏆 Kỷ lục của bạn: "+t+" điểm"):"Chưa có lịch sử làm bài"}
+function review(){var h="";
+for(var i=0;i<order.length;i++){var qi=order[i],q=Q[qi],ua=ans[qi],gd=ua==q.a;
+h+="<div class='card rv'><div class='rm'><span class='chip'>Câu "+(qi+1)+"</span><span class='chip "+(gd?"cg":"cr2")+"'>"+(gd?"ĐÚNG ✔":"SAI ✘")+"</span></div>";
+h+="<div class='qtext'>"+esc(q.t)+"</div>";
+for(var j=0;j<q.o.length;j++){var c="opt ro";if(j==q.a)c+=" cr";else if(j==ua)c+=" wr";
+h+="<div class='"+c+"'><span class='lt'>"+LT[j]+"</span><span>"+esc(q.o[j])+"</span></div>"}
+h+="</div>"}
+ $("rvb").innerHTML=h;show("rvw")}
+function exitQ(){if(confirm("Thoát bài làm? Tiến độ lượt này sẽ mất.")){clearInterval(timer);show("home1");home()}}
+function theme(){var d=document.body.classList.toggle("dark");
+var a=document.querySelectorAll(".thm");for(var i=0;i<a.length;i++)a[i].innerHTML=d?"☀️":"🌙";
+try{localStorage.setItem("kskd_theme",d?"d":"l")}catch(e){}}
+try{if(localStorage.getItem("kskd_theme")=="d"){document.body.classList.add("dark");
+var a2=document.querySelectorAll(".thm");for(var i2=0;i2<a2.length;i2++)a2[i2].innerHTML="☀️"}}catch(e){}
+var Q=[
+{t:"Doanh nhân cần có phẩm chất gì để lập nghiệp?",o:["Có trách nhiệm, kiên quyết, bền bỉ, nhạy cảm và thích ứng","Thành ích, chân thành, tạc phong ý nghiệp","Ham học hỏi, thực tiến, sáng tạo, nhạy bén, thích ứng","Ham học hỏi, thực tiến, tự kiềm chế, có sức dưỡng"],a:2},
+{t:"Tại sao nghiên cứu môi trường ngành là công việc có ý nghĩa quan trọng trước khi lập nghiệp?",o:["Lường trước mức độ rủi ro và khuynh hướng thất bại ở các ngành khác nhau","Biết được những nhân tố tích cực và ảnh hưởng của chúng","Nhận ra được những nhân tố ngành để hoạch định chiến lược cạnh tranh","Biết được rủi ro đối với công việc kinh doanh tương lai"],a:2},
+{t:"Thiết kế cấu trúc tổ chức trong bản đề án kinh doanh để làm gì?",o:["Cho biết khi cần thì phải liên hệ với ai","Cho biết cách thức chọn người và sự ứng người điều hành của công ty","Thể hiện tính chất quy cụ nghiệp tức của những người sáng lập công ty","Thể hiện các trách nhiệm chủ chốt trong công ty và mối quan hệ"],a:3},
+{t:"Bảng tổng kết tài sản cá nhân cho biết thông tin?",o:["Tài sản của chủ doanh nghiệp sử dụng vào công việc kinh doanh","Phần trách nhiệm \u201chữu hạn\u201d mà chủ muốn cam kết","Tài sản còn lại (sau khi trừ nghĩa vụ tài chính) mà chủ doanh nghiệp có thể sử dụng","Cam kết của chủ doanh nghiệp đối với công việc kinh doanh"],a:3},
+{t:"Tìm câu trả lời sai: Bản kế hoạch kinh doanh bao gồm:",o:["Phần nêu ý tưởng kinh doanh","Phần tìm kiếm trợ giúp kiểm tra bản kế hoạch kinh doanh","Phần đánh giá thị trường","Phần tóm tắt tổng hợp"],a:1},
+{t:"Mục đích của việc lập bản kế hoạch hành động:",o:["Giúp bạn gắn mình với công việc","Giúp bạn thực hiện công việc theo đúng thời điểm thích hợp","Giúp bạn biết được ai sẽ làm gì và phải làm khi nào","Giúp bạn thực hiện công việc đúng trình tự, đúng thời điểm, tránh quên bất kỳ việc nào cần làm"],a:2},
+{t:"Điều kiện chính để vay vốn kinh doanh từ người thân, bạn bè:",o:["Cung cấp và giải trình bản kế hoạch kinh doanh khả thi đó","Giải thích cho họ biết những rủi ro của việc đầu tư vào kinh doanh","Giải thích cho họ biết đây là cách phổ biến để bắt đầu kinh doanh","Thông báo điều dặn sự tiến triển trong hoạt động kinh doanh của bạn"],a:1},
+{t:"Phương pháp gạt hải nhanh là:",o:["Biện pháp làm tăng khả năng các đối thủ khác nhanh vào thị trường với giá thấp hơn","Phương pháp thu lợi nhuận nhanh nhất","Phương pháp áp dụng thu lợi nhuận nhanh khi sản phẩm có ưu thế cạnh tranh hơn đối thủ","Phương pháp định giá hấp dẫn hơn so với đối thủ"],a:2},
+{t:"Những yếu tố quyết định nhất giúp bạn thành công trong kinh doanh",o:["Quyết tâm, động cơ, chữ tín","Có quyết tâm, động cơ, sức khỏe, kỹ năng quản lý","Quyết tâm, động cơ, sức khỏe","Có khả năng quản lý kinh doanh, có tay nghề kỹ thuật"],a:1},
+{t:"Tìm câu trả lời sai: Trong nền kinh tế thị trường:",o:["Kinh doanh là điều không tránh khỏi","Kinh doanh có cạnh tranh là có rủi ro","Cạnh tranh trong kinh doanh là đường đầu voi mạo hiểm, là mạnh dạn","Đối với người tài năng muốn khẳng định mình thì cạnh tranh có sức hấp dẫn lớn"],a:2},
+{t:"Điều quan tâm trước tiên khi đưa ra ý tưởng kinh doanh mới:",o:["Khách hàng của họ là ai","Thời gian và địa điểm nào là thuận tiện nhất","Loại hàng hóa nào thị trường cần","Phương pháp bán ra sao"],a:2},
+{t:"Các điều kiện cần có khi vay vốn kinh doanh từ ngân hàng",o:["Tư chất của người vay vốn, tài sản thế chấp của người vay nợ","Khả năng thanh toán, thời hạn vay nợ, tài sản thế chấp, tính khả thi của phương án kinh doanh","Tình trạng công việc kinh doanh đề xuất, tài sản thế chấp","Trình độ năng lực của người vay vốn, chứng minh được đã thành công trong quá khứ"],a:1},
+{t:"Tầm quan trọng của marketing trong kinh doanh là:",o:["Tạo và tìm được khách hàng, thông qua việc thỏa mãn nhu cầu của họ để thu lợi nhuận","Đáp ứng một cách tốt nhất trong điều kiện hiện có","Cung cấp thông tin và thu hút khách hàng để họ mua sản phẩm","Đưa sản phẩm, dịch vụ đến với khách hàng một cách nhanh nhất"],a:0},
+{t:"Điểm cơ bản nhất làm cho một chủ doanh nghiệp kém thành công:",o:["Chưa làm tốt công tác tuyển dụng, đào tạo nhân viên","Cung cách đối xử, ngoại giao với bán hàng, đối tác chưa thuyết phục, chưa tâm lý với khách hàng","Chưa năng động sáng tạo và đổi mới kịp thời, thiếu tố chất của một nhà doanh nghiệp","Quản trị nhân sự yếu kém, xếp chưa đúng người, đúng chỗ"],a:2},
+{t:"Tồn kho là:",o:["Tất cả các hàng hóa đang có trong kho hoặc trên các quầy bán của doanh nghiệp cũng như ký gửi ở cửa hàng của người khác","Các sản phẩm dở dang (chưa hoàn chỉnh) và các sản phẩm hoàn chỉnh chưa bán hoặc chưa bán được đang lưu giữ tại doanh nghiệp","Một khoản tiền đầu tư dưới dạng hàng hóa","Việc lưu kho các nhiên liệu, nguyên vật liệu dùng để làm ra sản phẩm, dịch vụ của doanh nghiệp"],a:0},
+{t:"Mục đích của việc kiểm kê tồn kho là:",o:["Xác định được số lượng, chất lượng, chủng loại, giá trị thành tiền đối với nguyên vật liệu và hàng hóa của doanh nghiệp","Ghi số lượng và giá vốn của từng mặt hàng có trong thể kho vào danh mục kiểm kê","Xác định được chênh lệch giữa số liệu kiểm kê và số liệu trên kế hoạch","Cân dòng, đo, đếm từng mặt hàng quay nguyên vật liệu và lô kết quả vào trong danh mục kiểm kê"],a:0},
+{t:"Mục tiêu của việc tính vòng quay tài chính trong cơ hội kinh doanh là?",o:["Biết được phác thảo về dự kiến doanh số, chi phí, lãi, nguồn","Biết được khởi sự một công việc kinh doanh tốn kém bao nhiêu","Biết được những người khác cần đóng góp bao nhiêu","Biết được mỗi cơ hội có thể mang lại thu nhập là bao nhiêu"],a:0},
+{t:"Đặc trưng của hình thức doanh nghiệp một chủ sở hữu là?",o:["Doanh nghiệp gia đình","Tiền vốn chỉ do một người bỏ ra","Người điều hành có thể chỉ phải bỏ một phần vốn không đáng kể hoặc thậm chí không phải bỏ đóng nào","Chỉ một người có quyền ra quyết định về mọi công việc của doanh nghiệp"],a:3},
+{t:"Thành viên \u201chữu hạn\u201d trong một doanh nghiệp liên danh có trách nhiệm?",o:["Nhận thông tin tổng hợp và ra quyết định tổng hợp","Chịu rủi ro kinh doanh chỉ liên quan đến phần tài sản đóng góp","Tham gia ra các quyết định tạc nghiệp","Ra quyết định liên quan đến những vấn đề chiến lược"],a:1},
+{t:"Điểm nào có thể phát sinh dưới đây không thuộc những lợi điểm khi khởi sự kinh doanh:",o:["Được sáng tạo, đóng góp, đem lại sự thỏa mãn cho cộng đồng","Không phải tuân thủ mệnh lệnh, được quyền tự chủ trong kinh doanh","Chịu rủi ro với các khoản tiền tiết kiệm của mình","Có khả năng tự kiểm soát cuộc sống của mình"],a:2},
+{t:"Mục không thuộc lý do dẫn đến sự thất bại của các chủ doanh nghiệp nhỏ",o:["Việc phân biệt, hạch toán không rõ các vấn đề giữa gia đình với hoạt động kinh doanh và vốn kinh doanh","Có quá nhiều hàng tồn trong kho, có nhiều tiền đóng dưới dạng tài sản cố định","Có kinh nghiệm về tài chính nhưng không có kinh nghiệm về sản xuất và bán hàng","Có kỹ năng quản lý tiền, quản lý nhân viên, có khi chưa tính hết những nhu cầu của khách hàng"],a:3},
+{t:"Trước khi khởi sự kinh doanh cần",o:["Nghiên cứu các xu thế dân số, kinh tế, xã hội","Phân tích điều kiện thị trường hiện tại","Phân tích tiềm lực của bản thân","Phân tích các nhu cầu của khách hàng"],a:2},
+{t:"Việc xây dựng kế hoạch kinh doanh nhằm",o:["Quản lý được doanh nghiệp theo định hướng","Thấy được tính khả thi và chủ động của việc kinh doanh","Cung cấp thông tin cần thiết cho nhiều nhà đầu tư","Chỉ dẫn cách thức hoạt động"],a:0},
+{t:"Nội dung chính trình bày phần tóm tắt tổng hợp trong bản kế hoạch kinh doanh",o:["Trình bày ngắn gọn về dự kiến kinh doanh, các thị trường cụ thể sẽ được phục vụ","Trình bày được các ưu thế cạnh tranh, mức tăng trưởng dự kiến, mức thu hồi vốn của doanh nghiệp","Trình bày được những nghiên cứu cụ thể khi chuẩn bị kế hoạch kinh doanh của bạn","Trình bày được thực chất của công việc kinh doanh dự kiến"],a:0},
+{t:"Nội dung chính trình bày phần ý tưởng kinh doanh trong bản kế hoạch kinh doanh:",o:["Trình bày được các ưu thế cạnh tranh, mức tăng trưởng dự kiến của doanh nghiệp","Mô tả ngắn gọn chi tiết các thị trường cụ thể","Trình bày được những nghiên cứu cụ thể khi chuẩn bị kế hoạch kinh doanh của bạn","Là bức thông điệp chi tiết về sản phẩm, dịch vụ chuẩn bị cung cấp"],a:3},
+{t:"Nội dung chính trình bày phần đánh giá thị trường trong bản kế hoạch kinh doanh của bạn cần:",o:["Nêu được địa điểm kinh doanh và phương thức phân phối sản phẩm","Ghi chi tiết các sản phẩm hay dịch vụ bán ra","Mô tả cách thức bán hàng và phân phối sản phẩm của mình ra thị trường, cách thức nắm bắt và đáp ứng nhu cầu của khách hàng","Mô tả kế hoạch quảng cáo doanh nghiệp của bạn"],a:2},
+{t:"Mục không thuộc về quản lý tồn kho",o:["Tham quan các hội chợ triển lãm để tìm và gặp trực tiếp các nhà cung ứng","Nhập nguyên vật liệu và hàng hóa khi được nhập về doanh nghiệp","Ghi các dữ liệu về nguyên vật liệu, hàng hóa, lập mức dự trữ","Đặt mua thêm nguyên vật liệu và hàng hóa bổ sung","Sắp xếp và bảo quản nguyên vật liệu"],a:0},
+{t:"Công việc không thuộc các hoạt động nhập hàng vào doanh nghiệp",o:["Nhận các bản thành phẩm, các sản phẩm đã làm xong chờ bán","Loại bỏ những nguyên vật liệu và hàng hóa bị hỏng, không sử dụng được nữa","Nhận lô mới nguyên vật liệu và hàng hóa","Nhận các hàng đã bán rồi nhưng bị khách hàng trả lại"],a:1},
+{t:"Kỹ năng cần có để tiến hành kinh doanh:",o:["Tính chi phí và sổ sách","Dự báo về thị trường","Quản lý","Tìm đối tác"],a:2},
+{t:"Phẩm chất quyết định nhất cần có ở một người khi khởi sự kinh doanh:",o:["Có tầm nhìn xa cho sự hình thành và phát triển doanh nghiệp","Khát vọng làm giàu chính đáng","Sáng tạo","Quyết tâm"],a:0},
+{t:"Tìm câu trả lời sai: Khái niệm sản phẩm còn bao hàm các đặc tính khác của hàng hóa và dịch vụ như:",o:["Dịch vụ đi kèm","Chất lượng hàng hóa của sản phẩm","Cách hướng dẫn sử dụng","Tất cả các câu ở đây đều sai"],a:3},
+{t:"Kinh doanh là",o:["Hoạt động được một hay một nhóm người thực hiện với mục đích lợi nhuận","Hoạt động phức tạp được một hay một nhóm người thực hiện với mục đích cụ thể","Công việc của những người ưa mạo hiểm và thích thử sức mình","Hoạt động được một nhóm người thực hiện với mục đích giải quyết công ăn việc làm cho xã hội"],a:0},
+{t:"Các doanh nghiệp nhỏ và vừa có phát triển tốt nhờ",o:["Phù hợp với ngành kinh doanh có quy mô tương đối lớn","Khả năng đáp ứng yêu cầu đa dạng của thị trường","Thay đổi linh hoạt và năng động","Phương pháp quản lý có hiệu quả"],a:1},
+{t:"Cơ hội kinh doanh hấp dẫn phụ thuộc vào",o:["Khả năng của bản thân","Động cơ kinh doanh","Mục tiêu kinh doanh","Nhu cầu của thị trường"],a:3},
+{t:"Trong lĩnh vực quản lý, khâu quan trọng nhất là:",o:["Tổ chức","Điều khiển","Kiểm tra, giám sát","Hoạch định"],a:3},
+{t:"Thứ tự sắp xếp đúng nhất trình bày trong bản kế hoạch kinh doanh:",o:["Tóm tắt tổng hợp, ý tưởng kinh doanh, tổ chức doanh nghiệp, tài chính doanh nghiệp, phụ lục","Ý tưởng kinh doanh, tóm tắt tổng hợp, tổ chức doanh nghiệp, tài chính doanh nghiệp, phụ lục","Ý tưởng kinh doanh, tóm tắt tổng hợp, tổ chức doanh nghiệp, tài chính doanh nghiệp","Tóm tắt tổng hợp, ý tưởng kinh doanh, tổ chức doanh nghiệp, tài chính doanh nghiệp"],a:0},
+{t:"Giá nhập một chai rượu vang Pháp là 4 USD. Công ty đưa ra mức giá bán lẻ theo một mức giá nhất định là 5,5 USD; cách định giá này dựa vào",o:["Phương pháp định giá cộng thêm","Phương pháp dựa vào thị trường để định giá","Phương pháp hớt váng để đặt giá","Phương pháp theo thị trường"],a:0},
+{t:"Tìm câu trả lời ít đúng nhất: Đặc tính của cơ hội là",o:["Giá trị của cơ hội không tồn tại ở hình thái chủ quan và tính phụ thuộc","Tồn tại khách quan không theo ý muốn của con người","Có tính chất bất ngờ","Là tài nguyên có giá trị, phù hợp với từng hoàn cảnh"],a:0},
+{t:"Cốt lõi của nghệ thuật tìm ra khe hở thị trường là",o:["Tìm ra nhà cung ứng với giá rẻ nhất","Phân tích tìm ra nhu cầu của thị trường mà bạn dự định kinh doanh","Tìm hiểu khả năng mua của khách hàng","Tìm ra nơi tiêu thụ hàng nhanh chóng"],a:1},
+{t:"Trách nhiệm đầu tiên của chủ kinh doanh trong khởi sự kinh doanh:",o:["Tuân thủ luật lao động","Nộp thuế","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai tính thuế"],a:2},
+{t:"Điều quan trọng nhất của bản thân với tư cách là một chủ doanh nghiệp để có thể thành đạt trong cơ chế thị trường hiện nay:",o:["Đánh giá đúng tình hình tài chính gia đình","Sự quyết tâm","Có tinh thần sáng tạo","Có ý thức cạnh tranh cùng sự quyết tâm"],a:3},
+{t:"Điều bổ ích nhất trong việc tự điều chỉnh để một chủ doanh nghiệp có tinh thần sáng tạo trong kinh doanh:",o:["Có nhiều phương án giải quyết khác nhau","Bồi dưỡng đức tính bền bỉ, nhẫn nại và nhạy cảm","Thường xuyên tự hỏi mình, nếu có cơ hội như vậy, mình có thể làm được tốt hơn hay không?","Lắng nghe ý kiến của những người có nhiều kinh nghiệm"],a:2},
+{t:"Điểm có ý nghĩa quyết định nhất đến sự thành công hay thất bại trong kinh doanh của một chủ doanh nghiệp:",o:["Chữ tín","Động cơ","Chấp nhận rủi ro","Quyết tâm"],a:3},
+{t:"Yếu tố chủ yếu dẫn tới thất bại trong kinh doanh",o:["Không biết hoặc chọn nhầm cơ hội kinh doanh","Không đủ khách hàng, doanh thu thấp","Hiểu biết rất ít về ngành mà mình kinh doanh","Marketing yếu kém"],a:1},
+{t:"Mục khó khăn nhất khi tiến hành khởi sự kinh doanh",o:["Làm việc suốt ngày đêm, không có ngày nghỉ và thời gian dưỡng bệnh khi ốm đau","Trách nhiệm với các khoản tài chính và các hoạt động kinh doanh khi bị rủi ro","Thời gian chăm sóc gia đình và dành cho bạn bè ngày một co hẹp","Phải làm một số việc lặt vặt mà trước đây bạn không thích"],a:0},
+{t:"Tìm ra cơ hội kinh doanh từ đâu",o:["Từ những sản phẩm chưa có trên thị trường","Từ những sản phẩm, dịch vụ có nhu cầu cao đã và đang thịnh hành ở nước ngoài","Từ việc tìm tòi, thỏa mãn các nhu cầu chưa được đáp ứng","Từ khả năng nhạy bén và tính sáng tạo của bạn"],a:3},
+{t:"Tìm cơ hội kinh doanh là",o:["Tìm những nhu cầu mà các doanh nghiệp chưa đáp ứng hoặc đáp ứng chưa tốt","Tìm những nhu cầu mà các doanh nghiệp đáp ứng chưa hợp lý","Tìm và xóa bỏ những điều bất hợp lý trong việc đáp ứng các nhu cầu","Tìm những nhu cầu mà các doanh nghiệp đáp ứng chưa tốt"],a:0},
+{t:"Phát hiện ra cơ hội kinh doanh",o:["Từ những khó khăn mà chính bạn đang gặp phải","Từ các vấn đề, khó khăn mà người khác đang gặp phải","Từ những gì còn thiếu trong cộng đồng của bạn","Từ việc tìm ra khoảng trống trong quá trình đáp ứng các nhu cầu khác nhau trong cộng đồng"],a:3},
+{t:"Bước có ý nghĩa quyết định nhất khi tiến hành lựa chọn cơ hội kinh doanh:",o:["Xác lập quy mô về tài chính của các cơ hội, sắp xếp ưu tiên các cơ hội và lựa chọn cơ hội","Liệt kê những vấn đề có trên thị trường cần quan tâm","Xác định những năng lực và nguồn lực cần thiết để thực hiện cơ hội","Chỉ ra các cơ hội kinh doanh thích hợp đã được liệt kê"],a:0},
+{t:"Câu trả lời đúng nhất:",o:["Ý tưởng kinh doanh tốt là hãy bán những thứ thị trường cần","Ý tưởng kinh doanh xuất phát điểm tốt sẽ tránh được những thua lỗ mất mát sau này","Ý tưởng kinh doanh đúng, là tiền đề cho sự ra đời của các cơ sở kinh doanh là yếu tố cơ bản dẫn tới thành công","Ý tưởng kinh doanh không tốt sẽ dẫn kinh doanh tới thất bại"],a:0},
+{t:"Nội dung chính trình bày phần tài chính doanh nghiệp trong bản kế hoạch kinh doanh của bạn cần:",o:["Mô tả về nhân sự và trách nhiệm pháp lý của bạn trong kinh doanh","Nêu các điều kiện về tài chính của doanh nghiệp bạn","Nêu mục đích và cách thức của việc tạo ra lợi nhuận cho doanh nghiệp của bạn","Tính toán được doanh số, chi phí lãi lỗ, số vốn ban đầu cần thiết"],a:3},
+{t:"Cách định giá theo thị trường có hạn chế:",o:["Khó cạnh tranh về giá với sản phẩm cạnh tranh","Mức giá thường thấp hơn mức của sản phẩm thay thế","Không thể hiện hoặc khai thác được ưu thế cạnh tranh","Sức cạnh tranh yếu"],a:2},
+{t:"Hạn chế của cách định giá phân biệt:",o:["Tăng khả năng các đối thủ tiềm ẩn với mức giá thấp hơn","Không định hình được chiến lược cạnh tranh nhất quán","Chiến tranh về giá cả","Phản ứng của khách hàng"],a:0},
+{t:"Hạn chế của việc định giá hớt váng:",o:["Không khai thác được ưu thế cạnh tranh đặc biệt","Năng lực cạnh tranh bằng giá yếu so với đối thủ","Giá cao","Chỉ phục vụ một số đối tượng hạn chế"],a:1},
+{t:"Trong kế hoạch thu lợi nhuận của công ty kinh doanh taxi chất lượng cao thường áp dụng phương pháp",o:["Định giá cạnh tranh và định giá cộng thêm","Định giá cộng thêm","Giá linh hoạt theo thị trường","Định giá cạnh tranh"],a:0},
+{t:"Hãng sản xuất đầu gói đầu Daso chọn nhiều nhà cung ứng cùng một lúc sẽ có lợi hơn trong kinh doanh. Lợi ích cơ bản của chính sách này là:",o:["Tránh việc đầu cơ của một số nhà cung ứng","Được hưởng ưu đãi về khách hàng quen","Hưởng lợi thông qua cạnh tranh của các nhà cung ứng khác nhau","Chủ động trong việc duy trì lượng dự trữ"],a:2},
+{t:"Lý do chính giúp cho các doanh nghiệp vừa và nhỏ thành công trên thị trường",o:["Gần lợi ích với các doanh nghiệp lớn, các hoạt động quản lý và kinh doanh có hiệu quả","Có khả năng đáp ứng nhu cầu đa dạng về sản phẩm, dịch vụ trên thị trường. Thay đổi linh hoạt, năng động","Cho phép thay đổi linh hoạt, năng động trong môi trường cạnh tranh gay gắt","Vai trò và ưu thế của doanh nghiệp lớn giảm dần giúp cho doanh nghiệp nhỏ chiếm dần ưu thế trên thị trường"],a:1},
+{t:"Quản lý tồn kho yếu kém sẽ",o:["Ảnh hưởng tới hiệu quả sản xuất và kinh doanh, làm tăng các chi phí","Gây ra tình trạng động vốn","Tăng chi phí bảo quản và lưu kho, phí bảo hiểm","Làm tăng các chi phí như: lãi vay, hao hụt hữu hình và vô hình"],a:0},
+{t:"Câu trả lời đúng nhất:",o:["Ý tưởng kinh doanh thường được nảy sinh từ những người có óc quan sát nhạy bén và tài năng sáng tạo đặc biệt","Ý tưởng kinh doanh không chỉ xuất hiện từ những người có học vấn cao, trí tuệ sắc sảo mà còn từ những người bình thường có đầu óc quan sát tìm tòi","Ý tưởng kinh doanh xuất phát từ những người có mặt tài chính và rủi ro có thể chấp nhận được","Ý tưởng kinh doanh độc đáo ngày hôm qua sẽ là những sản phẩm, dịch vụ quen thuộc của ngày hôm nay"],a:1},
+{t:"Phát hiện ra cơ hội kinh doanh tiềm ẩn trên cơ sở",o:["Sử dụng các thông tin có được từ việc quan sát tổ chức sản xuất hoặc buôn bán các sản phẩm, dịch vụ, hàng hóa","Quá trình bản thân hay gia đình bạn khó khăn đi tìm mua một mặt hàng hay dịch vụ nào đó","Sử dụng các thông tin có được từ các sách báo, tài liệu, bản tin đại, vô tuyến hàng ngày","Phân tích thông tin, nghe ngóng, quan sát trên thị trường"],a:3},
+{t:"Nguồn ý tưởng kinh doanh tốt nhất:",o:["Khách hàng, sản phẩm và dịch vụ hiện hành","Thư viện, tạp chí nghiên cứu khoa học chuyên ngành","Phòng quản lý R&D, phòng thí nghiệm, nghiên cứu","Sự sáng tạo và nguồn cảm hứng ở người chủ, những ý nghĩ đặc sắc, độc đáo ở những cái đầu độc đáo"],a:3},
+{t:"Mục tiêu của việc liệt kê những vấn đề trên thị trường là gì?",o:["Lập danh mục những nhân tố tiền đề cho công việc kinh doanh","Lập danh mục các sản phẩm, dịch vụ tiềm năng trên thị trường","Lập danh mục các vấn đề có trên thị trường","Lập danh mục các sản phẩm, dịch vụ tiềm năng cho một đối tượng khách hàng"],a:2},
+{t:"Bản mô tả thị trường và địa điểm kinh doanh cho biết những thông tin chủ yếu nhất nào?",o:["Loại khách hàng và địa bàn sẽ phục vụ","Yếu tố thể hiện ưu thế cạnh tranh","Loại hàng hoá sẽ cung ứng","Tất cả các thông tin trên"],a:3},
+{t:"Lý do quan trọng nhất dẫn đến việc Ngân hàng từ chối cho doanh nghiệp vay vốn theo phương án",o:["Không mang tính chất thuyết phục","Kinh doanh không khả thi","Với lợi nhuận thấp","Không liên quan đến hoạt động sản xuất kinh doanh hiện tại của doanh nghiệp"],a:1},
+{t:"Các sản phẩm coi là mới được phân loại theo mức độ độc đáo như sau",o:["Kết hợp những cái đã có thành một cái mới","Tạo nên những công dụng đa dạng hoá tính năng, tác dụng","Mới hoàn toàn","Sao chép có cải tiến"],a:2},
+{t:"Lợi nhuận mà doanh nghiệp bạn có được phụ thuộc vào",o:["Giá nhập nguyên vật liệu thấp hơn so với thị trường (mặt bằng chung)","Chi phí cho một đơn vị sản phẩm (giá thành) thấp hơn chi phí chung bình quân của xã hội","Giá bán sản phẩm cao hơn chi phí","Lượng lợi nhuận thu được trên một đơn vị sản phẩm"],a:3},
+{t:"Yếu tố cần quan tâm trước tiên đối với doanh nghiệp bán lẻ",o:["Địa điểm","Cách thức phân phối","Giá cả","Chất lượng"],a:0},
+{t:"Xúc tiến bán hàng là",o:["Quảng cáo để đưa sản phẩm tới tay người tiêu dùng","Đưa sản phẩm thông qua hệ thống phân phối tới tay người mua","Tuyên truyền và quảng cáo sản phẩm của mình","Quảng cáo, thu hút khách hàng quan tâm, mua sản phẩm của mình"],a:3},
+{t:"Tìm câu trả lời sai: Lập kế hoạch thu lợi nhuận nhằm",o:["Lên kế hoạch doanh thu và chi phí","Xác định căn cứ đặt giá cho sản phẩm của bạn","Xác định lại tính tối ưu của sản phẩm","Lên kế hoạch lưu chuyển tiền mặt"],a:2},
+{t:"Tìm câu đúng nhất: Để hoàn thiện các kỹ năng bán hàng cần",o:["Tỏ ra lịch sự nhã nhặn khiến cho khách hàng có cảm giác họ được quan tâm chủ đạo","Đưa ra lời khuyên đồng thời cung cấp loại sản phẩm hay dịch vụ cho phù hợp","Hiểu và nhận biết khách hàng, luôn luôn thích, trao đổi cách ứng xử với khách hàng một cách khéo léo","Đừng phát lồng nếu như khách hàng không mua, tuyệt đối không tranh cải với khách hàng"],a:2},
+{t:"Ảnh hưởng quan trọng nhất của các hình thức pháp lý trong kinh doanh",o:["Chi phí đăng ký và thành lập doanh nghiệp","Hiệu quả về mặt tài chính của doanh nghiệp","Các thuận lợi khi bắt đầu kinh doanh","Khả năng thu hút thêm người hùn vốn"],a:2},
+{t:"Lợi điểm quan trọng nhất khi bạn tiến hành kinh doanh",o:["Tự làm chủ bản thân mình, không bị ai sai khiến","Bạn là người tự ra những quyết định cần thiết để công việc kinh doanh thành đạt","Được sáng tạo, ngoài lợi nhuận ra còn gặt hái cả sự đam mê kính trọng của xã hội","Có cơ may thành đạt về tiền bạc, cuộc sống có chất lượng cao"],a:0},
+{t:"Người chủ doanh nghiệp trước hết cần có những phẩm chất",o:["Khát vọng thành đạt để thúc giục kéo kéo mọi người","Luôn tự hoàn thiện các kỹ năng","Biết lắng nghe, chọn lọc, mưu trí trong việc dùng người","Có tầm nhìn xa để xây dựng, định hướng phát triển lâu dài cho doanh nghiệp"],a:3},
+{t:"Để có khả năng, có tinh thần sáng tạo cần",o:["Lắng nghe những nhận xét và kiến nghị của những người có nhiều kinh nghiệm","Bồi dưỡng đức tính bền bỉ, nhẫn nại và nhạy cảm; mỗi vấn đề có nhiều hướng giải quyết khác nhau","Khi gặp khó khăn phải nhìn nhận một cách thực tế, không thôi phóng","Thường xuyên tự hỏi nếu có cơ hội sẽ làm tốt hơn không?"],a:0},
+{t:"Câu trả lời không thuộc nội dung ở bước liệt kê những vấn đề trên thị trường",o:["Xác định cơ hội theo cách của Richard White là chia cuộc sống con người ra hai phần, lao động và nghỉ ngơi","Lập một danh sách các lĩnh vực mà nhu cầu con người chưa được thỏa mãn đầy đủ hoặc còn bỏ trống","Cố gắng trả lời câu hỏi: Khởi sự công việc này sẽ phải chi phí hết bao nhiêu tiền","Trong công việc này chỉ nên quan tâm tới số lượng các vấn đề có ý nghĩa quan trọng"],a:2},
+{t:"Vấn đề không thuộc nội dung ở bước: sắp xếp ưu tiên các cơ hội",o:["Cân nhắc để lựa chọn các cơ hội phù hợp với khả năng tài chính của mình","Sắp xếp các cơ hội theo: Sở thích, giá trị về mặt tài chính và rủi ro có thể chấp nhận được","Chỉ ra các yếu tố gây nguy hiểm cho mỗi cơ hội kinh doanh","Trả lời câu hỏi: Có bao nhiêu cách để giải quyết một vấn đề"],a:3},
+{t:"Vấn đề không thuộc nội dung ở bước: lựa chọn cơ hội kinh doanh sẽ theo đuổi",o:["Nếu thấy mình không đủ các điều kiện cần thiết, hãy gạt bỏ cơ hội này khỏi danh sách","Thu hẹp danh sách chỉ còn một, hai cơ hội tiềm năng khả thi","Sắp xếp thứ tự cơ hội theo thang điểm từ thấp tới cao cho cả 3 yếu tố: sở thích, tài chính, hay rủi ro có thể chấp nhận","Lựa chọn cơ hội đạt điểm cao cả 3 yếu tố với mức đầu tư ban đầu không quá lớn"],a:0},
+{t:"Kinh doanh thương mại",o:["Là hình thức kinh doanh phổ biến hiện nay","Là cầu nối giữa người sản xuất và tiêu dùng","Là động lực thúc đẩy xã hội ngày một phát triển","Là mua hàng từ người này bán cho người khác để tìm kiếm lợi nhuận"],a:1},
+{t:"Cách nào dưới đây không nên dùng để thu thập thông tin về khách hàng tiềm năng của doanh nghiệp",o:["Dự đoán dựa trên hiểu biết sẵn có","Tham khảo ý kiến các khách hàng dự kiến được lựa chọn","Sử dụng các nguồn thông tin trong ngành","Hỏi các đối thủ cạnh tranh của mình"],a:3},
+{t:"Đối với một doanh nghiệp vừa và nhỏ, yếu tố nào là quan trọng nhất để thành công",o:["Khả năng tài chính mạnh","Coi trọng việc xây dựng văn hoá doanh nghiệp","Đội ngũ nhân viên và quản lý giỏi","Có lực lượng lao động dồi dào"],a:2},
+{t:"Để thử nghiệm ý tưởng kinh doanh cần phải phân tích các yếu tố bên trong và bên ngoài (phân tích SWOT). Đánh dấu vào mục đúng",o:["Điểm mạnh và yếu là các yếu tố bên trong, cơ hội và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm yếu và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm mạnh và cơ hội là các yếu tố bên trong doanh nghiệp, điểm yếu và nguy cơ là các yếu tố bên ngoài doanh nghiệp","Điểm mạnh và cơ hội là các yếu tố bên trong doanh nghiệp"],a:0},
+{t:"Để ước tính được lượng hàng bán ra cần dựa vào các cách sau",o:["So sánh với các cơ sở khác kinh doanh cùng mặt hàng, qua thư đặt hàng, hỏi hàng, tiến hành điều tra qua khách hàng","So sánh với các cơ sở khác kinh doanh cùng mặt hàng, qua thư đặt hàng, dựa vào kinh nghiệm sẵn có","Bán thử trên thị trường, qua thư đặt hàng, hỏi hàng, điều tra qua khách hàng, dựa vào kinh nghiệm sẵn có","Dựa vào kinh nghiệm sẵn có, so sánh với các cơ sở khác kinh doanh cùng mặt hàng"],a:2},
+{t:"Mục nào không thuộc về tài sản cố định của một doanh nghiệp",o:["Chi phí về bảng phát minh sáng chế","Nhà xưởng, thiết bị","Quyền sử dụng đất","Hàng tồn kho"],a:3},
+{t:"Bộ phận chủ yếu nhất trong kế hoạch kinh doanh phải lập khi khởi sự doanh nghiệp",o:["Kế hoạch tài chính","Kế hoạch nhân sự","Kế hoạch vật tư","Kế hoạch Marketing, sản xuất và tiêu thụ"],a:3},
+{t:"Khi khởi sự kinh doanh muốn biết kinh doanh có lãi cần dựa vào",o:["Báo cáo kết quả hoạt động kinh doanh","Báo cáo lưu chuyển tiền tệ","Bảng cân đối kế toán","Báo cáo doanh thu hàng tháng"],a:0},
+{t:"Lĩnh vực kinh doanh là cầu nối giữa nhà sản xuất và người tiêu dùng:",o:["Kinh doanh sản xuất","Kinh doanh dịch vụ","Kinh doanh thương mại","Kinh doanh trong các ngành nông, lâm nghiệp"],a:2},
+{t:"Lĩnh vực kinh doanh có tác dụng tăng giá trị và sức cạnh tranh của sản phẩm ở các vùng phi thành thị hiện nay ở nước ta cần được đặc biệt chú ý khuyến khích:",o:["Kinh doanh chế biến nông lâm thuỷ sản","Tổ chức tiêu thụ sản phẩm trên địa bàn","Cung cấp giống cây trồng vật nuôi tiên tiến","Kinh tế trang trại"],a:3},
+{t:"Yếu tố cần được chuẩn bị tốt cho khởi sự kinh doanh:",o:["Năng lực thực hiện cùng các kỹ năng quản lý","Tập trung đầy đủ các nguồn lực (tài chính, nhân sự)","Cơ hội kinh doanh chắc chắn, hiện thực","Tất cả các yếu tố nêu ở đây"],a:3},
+{t:"Các ứng xử quan trọng nhất để có thể tạo ra và duy trì được lâu dài đội ngũ khách hàng đông đảo, tin cậy của doanh nghiệp:",o:["Trung thực","Kiên nhẫn","Hiểu và thoả mãn yêu cầu của khách hàng","Lịch sự, nhã nhặn"],a:2},
+{t:"Yếu tố cực kỳ quan trọng, nhất thiết bạn phải cần nhắc ngay từ đầu trong việc lựa chọn loại hình tổ chức công việc kinh doanh:",o:["Kinh nghiệm và khả năng quản lý của bản thân","Mức độ phức tạp và quy mô của công việc kinh doanh định làm","Mức vốn cần cho khởi sự kinh doanh","Đặc điểm cá tính của bạn: bạn dễ hay khó hợp tác với người khác trong làm doanh chung"],a:3},
+{t:"Nhiệm vụ không nhất thiết chỉ có chủ doanh nghiệp/người quản lý mới có thể thực hiện:",o:["Tiến hành các hoạt động mua sắm vật tư, tiêu thụ sản phẩm","Bảo đảm thực hiện kế hoạch để đạt được mục đích kinh doanh","Phát triển các ý tưởng kinh doanh, mục đích và kế hoạch hành động","Tổ chức và động viên mọi người thực hiện kế hoạch hành động"],a:0},
+{t:"Kinh doanh dịch vụ là",o:["Là hoạt động tìm kiếm lợi nhuận ngoài lĩnh vực sản xuất và thương mại","Tạo ra các sản phẩm dịch vụ đa dạng từ cắt tóc tới tư vấn","Gồm các công ty kinh doanh lớn như hàng không, bảo hiểm, ngân hàng","Hoạt động sẽ tạo ra nhiều công việc hơn khi xã hội ngày một phát triển"],a:0},
+{t:"Xác định nhu cầu mua hàng và nguyên liệu nhằm",o:["Đảm bảo chất lượng cao để đáp ứng yêu cầu mục tiêu của khách hàng","Đảm bảo đúng lúc tránh tồn kho, gián đoạn quá trình kinh doanh","Đảm bảo quá trình sản xuất kinh doanh liên tục","Đảm bảo mức doanh số dự kiến và mức dự trữ trong kho"],a:1},
+{t:"Mục không thuộc các lợi ích nếu chọn nhà cung ứng duy nhất khi mua hàng",o:["Có giá hạ hơn khi mua nhiều hàng hoặc trả tiền ngay khi lấy hàng","Được mua trả chậm một thời gian","Được lợi dụng sự cạnh tranh để thương lượng giá cả khi mua hàng","Được ưu tiên mua hàng khi khan hiếm"],a:2},
+{t:"Yếu tố có ý nghĩa quan trọng nhất của loại hình kinh doanh thương mại",o:["Địa điểm và hình thức đẹp","Phương pháp bán hàng tốt, tôn trọng và giữ chữ tín với khách hàng","Chủng loại hàng hoá phong phú, giá phải chăng","Sự thoả mãn cao nhất về sản phẩm, giá cả và chữ tín với khách hàng"],a:3},
+{t:"Yếu tố là mục tiêu chủ yếu nhất của loại hình kinh doanh sản xuất",o:["Sản xuất đáp ứng nhu cầu thị trường và có lãi","Bố trí nhà xưởng hợp lý, công nghệ hiện đại","Cung cấp nguyên vật liệu kịp thời, nguồn năng lượng ổn định","Sử dụng hiệu quả và bảo tồn nguồn vốn"],a:0},
+{t:"Chủ doanh nghiệp nhỏ đồng thời là người quản lý thường xuyên thực hiện các nhiệm vụ",o:["Phát triển các ý tưởng kinh doanh, tổ chức và công nhận cho mọi người cùng thực hiện","Xây dựng các mục tiêu hành động, tổ chức và hoạt động cho mọi người thực hiện kế hoạch","Đảm bảo thực hiện kế hoạch để đạt được mục tiêu kinh doanh, xây dựng mục tiêu và kế hoạch hành động","Tìm và phát triển các ý tưởng kinh doanh, xây dựng các kế hoạch hành động, tổ chức, động viên cho mọi người thực hiện, có trách nhiệm thực hiện kế hoạch để đạt được mục tiêu kinh doanh"],a:3},
+{t:"Phương pháp định giá cộng dùng để định giá bán cho sản phẩm thường được tiến hành",o:["Cộng các chi phí làm ra sản phẩm với lợi nhuận dự phóng","Cộng thêm một tỷ lệ phần trăm lợi nhuận so với giá thành sản phẩm","Xem xét giá bán của đối thủ để định giá sản phẩm của doanh nghiệp","Cộng thêm các chi phí làm ra sản phẩm và cộng thêm một tỷ lệ phần trăm lợi nhuận biên để định giá bán hợp lý"],a:3},
+{t:"Phương pháp định giá cạnh tranh để định giá bán cho sản phẩm thường được tiến hành",o:["Tìm hiểu giá cả trong khu vực để định giá sản phẩm của doanh nghiệp","So sánh giá bán của nhà sản xuất với hàng bán lẻ để xác định giá sản phẩm của doanh nghiệp","Đặt giá trị sao cho có lợi nhuận cao nhất trên cơ sở phân tích trường","Xác định đúng chi phí, tham khảo giá của đối thủ để xác định giá cả cạnh tranh"],a:3},
+{t:"Các lý do dẫn đến món xin vay vốn bị từ chối",o:["Những lý do vay tiền của bạn không rõ ràng, khoan nhặn, khai ra thiếu tin cậy, thiếu quyết tâm","Ý tưởng kinh doanh không khả thi, lý do rõ ràng, bay to sự thiếu tin cậy, thiếu quyết tâm, kế hoạch kinh doanh thiếu sức thuyết phục","Bạn trình bày không đáng tin cậy, thiếu quyết tâm, thiếu hiểu biết thực tế về các mục tiêu kinh doanh","Ý tưởng kinh doanh được đánh giá là quá mạo hiểm, lý do không rõ ràng, bay to sự thiếu tin cậy"],a:1},
+{t:"Tại công trường đang thi công, một công nhân đang làm việc trên cao thì đột nhiên có một thanh xà xả xã vít người. Kết luận của bác sĩ là người công nhân đó giảm 85% sức khoẻ. Nhưng Giám đốc doanh nghiệp không mua bảo hiểm cho công nhân trong doanh nghiệp mình, theo quy định về an toàn lao động, doanh nghiệp phải đền bù cho người công nhân đó",o:["30 tháng lương","Không phải bù","12 tháng lương","20 tháng lương"],a:0},
+{t:"Điều quan tâm trước khi đưa ra ý tưởng kinh doanh mới",o:["Loại hàng hoá nào cần thiết","Thời gian và địa điểm nào thuận tiện nhất","Phương pháp bán ra sao","Khách hàng của họ là ai"],a:0},
+{t:"Tìm câu trả lời ít nhất đúng: Khách hàng của doanh nghiệp thường là",o:["Những khách hàng trong tương lai sẽ mua hàng doanh nghiệp bán","Những khách hàng hiện tại không mua nữa nhưng trong tương lai sẽ mua hàng của doanh nghiệp","Những khách hàng hiện tại không mua sản phẩm của bạn","Những khách hàng hiện tại trung thành với doanh nghiệp khác"],a:3},
+{t:"Lợi ích đầu tiên của công việc kinh doanh đúng tại nhà là",o:["Quản lý thuận tiện","Kinh doanh gắn kết công việc","Vốn đầu tư thấp hơn","Linh hoạt trong chuyển tiếp"],a:2},
+{t:"Các hình thức kinh doanh đứng trên thị trường bao gồm",o:["Các hoạt động sản xuất sản phẩm, cung cấp các dịch vụ được yêu cầu của thị trường","Các hoạt động sản xuất ra một số loại sản phẩm, mua bán bất cứ thứ gì hoá hoá và ở bất cứ đâu để bán lại cho người khác","Một số hoạt động sản xuất sản phẩm, mua bán sản phẩm","Các hoạt động sản xuất sản phẩm, kinh doanh thương mại, dịch vụ"],a:3},
+{t:"Để đơn giản lựa chọn hình thức kinh doanh phù hợp với cơ thể cần dựa vào",o:["Kinh nghiệm và khả năng quản lý của bản thân, cường độ phức tạp và mô-đun công việc được xác định, tính năng của bản thân","Mức độ phức tạp và quy mô công việc được định nghĩa, mức độ cần thiết cho công việc khởi nghiệp kinh doanh","Kinh nghiệm và khả năng quản lý của bản thân, cường độ phức tạp và công việc quy định","Mức độ cần thiết về vốn để khởi động kinh doanh, kinh nghiệm và khả năng quản lý của bản thân"],a:0},
+{t:"Thứ tự các bước đầu và cuối trong công việc ước tính doanh thu bán hàng là",o:["Liệt kê các sản phẩm, dịch vụ hoặc mặt hàng của doanh nghiệp sẽ bán, số lượng hàng bán được với giá bán tương ứng","Ước tính khối lượng sản phẩm hy vọng bán được, liệt kê các sản phẩm dịch vụ, nhân số lượng hàng bán được với giá bán tương ứng","Ước tính khối lượng sản phẩm hy vọng bán được khi bắt đầu kinh doanh thông qua nghiên cứu thị trường, nhân số lượng hàng bán được với giá bán tương ứng","Xác định giá bán cho mỗi mặt hàng hy vọng bán được, số lượng hàng bán được với giá bán tương ứng"],a:0},
+{t:"Tìm câu trả lời sai: Người đồng sở hữu là",o:["Những người cùng chia sẻ quyền lực và trách nhiệm","Những người cùng bỏ vốn tư nhân để kinh doanh","Những người cho doanh nghiệp vay vốn","Những người có thể đưa ra quyết định dựa trên phạm vi trách nhiệm của mình"],a:2},
+{t:"Vậy với doanh nghiệp lớn, doanh nghiệp nhỏ có hiệu quả trong những lĩnh vực nào?",o:["Thị trường mới, đa dạng, đặc quyền","Sản phẩm định hình, tiêu chuẩn hoá","Công nghệ lắp ráp","Trường lớn"],a:0},
+{t:"Nội dung nào không thuộc kế hoạch kinh doanh",o:["Phần tài chính doanh nghiệp: Mô tả các phần liên quan đến tài chính như tính toán doanh thu, chi phí và lãi cũng như số vốn ban đầu cần thiết","Phần tổ chức nhân sự: Là những văn bản cần thiết đi kèm với kế hoạch kinh doanh như: bản mô tả công việc, bảng giá giấy đăng ký kinh doanh","Tổng hợp các phần tóm tắt: Chứa các thông tin quan trọng nhất từ những phần còn lại của kế hoạch kinh doanh","Phần đánh giá thị trường: Mô tả thị trường như thế nào, mô tả chi tiết sản phẩm, giá bán, địa điểm và cách thức phân phối sản phẩm"],a:1},
+{t:"Các biện pháp khắc phục dưới đây không làm tăng giá trị sản phẩm, hàng hoá",o:["Giảm chi phí nguyên vật liệu trực tiếp bằng cách mua giá rẻ, chất lượng tốt hay được giảm giá nhiều","Cải tiến chất lượng sản phẩm để tăng giá bán","Tăng số lượng bán ra để thu được tổng giá trị giá tăng lớn hơn","Tăng giá bán cho mỗi sản phẩm mà vẫn giữ nguyên chất lượng hoá hoá"],a:3},
+{t:"Tính năng động sáng tạo đúng của doanh nghiệp là",o:["Tạo ra sản phẩm có thêm các tính năng độc đáo từ các sản phẩm cũ có trên thị trường","Tạo ra sản phẩm có tính năng khác biệt đáp ứng tốt hơn nhu cầu của khách hàng so với sản phẩm cùng loại trên thị trường","Tạo ra sản phẩm mới từ công việc đáp ứng tốt hơn nhu cầu của khách hàng","Tạo ra sản phẩm mới bằng cách sao chép quá trình cải tiến để tạo ra sản phẩm có ưu thế"],a:1},
+{t:"Khi khởi nghiệp doanh nghiệp đúng nên",o:["Xem xét mình có đủ tiền để bắt đầu kinh doanh không","Tự đánh giá mình có phù hợp với công việc kinh doanh không","Tự đánh giá bản thân xem có phù hợp với công việc kinh doanh không, có ý tưởng kinh doanh tốt và lập kế hoạch kinh doanh","Phải có ý tưởng kinh doanh tốt và lập kế hoạch kinh doanh"],a:2},
+{t:"Để tìm ra cơ sở kinh doanh mới thường được phát từ đúng",o:["Những lĩnh vực kinh doanh thành công của người khác","Có khả năng tài chính","Những vấn đề khó khăn, thắc mắc của cộng đồng, của khách hàng","Xây dựng một kế hoạch kinh doanh"],a:2},
+{t:"Yếu tố không thuộc vốn lưu động để chi trả cho các tài khoản khi khởi nghiệp doanh nghiệp",o:["Mua nguyên liệu","Tiền lương, bảo hiểm","Tiền thuê nhà xưởng","Mua máy móc thiết bị phục vụ cho nhà sản xuất"],a:3},
+{t:"Bản kế hoạch kinh doanh đúng đáng giúp ích cho doanh nghiệp chủ sở hữu",o:["Suy nghĩ ý nghĩa và đánh giá bất kỳ điểm yếu nào trong ý tưởng kinh doanh","Suy nghĩ ý nghĩa và đánh giá bất kỳ điểm yếu nào trong ý tưởng kinh doanh","Có cơ hội thử nghiệm ý tưởng, mô tả chi tiết tất cả các mạng công việc trong kinh doanh","Mô tả chi tiết các công việc trong doanh nghiệp nếu có cơ hội thử nghiệm và đánh giá ý tưởng kinh doanh"],a:3},
+{t:"Các hình thức kinh doanh trên thị trường",o:["Sản xuất các sản phẩm hoá hoá, dịch vụ","Cung cấp các dịch vụ cho cộng đồng","Kinh doanh bán buôn, bán lẻ, dịch vụ","Các hoạt động kinh doanh sản xuất, thương mại, dịch vụ"],a:3},
+{t:"Các hoạt động marketing giúp doanh nghiệp",o:["Tìm hiểu khách hàng là ai, họ muốn và cần gì, làm thế nào đáp ứng nhu cầu của họ để tạo ra lợi nhuận","Trả giá mà khách hàng chấp nhận trả lời","Cung cấp thông tin và thu hút khách hàng những dịch vụ hoá hoá sẽ mua sản phẩm của doanh nghiệp","Nghiên cứu thị trường cung cấp sản phẩm dịch vụ mà khách hàng cần"],a:0},
+{t:"Khi khởi nghiệp kinh doanh đúng, các nguồn vốn để kinh doanh thường dựa vào",o:["Có thể vay từ các ngân hàng hoặc các tổ chức tài chính khác","Có thể vay từ bạn bè, họ hàng, vay hay ứng trước từ nhà cung cấp","Bằng hình thức liên doanh, liên kết với các hoạt động kinh doanh chủ yếu khác","Nguồn vốn của chủ sở hữu và vốn huy động được"],a:3},
+{t:"Khi muốn vay tiền để khởi động sự kinh doanh cần thuyết phục người cho vay đó",o:["Thực tế cần có sổ tiền đó, nếu cần sẽ đảm bảo tài sản kinh doanh được chấp nhận và trình bày các đề án dự án kinh doanh","Thực tế cần có sổ tiền đó và phải xác định rõ cần mua những loại tài sản nào, đã kiểm tra các loại tài sản chi phí và các loại tài sản khác nhau","Phương án kinh doanh khả thi","Đã kiểm tra các chi phí và các loại tài sản khác, nếu cần thiết sẽ được chấp nhận tài sản kinh doanh"],a:1},
+{t:"Khi chuẩn bị tiếp cận đúng những nơi có thể vay vốn để kinh doanh cần cân nhắc. Bạn chuẩn bị khi gặp gỡ đột ngột, chuẩn bị trả lời bất cứ câu hỏi nào về công việc kinh doanh của bạn",o:["Hẹn trường khi đến, chuẩn bị trả lời các câu hỏi liên quan đến doanh nghiệp, đưa ra kế hoạch kinh doanh, hỏi xem cần cung cấp thêm thông tin nào, bao giờ có câu trả lời thanh tra trả lời?","Hẹn trường khi đến, chuẩn bị trả lời bất kỳ câu hỏi nào về công việc kinh doanh của bạn, nên tuân theo một kế hoạch kinh doanh","Chuẩn bị trả lời bất kỳ câu hỏi nào về công việc kinh doanh của bạn, nên tuân theo một kế hoạch kinh doanh","Nên mang theo một kế hoạch kinh doanh, trước khi đến nơi hỏi khi nào có thể nhận được đơn xin vay của mình, sẵn sàng cung cấp thêm thông tin nếu họ cần"],a:1},
+{t:"Công việc hoàn trả các hoạt động kinh doanh đúng sẽ giúp bạn",o:["Quản lý tiền tệ, quản lý các tài khoản, lập kế hoạch cho tương lai","Quản lý tiền mặt, theo dõi các khoản nợ, hàng tồn kho, tài sản cố định và năng lượng lao động","Quản lý theo dõi các khoản nợ vay, tồn tại kho, cố định tài sản và tài sản lưu động","Nắm bắt thông tin về tình hình hoạt động của doanh nghiệp"],a:2},
+{t:"Mục nào dưới đây là cần thiết khi nghiên cứu đánh giá thị trường",o:["Chụp thông tin về cạnh tranh cạnh tranh","Thu thập thông tin về khách hàng","Tìm hiểu về giá cả mặt hàng cùng loại sản phẩm của doanh nghiệp","Hiểu được nhu cầu của khách hàng"],a:1},
+{t:"Kế hoạch tiếp thị là kế hoạch đúng",o:["Địa điểm kinh doanh, sản phẩm, giá cả, quảng cáo, xúc tiến bán hàng","Quảng cáo, xúc tiến bán hàng, giá cả","Sản phẩm, giá cả, quảng cáo, xúc tiến bán hàng","Địa điểm kinh doanh, sản phẩm, giá cả"],a:0},
+{t:"Khi khởi sự kinh doanh cần phải chuẩn bị những yếu tố cơ bản của một doanh nghiệp nhỏ",o:["Phải có sở kinh doanh, có kỹ năng, có các nguồn lực để thực hiện cơ hội thực hiện","Có cơ sở kinh doanh hiện thực, có kỹ năng quản lý và có các nguồn lực thực hiện cơ hội thực hiện","Phải có năng lực chính và kinh nghiệm","Phải có kỹ năng quản lý và kỹ năng thực hiện, phải có cơ sở kinh doanh thực hiện"],a:1},
+{t:"Cơ sở kinh doanh có đặc tính đúng bất ngờ",o:["Không biết trước cơ hội sẽ xuất hiện vào lúc nào, ở đâu?","Không biết cơ hội nào sẽ xuất hiện bền dưới biểu thức nào?","Không biết trước cơ hội xuất hiện có kèm theo những nhân tố gì, bất lợi hay không?","Khi kinh doanh không thể biết chắc chắn rằng sẽ có cơ hội"],a:3},
+{t:"Cơ hội kinh doanh đúng",o:["Có giá trị khác nhau đối với những người có nhu cầu khác nhau","Có giá trị biểu hiện ở trạng thái chủ và thuộc tính phụ thuộc","Có giá trị dương khi người có nhu cầu được cơ hội","Có giá trị cho người có nhu cầu"],a:3},
+{t:"Có thể phát hiện ra cơ hội kinh doanh đúng dần bởi vì",o:["Cơ sở kinh doanh có rất nhiều và có ở mọi nơi","Đòi hỏi đáp ứng được những nhu cầu mới phát sinh từ khách hàng","Cơ hội xuất hiện để thay đổi trưởng","Hỗ trợ các tính năng năng động và sáng tạo của chính bạn"],a:3},
+{t:"Ý tưởng kinh doanh tạo ra sản phẩm mới",o:["Là mới hoàn toàn mà trước đó chưa hề có","Là những sản phẩm đã có trên thị trường nhưng lại tạo ra nhiều tính năng hoạt động hơn","Các sản phẩm đã được kết hợp lại thành sản phẩm mới","Là những sản phẩm được sao chép nhưng có quá trình cải tiến"],a:0},
+{t:"Mục tiêu chính của việc lập kế hoạch mục tiêu:",o:["Tìm nguyên nhân công việc không trả nợ và không đòi tiền từ khách hàng","Tìm nhân vật tồn tại quá nhiều hàng trong kho không có kế hoạch","Tìm nguyên nhân việc bán trà chậm nhiều, phải đi vay để bù đắp cho vốn lưu động","Tìm nguyên nhân cố gắng để giúp đỡ, điều chỉnh vốn kinh doanh tốt"],a:3},
+{t:"Điểm nổi bật trong vai trò của các doanh nghiệp nhỏ và vừa là vườn cây của các doanh nghiệp mới đang hình thành trên thị trường:",o:["Bổ sung cho hoạt động của các doanh nghiệp lớn","Chi phí đầu tư, tạo khả năng thử nghiệm các sản phẩm mới","Có những đóng góp đáng kể cho xuất khẩu, thu ngoại tệ cho đất nước","Thúc đẩy tăng trưởng kinh tế, góp phần tăng khối lượng, chất lượng, hàng hoá tiêu dùng và dịch vụ trong dân cư các vùng"],a:1},
+{t:"Ấn tượng nhất mà một bản tóm tắt có thể tạo ra:",o:["Lô-gích của dự án","Viễn cảnh về phát triển triển vọng trong tương lai của một công việc kinh doanh","Khả năng hoàn vốn của hoạt động kinh doanh","Năng lực của chủ doanh nghiệp"],a:0},
+{t:"Mục tiêu của việc xác định đúng khách hàng tương lai:",o:["Xác định cấu hình cơ sở mua tương lai","Xác định người mua địa chỉ","Phác ra được tượng trung mà doanh nghiệp sẽ phục vụ trong tương lai","Xác định các khu vực sẽ đặt điểm bán"],a:2},
+{t:"Mục tiêu của việc xác định đúng mục tiêu trưởng?",o:["Xác định doanh thu dự kiến","Đánh giá khu vực thị trường theo mẫu hàng khách mặt khẩu","Chợ đến thời quen và hành động mua hàng của khách hàng mẫu","Phân chia các loại thị trường theo sự tương đồng về sở hữu và thời quen"],a:0},
+{t:"Mục tiêu chính của công việc nghiên cứu về ngành:",o:["Bi quyết phát triển thị trường của ngành","Biết rõ giai đoạn phát triển của ngành","Chụp được đặc điểm cạnh tranh của ngành","Chụp được đặc điểm công nghệ của các doanh nghiệp trong ngành"],a:2},
+{t:"Kinh doanh thương mại là đúng loại hình kinh doanh",o:["Sau đó mua sản phẩm từ người này, bán cho người khác để kiếm lời","Kết hợp để tạo ra sản phẩm tiêu dùng giữa nhiều người","Làm ra sản phẩm rồi bán cho người khác","Trả lời nhu cầu được phục vụ của con người"],a:0},
+{t:"Yếu tố cơ bản nhất làm cho không đủ vốn để duy trì kinh doanh:",o:["Mua sắm tài sản cố định nhiều hơn hoặc hiện đại hơn cần thiết","Không biết cách lập kế hoạch kinh doanh, không biết huy động vốn","Không thể kiểm soát các chi phí","Để hàng tồn kho quá nhiều, công tác kế toán yếu"],a:0},
+{t:"Điều cần luôn tâm niệm đúng khi hình thành các ý tưởng kinh doanh:",o:["Gần như mỗi sản phẩm, dịch vụ quá quen thuộc ngày hôm nay đã là sản phẩm độc nhất của ngày hôm qua","Cần phải có một sản phẩm phát hiện tốt để tránh thất vọng, thua lỗ sau này","Hãy bán những thứ cần thiết","Nhu cầu các loại sản phẩm, dịch vụ mới dành cho mọi người trong cuộc sống hàng ngày là không có điểm dừng"],a:2},
+{t:"Không có điểm nào trong kế hoạch lưu chuyển tiền:",o:["Khấu hao","Trả lãi vay","Hoàn trả tiền gốc","Doanh thu"],a:0},
+{t:"Để xác lập quy mô tài chính của cơ hội kinh doanh, sau khi xem xét các nguồn thông tin về tài chính, bạn cần suy nghĩ kỹ hơn về các vấn đề:",o:["Lợi nhuận mà cơ hội kinh doanh cung cấp lại","Lợi nhuận trung bình, yêu cầu vốn đầu tư ban đầu, cấp và thời gian hoàn vốn","Thời gian bao lâu thì công việc kinh doanh mới có lãi","Phải chi phí hết bao nhiêu tiền"],a:1},
+{t:"Mục không thuộc lợi ích nếu chọn nhiều nhà cung cấp ứng dụng một lần khi mua hàng",o:["Bạn có khả năng nhận được trợ giúp về tư vấn hoá hoá và thị trường từ các nhà cung cấp này","Bạn được hưởng lợi từ sự cạnh tranh để giảm giá cả khi mua hàng","Bạn sẽ không bị ảnh hưởng gì nhiều khi một số hoạt động kinh doanh liên tục của họ","Bạn sẽ có cơ hội và những điều kiện thuận lợi trong kinh doanh khi trở thành độc quyền duy nhất trong việc tiêu thụ sản phẩm và dịch vụ của các nhà cung cấp"],a:0},
+{t:"Trách nhiệm có thể hiện mối quan hệ về hữu ích kinh tế giữa doanh nghiệp với nhà nước mà người chủ doanh nghiệp phải thực hiện đầy đủ:",o:["Nộp thuế","Tuân thủ luật lao động","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai thuế"],a:0},
+{t:"Trách nhiệm hiện tại mối quan hệ giữa doanh nghiệp chủ doanh nghiệp với người lao động:",o:["Bảo hiểm xã hội","Nộp thuế","Xin giấy phép hoạt động và kinh doanh","Nộp tờ khai thuế"],a:0},
+{t:"Trong điều kiện hiện tại của cơ chế kinh tế, phần đặc biệt cần lưu ý trong nội dung kế hoạch kinh doanh của doanh nghiệp:",o:["Tổ chức doanh nghiệp","Tài chính doanh nghiệp","Đánh giá thị trường","Ý tưởng kinh doanh"],a:2},
+{t:"Điểm không có trong kế hoạch thu và chi phí:",o:["Trả lãi vay","Khấu hao","Hoàn trả gốc tiền vay","Doanh thu"],a:2},
+{t:"Khi phân tích công việc tại một phân xưởng sản xuất bao bì, công việc nào thuộc về bộ phận kho:",o:["Sắp xếp và quản lý hàng hoá","Khảo sát thị trường và đưa ra quyết định sản xuất","Lập báo cáo tài chính và nâng cấp lên trên","Đặt mua hoá và giao hàng tới khách hàng"],a:0},
+{t:"Để trở thành một doanh nghiệp đúng dân cần thiết",o:["Tất cả các nội dung nêu ở đây","Quyết tâm, có động cơ xóa, son chấp nhận rủi ro","Có sức khoẻ, chấp nhận rủi ro, có quyết tâm","Giữ uy tín với khách hàng, có quyết tâm"],a:0},
+{t:"Để thành công trong kinh doanh đúng",o:["Cần có kỹ năng quản lý, chấp nhận rủi ro và hiểu biết về đơn hàng kinh doanh và thị trường","Cần có năng lực tài chính, có tâm","Cần có năng lực tài chính và sức khoẻ","Cần có khả năng tài chính và chấp nhận rủi ro"],a:0},
+{t:"Một doanh nghiệp nhỏ khi đúng bắt đầu kinh doanh nên",o:["Đầu tư với quy mô lớn bằng cách vay nhiều tiền","Đầu tư với quy mô lớn bằng cách vay nhiều tiền, cố gắng sản xuất thật nhiều hàng và mở rộng thị trường","Cố gắng sản xuất thật nhiều hàng và chưa cần chú ý đến chất lượng","Bắt đầu từ mô tả nhỏ và chú trọng tới chất lượng ngay từ đầu"],a:3},
+{t:"Khi khởi nghiệp doanh nghiệp đúng, công việc thường xuyên nhất của bạn sẽ là",o:["Giám sát nhân viên, mua hàng hoá, nguyên vật liệu, kiểm soát chi phí, định giá","Kiểm soát quá trình sản xuất, phục vụ khách hàng, kiểm soát chi phí, định giá","Kiểm soát chi phí, định giá, ghi sổ về những gì đang diễn ra trong doanh nghiệp","Tất cả nội dung nêu ở đây"],a:1},
+{t:"Để phát hiện cơ hội kinh doanh thường xuyên sử dụng các phương pháp",o:["Phân tích thông tin","Nghe ngóng, quan sát trên thị trường","Lựa chọn","Tổng hợp"],a:1},
+{t:"Những mục dưới đây không có trong các bước cơ bản được lựa chọn trong kinh doanh",o:["Chỉ ra các cơ sở kinh doanh thích hợp","Xác định năng lực và nguồn lực cần thiết","Xác định mô-đun về tài chính của cơ sở","Extended long line"],a:3},
+{t:"Những mục dưới đây không cần thiết trong Kế hoạch Tiếp thị",o:["Xác định địa điểm kinh doanh","Sản phẩm được khách hàng mong đợi","Xác định phương thức sản xuất sản phẩm","Giá cả phù hợp với thị trường chung"],a:2},
+{t:"Bước đầu tiên và bước cuối cùng khi tiến hành nghiên cứu các cơ hội kinh doanh là",o:["Liệt kê những vấn đề trên thị trường và quyết định cơ hội kinh doanh sẽ theo đuổi","Liệt kê các vấn đề trên thị trường và chỉ ra các cơ sở kinh doanh thích hợp","Xác định các năng lực và nguồn lực cần thiết và sắp xếp thứ tự các cơ sở","Chỉ hợp lý các cơ sở kinh doanh thích hợp và xác định những nguồn lực và nguồn lực cần thiết"],a:0},
+{t:"Phân phối sản phẩm qua hệ thống bán lẻ hiệu quả khi",o:["Khách hàng phân bố trên địa bàn thu gọn, tập trung","Sản xuất với số lượng lớn, đồng loạt","Phân bố trên mạng Internet","Sản xuất ra mà không cần nhiều liên hệ với khách hàng"],a:1},
+{t:"Bảo hiểm xã hội đúng quy định bắt buộc đối với các doanh nghiệp có từ",o:["10 công nhân trở lên","15 công nhân trở lên","20 công nhân trở lên","30 công nhân trở lên"],a:0},
+{t:"Thời gian công nhân nghỉ đúng việc làm tai nạn hay bệnh nghề nghiệp, doanh nghiệp phải trả",o:["Trả 50% lương + chi phí","Trả 70% lương + chi phí","Trả 100% lương + chi phí","Trả 50% lương"],a:2},
+{t:"Chi phí nào không phải là chi phí cố định",o:["Đầu tư dây chuyền sản xuất","Giấy phép kinh doanh bảo hiểm","Thuê nhà xưởng","Mua sản phẩm nguyên liệu"],a:3},
+{t:"Tìm câu trả lời sai: Việc ước tính doanh thu bao gồm",o:["Liệt kê các sản phẩm mà doanh nghiệp sẽ bán","Ước tính khối lượng bán ra trong một khoảng thời gian","Xác định giá bán cho từng sản phẩm","Xác định lợi nhuận thu được từ mỗi sản phẩm"],a:3},
+{t:"Bản sơ yếu về mẫu khách hàng KHÔNG trả lời câu hỏi:",o:["Địa điểm cư trú","Ai","Nghề nghiệp","Giới tính"],a:1},
+{t:"Marketing là",o:["Công việc tìm hiểu và đưa ra mức giá mà khách hàng chấp nhận và màn nguyên","Công việc tìm hiểu khách hàng của bạn là ai, họ cần gì, làm thế nào để đáp ứng nhu cầu đó","Công việc cung cấp sản phẩm hoặc dịch vụ mà người khác cần","Công việc cung cấp thông tin và thu hút khách hàng để họ mua sản phẩm và dịch vụ của bạn"],a:1},
+{t:"Khách hàng của bạn là đúng",o:["Những người đang mua hàng hoá, sản phẩm dịch vụ của bạn","Những người hiện tại đã thôi không mua hàng của bạn nữa nhưng vẫn vọng họ sẽ quay trở lại","Những cá nhân, tổ chức hay những doanh nghiệp cần thiết và chấp nhận mua hàng hoá, dịch vụ của bạn","Những người tương lai sẽ mua hàng hoá, sản phẩm dịch vụ của bạn"],a:2},
+{t:"Ưu thế của doanh nghiệp đúng nhỏ:",o:["Doanh nghiệp rút ngắn khoảng cách về kỹ thuật so với doanh nghiệp lớn","Chuyển đổi nhanh chóng và dễ dàng, thích nghi với những thay đổi mới","Dễ dàng bắt đầu với việc thay đổi thị trường, tự động thay đổi mới, làm chủ về công nghệ, kỹ thuật, sử dụng hiệu quả vốn","Việc sử dụng vốn có hiệu quả nên nguồn vốn sẽ ít khó khăn hơn"],a:2},
+{t:"Các biện pháp tìm ra cơ hội kinh doanh đúng đắn",o:["Sử dụng các thông tin thông qua các tài liệu, đài, báo, vô tuyến, học hỏi kinh nghiệm ở người khác, nơi khác","Đi tìm nhu cầu trên thị trường thông qua thăm tơ nghe ngóng, ý kiến, sự phàn nàn của khách hàng","Sử dụng các thông tin qua quan sát ngón tay, thu tập từ khách hàng","Sử dụng thông tin để tìm cơ hội thông qua nghe ngóng, quan sát, phân tích, đáp ứng nhu cầu, các vấn đề của khách hàng"],a:3},
+{t:"Đặc điểm nổi bật nhất nói lên cơ hội kinh doanh là tài nguyên, là có giá trị:",o:["Chỉ có giá trị đối với người có nhu cầu","Cơ sở có tính chất bất ngờ","Cơ hội có đặc tính khách hàng","Cơ sở có tính động chỉ"],a:0},
+{t:"Cơ sở kinh doanh được sắp xếp thứ tự ưu tiên theo tiêu chuẩn cơ bản: Sở thích riêng (a), giá trị về mặt tài chính (b), rủi ro có thể được chấp nhận (c):",o:["c - a - b","a - b - c","a - c - b","b - c - a"],a:1},
+{t:"Mục tiêu của nghiên cứu đánh giá đúng giá thị trường mục tiêu",o:["Cung cấp thông tin và thu hút khách hàng để họ sẽ mua sản phẩm và dịch vụ của bạn","Cung cấp hàng hoá dịch vụ mà người khách cần","Trả giá mà khách hàng chấp nhận thanh toán","Tìm hiểu khách hàng để đáp ứng nhu cầu của họ nhằm thu lợi nhuận"],a:3},
+{t:"Các mục dưới đây không thuộc các câu hỏi thu thập thông tin về khách hàng",o:["Doanh nghiệp cần những loại khách hàng nào?","Họ có mua thường xuyên sản phẩm và dịch vụ hay không, tại sao họ lại mua một loại sản phẩm hay dịch vụ nào đó?","Họ cần loại hoá hoá nào, chấp nhận mức giá bao nhiêu?","Họ đặt giá bao nhiêu và có quảng cáo cho hàng hoá và dịch vụ của mình không?"],a:3},
+{t:"Kinh doanh ở lĩnh vực đúng nông lâm ngư nghiệp là",o:["Cung cấp cho thị trường các cây giống, con giống tiên tiến","Sản xuất các sản phẩm nông sản, lâm, ngư nghiệp và dịch vụ đáp ứng nhu cầu thị trường","Chế biến sản phẩm của trang trại","Tổ chức tiêu thụ các sản phẩm nông nghiệp trên thị trường"],a:1},
+{t:"Thu thập thông tin từ nhà cung cấp đúng cần chú ý các vấn đề sau",o:["Loại hàng và chất lượng mà doanh nghiệp cần, các điều kiện, ưu đãi khi mua hàng của họ","Mức giá, thời gian giao hàng, các ưu đãi khi mua hàng của họ","Chủng loại, chất lượng, giá cả hoá hoá, các điều kiện mua hàng, quá trình thực hiện hợp nhất và các cam kết nối kèm theo","Các điều kiện, ưu đãi khi mua hàng của họ, uy tín trong công việc thực hiện hợp đồng cung cấp ứng hàng hoá"],a:2},
+{t:"Mục đích chính của việc sử dụng vốn lưu động là đúng",o:["Phù hợp với giới hạn đầu tư","Thu được nhiều lợi nhuận từ các tài khoản đầu tư khác nhau","Phục vụ nhu cầu chi thường xuyên","Thời gian quay vòng vốn nhanh"],a:2},
+{t:"Trong kế hoạch tài chính chính xác, việc hoàn thành tiền vay được tính toán vào",o:["Kế hoạch chuyển đổi tiền tệ","Kế hoạch thu và chi phí, kế hoạch chuyển đổi tiền tệ","Kế hoạch thu và chi phí","Ở đây không có kế hoạch phụ thuộc nào"],a:3},
+{t:"Tìm ý tưởng kinh doanh cần",o:["Ghi lại mỗi khi có ý tưởng nảy sinh","Duy trì công việc kinh doanh trong thời gian nghiên cứu","Bắt đầu quan sát các bước phát triển trong nhiều lĩnh vực khác nhau","Nghiên cứu các sản phẩm hiện có"],a:1},
+{t:"Quản lý công việc mua hàng thông qua",o:["Xác định và lựa chọn nhà cung cấp ứng dụng","Tuyển chọn nhiều đại lý","Đặt hàng, kiểm tra hoá hoá và thanh toán","Xác định nhu cầu mua hàng"],a:1},
+{t:"Điều kiện giao hàng cần đúng quan tâm là",o:["Hàng được giao tại đâu?","Vận chuyển theo phương thức gì và chân do ai thanh toán?","Bao gồm tất cả các mục ở đây","Thời hạn giao hàng từ khi đặt hàng cho đến khi giao hàng?"],a:2},
+{t:"Bước thứ nhất và bước đúng sau cùng của quản lý công việc mua hàng",o:["Xác định nhu cầu mua hàng và liên hệ quan hệ với nhà cung cấp","Xác định nhà cung cấp ứng dụng và lựa chọn chất lượng với nhà cung cấp ứng dụng","Lựa chọn nhà cung ứng và thanh toán đơn đặt hàng","Xác định nhu cầu mua hàng, đặt hàng, xác định địa điểm và thời hạn giao hàng"],a:0},
+{t:"Mục tiêu của quản lý đúng tồn kho",o:["Giảm mát và làm cho sản phẩm, nguyên vật liệu lưu thông","Giải quyết tốt các khâu về an toàn trong lưu kho và tránh thất bại","Làm cho hàng hoá không bị động ở một khâu nào cả","Sắp xếp hợp lý mọi nguồn hàng hoá xuất nhập kho"],a:0},
+{t:"Hoạt động nhập hàng vào kho khi",o:["Sản phẩm làm xong, chờ bán","Nhận lô mới về nguyên vật liệu hay hàng hoá","Hàng bán rồi nhưng khách hàng trả lại","Hàng hoá, nguyên liệu bị hỏng cần loại bỏ"],a:3},
+{t:"Với tư cách là chủ doanh nghiệp bạn cần",o:["Hạch toán chi phí và lãi, tạo nguồn vốn để hoạt động lâu dài","Tổ chức và thành viên mọi người thực hiện kế hoạch","Phát triển các ý tưởng kinh doanh, mục tiêu và kế hoạch hành động","Đảm bảo thực hiện kế hoạch để đạt được mục tiêu kinh doanh"],a:2}
+];
+home();
+</script>
 </body>
 </html>
